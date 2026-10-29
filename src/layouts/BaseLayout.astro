@@ -2,39 +2,64 @@
 interface Props {
   title?: string;
   description?: string;
+  schema?: Record<string, any>;
 }
 
 const {
   title = 'Side by Side Therapy Connect | In-Home Autism Therapy Teams in Ontario',
   description = 'Connecting Ontario families with vetted, independent in-home ABA therapy teams under direct Registered Behaviour Analyst (R.B.A. Ont.) supervision. OAP-eligible.',
+  schema,
 } = Astro.props;
 
-const schemaGraph = {
+const defaultSchemaGraph = {
   '@context': 'https://schema.org',
-  '@type': 'MedicalBusiness',
-  name: 'Side by Side Therapy Connect',
-  legalName: 'Side by Side Therapy Inc.',
-  url: 'https://sidebysidetherapyconnect.ca',
-  description:
-    'Ontario platform connecting families of children with ASD with vetted, independent in-home therapy teams under direct Registered Behaviour Analyst supervision.',
-  areaServed: {
-    '@type': 'AdministrativeArea',
-    name: 'Ontario, Canada',
-  },
-  medicalSpecialty: [
-    'Applied Behaviour Analysis',
-    'Assent-based behavioral therapy',
-    'Neurodiversity-affirming care',
-    'Speech-Language Pathology coordination',
-  ],
-  availableService: [
+  '@graph': [
     {
-      '@type': 'TherapeuticProcedure',
-      name: 'In-Home ABA Therapy Clinical Matching',
+      '@type': 'MedicalBusiness',
+      '@id': 'https://sidebysidetherapyconnect.ca/#organization',
+      name: 'Side by Side Therapy Connect',
+      legalName: 'Side by Side Therapy Inc.',
+      url: 'https://sidebysidetherapyconnect.ca',
+      logo: 'https://sidebysidetherapyconnect.ca/images/sbs-logo.png',
+      image: 'https://sidebysidetherapyconnect.ca/images/sbs-logo.png',
+      telephone: '+1-877-797-0477',
+      email: 'info@sidebysidetherapy.ca',
+      description:
+        'Ontario platform connecting families of children with ASD with vetted, independent in-home therapy teams under direct Registered Behaviour Analyst supervision.',
+      areaServed: {
+        '@type': 'AdministrativeArea',
+        name: 'Ontario, Canada',
+      },
+      medicalSpecialty: [
+        'Applied Behaviour Analysis',
+        'Assent-based behavioral therapy',
+        'Neurodiversity-affirming care',
+        'Speech-Language Pathology coordination',
+        'Occupational Therapy',
+        'Psycho-Educational Assessment',
+      ],
+      priceRange: '$$$',
+      currenciesAccepted: 'CAD',
+      paymentAccepted: 'Cash, Credit Card, Direct Billing, Ontario Autism Program (OAP), Private Health Insurance',
+      availableService: [
+        {
+          '@type': 'TherapeuticProcedure',
+          name: 'In-Home ABA Therapy Clinical Matching',
+        },
+        {
+          '@type': 'TherapeuticProcedure',
+          name: 'Transdisciplinary Care Coordination',
+        },
+      ],
     },
     {
-      '@type': 'TherapeuticProcedure',
-      name: 'Transdisciplinary Care Coordination',
+      '@type': 'WebSite',
+      '@id': 'https://sidebysidetherapyconnect.ca/#website',
+      url: 'https://sidebysidetherapyconnect.ca',
+      name: 'Side by Side Therapy Connect',
+      publisher: {
+        '@id': 'https://sidebysidetherapyconnect.ca/#organization',
+      },
     },
   ],
 };
@@ -58,7 +83,7 @@ const schemaGraph = {
     />
 
     <!-- Structured Data Graph (E-E-A-T & CPBAO Compliance) -->
-    <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
+    <script type="application/ld+json" set:html={JSON.stringify(schema || defaultSchemaGraph)} />
 
     <!-- Simple Password Protection Check -->
     <script is:inline>

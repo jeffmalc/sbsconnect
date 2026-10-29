@@ -40,58 +40,131 @@ const displayTeams = matchingTeams.length > 0 ? matchingTeams : therapyTeamsData
 const pageTitle = `In-Home Autism Therapy in ${location.name}, Ontario | ABA, Speech & OT`;
 const pageDescription = `Dedicated in-home ABA therapy, Speech-Language Pathology, and Occupational Therapy in ${location.name}, Ontario (${location.postalPrefixes.slice(0, 3).join(', ')}). Supervised by Registered Behaviour Analysts (R.B.A. Ont.). OAP approved.`;
 
-// Localized MedicalBusiness schema with ALL services
-const locationSchema = {
+// Localized MedicalBusiness and Structured Entity Graph
+const cityPageSchema = {
   '@context': 'https://schema.org',
-  '@type': 'MedicalBusiness',
-  name: `Side by Side Therapy Connect - ${location.name}`,
-  legalName: 'Side by Side Therapy Inc.',
-  url: `https://sidebysidetherapyconnect.ca/locations/${location.slug}`,
-  description: location.description,
-  areaServed: {
-    '@type': 'City',
-    name: location.name,
-    containedInPlace: {
-      '@type': 'AdministrativeArea',
-      name: `${location.region}, Ontario, Canada`,
-    },
-  },
-  medicalSpecialty: [
-    'Applied Behaviour Analysis',
-    'Speech-Language Pathology',
-    'Occupational Therapy',
-    'Psycho-Educational Assessment',
-    'Pediatric Respite',
-    'Assent-based behavioral therapy'
-  ],
-  availableService: servicesData.map((s) => ({
-    '@type': 'TherapeuticProcedure',
-    name: `${s.name} in ${location.name}`,
-    description: `${s.tagline} Delivered in-home and in community settings across ${location.name}, ${location.region}.`
-  }))
-};
-
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
+  '@graph': [
     {
-      '@type': 'ListItem',
-      position: 1,
-      name: 'Home',
-      item: 'https://sidebysidetherapyconnect.ca/',
+      '@type': ['MedicalBusiness', 'LocalBusiness'],
+      '@id': `https://sidebysidetherapyconnect.ca/locations/${location.slug}#medicalbusiness`,
+      name: `Side by Side Therapy Connect - ${location.name}`,
+      legalName: 'Side by Side Therapy Inc.',
+      url: `https://sidebysidetherapyconnect.ca/locations/${location.slug}`,
+      logo: 'https://sidebysidetherapyconnect.ca/images/sbs-logo.png',
+      image: 'https://sidebysidetherapyconnect.ca/images/sbs-logo.png',
+      telephone: '+1-877-797-0477',
+      email: 'info@sidebysidetherapy.ca',
+      description: location.description,
+      priceRange: '$$$',
+      currenciesAccepted: 'CAD',
+      paymentAccepted: 'Ontario Autism Program (OAP), Private Health Insurance, Direct Billing, Credit Card',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: location.name,
+        addressRegion: 'ON',
+        addressCountry: 'CA',
+        postalCode: location.postalPrefixes[0] || 'L5B',
+      },
+      areaServed: [
+        {
+          '@type': 'City',
+          name: location.name,
+          containedInPlace: {
+            '@type': 'AdministrativeArea',
+            name: `${location.region}, Ontario, Canada`,
+          },
+        },
+        ...location.nearbyAreas.map((nearby) => ({
+          '@type': 'AdministrativeArea',
+          name: `${nearby}, Ontario`,
+        })),
+      ],
+      medicalSpecialty: [
+        'Applied Behaviour Analysis',
+        'Speech-Language Pathology',
+        'Occupational Therapy',
+        'Psycho-Educational Assessment',
+        'Pediatric Respite',
+        'Assent-based behavioral therapy',
+        'Neurodiversity-affirming care',
+      ],
+      availableService: servicesData.map((s) => ({
+        '@type': 'TherapeuticProcedure',
+        name: `${s.name} in ${location.name}`,
+        description: `${s.tagline} Delivered in-home and in community settings across ${location.name}, ${location.region}.`,
+        provider: {
+          '@id': `https://sidebysidetherapyconnect.ca/locations/${location.slug}#medicalbusiness`,
+        },
+      })),
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: `In-Home Autism Therapy Services in ${location.name}`,
+        itemListElement: servicesData.map((s) => ({
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: `${s.name} (${location.name})`,
+            description: s.description,
+          },
+          priceCurrency: 'CAD',
+          eligibleRegion: {
+            '@type': 'City',
+            name: location.name,
+          },
+        })),
+      },
+      parentOrganization: {
+        '@type': 'MedicalOrganization',
+        name: 'Side by Side Therapy Inc.',
+        url: 'https://www.sidebysidetherapy.ca',
+      },
+      knowsAbout: [
+        ...location.localKeywords,
+        ...(location.localContext?.schoolBoards || []),
+        ...(location.schools?.map((sch) => sch.name) || []),
+      ],
     },
     {
-      '@type': 'ListItem',
-      position: 2,
-      name: 'Ontario Service Locations',
-      item: 'https://sidebysidetherapyconnect.ca/locations',
+      '@type': 'BreadcrumbList',
+      '@id': `https://sidebysidetherapyconnect.ca/locations/${location.slug}#breadcrumb`,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://sidebysidetherapyconnect.ca/',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Ontario Service Locations',
+          item: 'https://sidebysidetherapyconnect.ca/locations',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: location.name,
+          item: `https://sidebysidetherapyconnect.ca/locations/${location.slug}`,
+        },
+      ],
     },
     {
-      '@type': 'ListItem',
-      position: 3,
-      name: location.name,
-      item: `https://sidebysidetherapyconnect.ca/locations/${location.slug}`,
+      '@type': 'WebPage',
+      '@id': `https://sidebysidetherapyconnect.ca/locations/${location.slug}#webpage`,
+      url: `https://sidebysidetherapyconnect.ca/locations/${location.slug}`,
+      name: pageTitle,
+      description: pageDescription,
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'Side by Side Therapy Connect',
+        url: 'https://sidebysidetherapyconnect.ca',
+      },
+      breadcrumb: {
+        '@id': `https://sidebysidetherapyconnect.ca/locations/${location.slug}#breadcrumb`,
+      },
+      mainEntity: {
+        '@id': `https://sidebysidetherapyconnect.ca/locations/${location.slug}#medicalbusiness`,
+      },
     },
   ],
 };
@@ -109,11 +182,7 @@ const iconSvgMap: Record<string, string> = {
 };
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription}>
-  <!-- Location-Specific Schema Markup -->
-  <script type="application/ld+json" set:html={JSON.stringify(locationSchema)} />
-  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
-
+<BaseLayout title={pageTitle} description={pageDescription} schema={cityPageSchema}>
   <Header />
 
   <main class="flex-grow">

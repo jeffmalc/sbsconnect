@@ -18,9 +18,58 @@ ontarioLocations.forEach((loc) => {
 });
 
 const regionsList = Object.keys(regionsMap);
+
+const locationsIndexSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': 'https://sidebysidetherapyconnect.ca/locations#webpage',
+      url: 'https://sidebysidetherapyconnect.ca/locations',
+      name: pageTitle,
+      description: pageDescription,
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'Side by Side Therapy Connect',
+        url: 'https://sidebysidetherapyconnect.ca',
+      },
+      breadcrumb: {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://sidebysidetherapyconnect.ca/',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Ontario Service Locations',
+            item: 'https://sidebysidetherapyconnect.ca/locations',
+          },
+        ],
+      },
+    },
+    {
+      '@type': 'MedicalBusiness',
+      '@id': 'https://sidebysidetherapyconnect.ca/#organization',
+      name: 'Side by Side Therapy Connect',
+      legalName: 'Side by Side Therapy Inc.',
+      url: 'https://sidebysidetherapyconnect.ca',
+      telephone: '+1-877-797-0477',
+      email: 'info@sidebysidetherapy.ca',
+      description: 'Connecting Ontario families with vetted in-home autism therapy teams across 68+ cities in the Greater Toronto Area and surrounding regions within 250km.',
+      areaServed: ontarioLocations.map((loc) => ({
+        '@type': 'City',
+        name: loc.name,
+      })),
+    },
+  ],
+};
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription}>
+<BaseLayout title={pageTitle} description={pageDescription} schema={locationsIndexSchema}>
   <Header />
 
   <main class="flex-grow">
