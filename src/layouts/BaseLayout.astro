@@ -115,11 +115,50 @@ const defaultSchemaGraph = {
   <body
     class="bg-brand-surface font-sans text-slate-800 antialiased min-h-screen flex flex-col selection:bg-brand-peony selection:text-brand-dark"
   >
+    <a
+      href="#main-content"
+      class="visually-hidden focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-5 focus:py-3 focus:rounded-2xl focus:bg-brand-orchid focus:text-white focus:font-bold focus:shadow-xl"
+    >
+      Skip to main content
+    </a>
     <slot />
   </body>
 </html>
 
 <style is:global>
+  :root {
+    --color-brand-orchid: #8224e3;
+    --color-brand-ocean: #009cc2;
+    --color-brand-berry: #b02994;
+    --color-brand-peony: #e490bd;
+    --color-brand-amethyst: #7f53aa;
+    --color-brand-dark: #190a2c;
+    --color-brand-surface: #f8f4fd;
+    --color-brand-border: #e8ddf5;
+    --in-oklab: ;
+    --in-oklch: ;
+  }
+
+  @supports (background: linear-gradient(in oklab, white, black)) {
+    :root {
+      --in-oklab: in oklab;
+      --in-oklch: in oklch;
+    }
+  }
+
+  /* Visually hidden utility that reveals on focus for skip links */
+  .visually-hidden:where(:not(:focus-within, :active)) {
+    position: absolute !important;
+    clip-path: inset(50%) !important;
+    overflow: hidden !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    white-space: nowrap !important;
+  }
+
   /* Readability & Responsive Typography Best Practices */
   html {
     text-size-adjust: 100%;
@@ -136,23 +175,30 @@ const defaultSchemaGraph = {
 
   h1, h2, h3, h4 {
     text-wrap: balance;
-    line-height: 1.25;
+    line-height: 1.22;
   }
 
   p {
     text-wrap: pretty;
   }
 
+  /* Accessible High-Contrast Focus Indicator */
+  :where(a:any-link, button, summary, select, input, textarea):focus-visible {
+    outline: 3px solid var(--color-brand-orchid);
+    outline-offset: 3px;
+  }
+
   /* Custom Scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
   }
   ::-webkit-scrollbar-track {
     background: #f1edfa;
   }
   ::-webkit-scrollbar-thumb {
     background: #c3a1ed;
-    border-radius: 4px;
+    border-radius: 9999px;
+    border: 2px solid #f1edfa;
   }
   ::-webkit-scrollbar-thumb:hover {
     background: #8224e3;
@@ -161,19 +207,106 @@ const defaultSchemaGraph = {
   /* Subtle Glassmorphism */
   .glass-nav {
     background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
   }
 
-  /* Animated gradient badge */
+  /* Playful Brand Gradients with OKLCH / OKLab Color Interpolation */
   .brand-gradient {
-    background: linear-gradient(135deg, #8224e3 0%, #b02994 50%, #009cc2 100%);
+    background: linear-gradient(135deg var(--in-oklch), #8224e3 0%, #b02994 52%, #009cc2 100%);
+  }
+
+  .brand-gradient-soft {
+    background: linear-gradient(135deg var(--in-oklab), rgba(130, 36, 227, 0.08) 0%, rgba(228, 144, 189, 0.14) 50%, rgba(0, 156, 194, 0.08) 100%);
   }
 
   .brand-gradient-text {
-    background: linear-gradient(135deg, #8224e3 0%, #b02994 60%, #009cc2 100%);
+    background: linear-gradient(135deg var(--in-oklch), #8224e3 0%, #b02994 55%, #009cc2 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  /* Playful Polka Dot Pattern Background */
+  .playful-dots {
+    --distance: 24px;
+    --radius: 1.5px;
+    --polka: radial-gradient(circle, rgba(130, 36, 227, 0.14) var(--radius), transparent calc(var(--radius) + 0.5px));
+    background: var(--polka) 0 0, var(--polka) var(--distance) var(--distance) var(--color-brand-surface);
+    background-size: calc(var(--distance) * 2) calc(var(--distance) * 2);
+  }
+
+  /* Playful Tactile Card & Button Utilities */
+  .card-playful {
+    border-radius: 1.75rem;
+    corner-shape: squircle;
+    box-shadow:
+      0 4px 12px -2px rgba(25, 10, 44, 0.04),
+      0 12px 28px -6px rgba(130, 36, 227, 0.08);
+    transition:
+      transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+      box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+      border-color 0.25s ease;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .card-playful:hover {
+      transform: translateY(-5px);
+      box-shadow:
+        0 10px 20px -4px rgba(25, 10, 44, 0.06),
+        0 24px 40px -10px rgba(130, 36, 227, 0.16);
+    }
+  }
+
+  .btn-playful {
+    transition:
+      transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
+      box-shadow 0.28s ease,
+      background-color 0.2s ease;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .btn-playful:hover:not(:disabled) {
+      transform: translateY(-2px) scale(1.015);
+    }
+    .btn-playful:active:not(:disabled) {
+      transform: translateY(0) scale(0.97);
+    }
+  }
+
+  /* Progressive Scroll-Driven Entry Animations */
+  @media (prefers-reduced-motion: no-preference) {
+    @supports ((animation-timeline: view()) and (animation-range: entry)) {
+      @keyframes playfulReveal {
+        from {
+          opacity: 0;
+          transform: translateY(22px) scale(0.98);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      .scroll-reveal {
+        animation: playfulReveal auto cubic-bezier(0.22, 1, 0.36, 1) backwards;
+        animation-timeline: view();
+        animation-range: entry 5% cover 22%;
+      }
+    }
+
+    @keyframes floatSlow {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+
+    .animate-float-slow {
+      animation: floatSlow 4.5s ease-in-out infinite;
+    }
   }
 
   /* Modal Animation */

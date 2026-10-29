@@ -2,11 +2,16 @@
 import { faqsData } from '../data/therapyTeams';
 ---
 <!-- SECTION: FREQUENTLY ASKED QUESTIONS (STRUCTURED DATA READY) -->
-<section class="py-20 bg-brand-surface border-t border-brand-border">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <span class="text-xs uppercase tracking-widest font-bold text-brand-ocean">Family Questions Answered</span>
-      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-2">Frequently Asked Questions</h2>
+<section class="py-20 playful-dots border-t border-brand-border">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-brand-ocean/15 text-xs uppercase tracking-widest font-extrabold text-brand-ocean">
+        <span aria-hidden="true">💬</span> Friendly Family Guide
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Got Questions? We’ve Got Simple Answers</h2>
+      <p class="mt-3 text-slate-600 font-medium text-sm sm:text-base">
+        Everything you need to know about in-home therapy, OAP funding, and our CPBAO-supervised clinical duos.
+      </p>
     </div>
 
     <div class="space-y-4" id="faqAccordion">
@@ -14,26 +19,55 @@ import { faqsData } from '../data/therapyTeams';
         faqsData.map((faq) => (
           <details
             name="faq-accordion"
-            class="group bg-white rounded-2xl border border-brand-border overflow-hidden shadow-sm"
+            class="card-playful group bg-white border-2 border-brand-border open:border-brand-orchid/60 overflow-hidden"
           >
-            <summary class="w-full text-left p-6 font-bold text-slate-900 flex justify-between items-center gap-4 hover:text-brand-orchid transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden">
-              <span>{faq.question}</span>
-              <svg
-                class="w-5 h-5 text-slate-400 transition-transform duration-200 group-open:rotate-180 shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
+            <summary class="w-full text-left p-6 font-extrabold text-slate-900 text-base sm:text-lg flex justify-between items-center gap-4 hover:text-brand-orchid transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+              <span class="flex items-center gap-3">
+                <span class="w-7 h-7 rounded-xl bg-brand-surface border border-brand-border text-brand-orchid flex items-center justify-center text-sm shrink-0 group-open:bg-brand-orchid group-open:text-white transition-colors" aria-hidden="true">
+                  ?
+                </span>
+                <span>{faq.question}</span>
+              </span>
+              <span class="w-8 h-8 rounded-full bg-brand-surface flex items-center justify-center shrink-0 group-open:bg-brand-orchid/10">
+                <svg
+                  class="w-5 h-5 text-brand-orchid transition-transform duration-300 group-open:rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
             </summary>
             <div
-              class="px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-50 pt-4"
+              class="px-6 pb-6 text-sm sm:text-base text-slate-700 font-medium leading-relaxed border-t border-brand-border/50 pt-4"
               set:html={faq.answer}
             />
           </details>
         ))
       }
+    </div>
+
+    <!-- Friendly Bottom Support Callout -->
+    <div class="mt-12 p-6 sm:p-8 rounded-[2rem] bg-white border-2 border-brand-border shadow-card flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+      <div class="flex flex-col sm:flex-row items-center gap-4">
+        <span class="w-14 h-14 rounded-2xl brand-gradient text-white flex items-center justify-center text-2xl shrink-0 shadow-glow-orchid" aria-hidden="true">
+          👋
+        </span>
+        <div>
+          <h3 class="text-lg font-extrabold text-slate-900">Not sure which therapy path fits your child best?</h3>
+          <p class="text-xs sm:text-sm text-slate-600 font-medium mt-1">
+            Take our friendly 2-minute matching quiz and a Care Coordinator will walk you through your options.
+          </p>
+        </div>
+      </div>
+      <button
+        type="button"
+        data-start-intake-wizard
+        class="btn-playful px-6 py-3.5 rounded-full brand-gradient text-white font-bold text-xs sm:text-sm shadow-glow-orchid shrink-0"
+      >
+        Start 2-Min Match Quiz →
+      </button>
     </div>
   </div>
 </section>

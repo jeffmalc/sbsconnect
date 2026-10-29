@@ -57,60 +57,76 @@
 </aside>
 
 <!-- MAIN NAVIGATION BAR (BRAND BOOK: 25px CLEAR PADDING & >= 80px MIN LOGO) -->
-<header class="sticky top-0 z-40 glass-nav border-b border-brand-border">
+<header class="sticky top-0 z-40 glass-nav border-b border-brand-border/80 shadow-sm">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
     <!-- Brand Logo Container with Required 25px Padding & Minimum Width -->
-    <a href="/#hero" class="flex items-center gap-3 p-[10px] md:p-[15px] group">
+    <a href="/#hero" class="flex items-center gap-3 p-[10px] md:p-[15px] group rounded-2xl">
       <img
         src="/logo.png"
-        alt="Side by Side Therapy Connect"
+        alt="Side by Side Therapy Connect Home"
         class="h-12 sm:h-14 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
       />
     </a>
 
-    <!-- Desktop Navigation Menu -->
-    <nav class="hidden lg:flex items-center gap-7" aria-label="Main Navigation">
-      <a href="/#how-it-works" class="font-bold text-sm text-slate-800 hover:text-brand-orchid transition-colors"
-        >How We Connect</a
+    <!-- Desktop Navigation Menu (Playful Pill Style) -->
+    <nav class="hidden lg:flex items-center gap-1.5 bg-brand-surface/80 p-1.5 rounded-full border border-brand-border/70" aria-label="Primary">
+      <a
+        href="/#how-it-works"
+        class="px-3.5 py-2 rounded-full font-bold text-sm text-slate-800 hover:text-brand-orchid hover:bg-white hover:shadow-sm transition-all"
+        >How It Works</a
       >
-      <a href="/#directory" class="font-bold text-sm text-slate-800 hover:text-brand-orchid transition-colors"
-        >Therapy Teams</a
+      <a
+        href="/#directory"
+        class="px-3.5 py-2 rounded-full font-bold text-sm text-slate-800 hover:text-brand-orchid hover:bg-white hover:shadow-sm transition-all"
+        >Meet Teams</a
       >
-      <a href="/locations" class="font-bold text-sm text-slate-800 hover:text-brand-orchid transition-colors"
-        >Locations</a
+      <a
+        href="/locations"
+        class="px-3.5 py-2 rounded-full font-bold text-sm text-slate-800 hover:text-brand-orchid hover:bg-white hover:shadow-sm transition-all inline-flex items-center gap-1"
       >
-      <a href="/#services" class="font-bold text-sm text-slate-800 hover:text-brand-orchid transition-colors"
-        >Disciplines</a
+        <span>Locations</span>
+        <span class="px-1.5 py-0.2 rounded-full bg-brand-ocean/15 text-brand-ocean text-[10px] font-extrabold">69</span>
+      </a>
+      <a
+        href="/#services"
+        class="px-3.5 py-2 rounded-full font-bold text-sm text-slate-800 hover:text-brand-orchid hover:bg-white hover:shadow-sm transition-all"
+        >Services</a
       >
-      <a href="/#pricing" class="font-bold text-sm text-slate-800 hover:text-brand-orchid transition-colors"
-        >Pricing &amp; Cost</a
+      <a
+        href="/#pricing"
+        class="px-3.5 py-2 rounded-full font-bold text-sm text-slate-800 hover:text-brand-orchid hover:bg-white hover:shadow-sm transition-all"
+        >OAP Calculator</a
       >
-      <a href="/#for-therapists" class="font-bold text-sm text-slate-800 hover:text-brand-orchid transition-colors"
-        >Join as Clinician</a
+      <a
+        href="/#for-therapists"
+        class="px-3.5 py-2 rounded-full font-bold text-sm text-slate-800 hover:text-brand-orchid hover:bg-white hover:shadow-sm transition-all"
+        >For Clinicians</a
       >
     </nav>
 
     <!-- Action Buttons & Quick Modals -->
-    <div class="hidden sm:flex items-center gap-3">
+    <div class="hidden sm:flex items-center gap-2.5">
       <button
         type="button"
         data-open-llms-modal
-        title="View LLM Knowledge Graph Document"
-        class="p-2.5 rounded-full text-slate-600 hover:text-brand-orchid hover:bg-brand-peony/20 transition-all border border-transparent hover:border-brand-peony/40"
+        aria-label="Open llms.txt AI Knowledge Graph"
+        class="px-3 py-2 rounded-full text-slate-600 hover:text-brand-orchid hover:bg-brand-peony/20 transition-all border border-brand-border/60 bg-white shadow-sm"
       >
-        <span class="text-xs font-mono font-bold px-1 py-0.5 bg-slate-100 rounded">llms.txt</span>
+        <span class="text-xs font-mono font-bold">llms.txt</span>
       </button>
 
       <button
         type="button"
         data-start-intake-wizard
-        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold text-white bg-brand-orchid hover:bg-brand-amethyst shadow-glow-orchid transition-all hover:shadow-lg active:scale-95"
+        class="btn-playful inline-flex items-center gap-2 px-5 py-3 rounded-full text-sm font-bold text-white brand-gradient shadow-glow-orchid group"
       >
         <span>Find My Team Match</span>
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-          ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3"
-          ></path></svg
-        >
+        <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white/20 transition-transform group-hover:translate-x-0.5">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"
+            ></path></svg
+          >
+        </span>
       </button>
     </div>
 
@@ -118,8 +134,8 @@
     <button
       id="mobileMenuBtn"
       type="button"
-      class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-brand-peony/20 transition-colors"
-      aria-label="Toggle navigation menu"
+      class="lg:hidden p-2.5 rounded-2xl text-slate-700 bg-brand-surface hover:bg-brand-peony/20 border border-brand-border transition-colors"
+      aria-label="Toggle menu"
       aria-expanded="false"
       aria-controls="mobileMenu"
     >
@@ -142,27 +158,27 @@
   </div>
 
   <!-- Mobile Navigation Drawer -->
-  <div id="mobileMenu" class="hidden lg:hidden border-t border-brand-border bg-white px-6 py-6 space-y-4 shadow-xl">
-    <nav class="flex flex-col space-y-3" aria-label="Mobile Navigation">
-      <a href="/#how-it-works" data-mobile-nav-link class="text-base font-bold text-slate-800 hover:text-brand-orchid py-1"
-        >How We Connect</a
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-brand-border bg-white px-6 py-6 space-y-4 shadow-2xl rounded-b-3xl">
+    <nav class="flex flex-col space-y-2" aria-label="Mobile">
+      <a href="/#how-it-works" data-mobile-nav-link class="px-4 py-2.5 rounded-2xl text-base font-bold text-slate-800 hover:bg-brand-surface hover:text-brand-orchid transition-colors"
+        >✨ How We Connect</a
       >
-      <a href="/#directory" data-mobile-nav-link class="text-base font-bold text-slate-800 hover:text-brand-orchid py-1"
-        >Therapy Teams Directory</a
+      <a href="/#directory" data-mobile-nav-link class="px-4 py-2.5 rounded-2xl text-base font-bold text-slate-800 hover:bg-brand-surface hover:text-brand-orchid transition-colors"
+        >👩‍⚕️ Meet Therapy Teams</a
       >
-      <a href="/locations" data-mobile-nav-link class="text-base font-bold text-slate-800 hover:text-brand-orchid py-1"
-        >All Ontario Locations</a
+      <a href="/locations" data-mobile-nav-link class="px-4 py-2.5 rounded-2xl text-base font-bold text-slate-800 hover:bg-brand-surface hover:text-brand-orchid transition-colors"
+        >📍 All 69 Ontario Locations</a
       >
-      <a href="/#services" data-mobile-nav-link class="text-base font-bold text-slate-800 hover:text-brand-orchid py-1"
-        >Connected Disciplines</a
+      <a href="/#services" data-mobile-nav-link class="px-4 py-2.5 rounded-2xl text-base font-bold text-slate-800 hover:bg-brand-surface hover:text-brand-orchid transition-colors"
+        >🧩 In-Home Disciplines</a
       >
-      <a href="/#pricing" data-mobile-nav-link class="text-base font-bold text-slate-800 hover:text-brand-orchid py-1"
-        >Pricing &amp; Cost Calculator</a
+      <a href="/#pricing" data-mobile-nav-link class="px-4 py-2.5 rounded-2xl text-base font-bold text-slate-800 hover:bg-brand-surface hover:text-brand-orchid transition-colors"
+        >🧮 OAP Cost Calculator</a
       >
       <a
         href="/#for-therapists"
         data-mobile-nav-link
-        class="text-base font-bold text-slate-800 hover:text-brand-orchid py-1">For Clinicians / Contractors</a
+        class="px-4 py-2.5 rounded-2xl text-base font-bold text-slate-800 hover:bg-brand-surface hover:text-brand-orchid transition-colors">🤝 Join as Clinician</a
       >
     </nav>
     <div class="pt-4 border-t border-slate-100 flex flex-col gap-3">
@@ -170,15 +186,15 @@
         type="button"
         data-mobile-nav-link
         data-start-intake-wizard
-        class="w-full py-3 rounded-full text-center font-bold text-white bg-brand-orchid shadow-glow-orchid"
+        class="btn-playful w-full py-3.5 rounded-full text-center font-bold text-white brand-gradient shadow-glow-orchid"
       >
-        Find My Team Match
+        Find My Team Match →
       </button>
-      <div class="flex items-center justify-between text-xs text-slate-500 pt-1">
-        <button type="button" data-mobile-nav-link data-open-llms-modal class="underline"
+      <div class="flex items-center justify-between text-xs text-slate-500 pt-1 px-2">
+        <button type="button" data-mobile-nav-link data-open-llms-modal class="underline font-semibold hover:text-brand-orchid"
           >View llms.txt standard</button
         >
-        <button type="button" data-mobile-nav-link data-open-schema-modal class="underline"
+        <button type="button" data-mobile-nav-link data-open-schema-modal class="underline font-semibold hover:text-brand-orchid"
           >View JSON-LD Schema</button
         >
       </div>
