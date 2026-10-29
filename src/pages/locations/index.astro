@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Modals from '../../components/Modals.astro';
+import OntarioCoverageMap from '../../components/OntarioCoverageMap.astro';
 import { ontarioLocations } from '../../data/locations';
 
 const pageTitle = 'Ontario Service Locations & In-Home ABA Coverage | Side by Side Therapy Connect';
@@ -101,6 +102,9 @@ const locationsIndexSchema = {
         </div>
       </div>
     </section>
+
+    <!-- REALISTIC INTERACTIVE PROVINCE-WIDE COVERAGE MAP -->
+    <OntarioCoverageMap />
 
     <!-- LOCATIONS DIRECTORY GROUPED BY REGION -->
     <section class="py-20 bg-brand-surface">

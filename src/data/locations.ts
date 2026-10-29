@@ -1,4 +1,5 @@
 export interface LocationInfo {
+  coordinates: { lat: number; lng: number };
   slug: string;
   name: string;
   region: string;
@@ -29,6 +30,7 @@ export const ontarioLocations: LocationInfo[] = [
   // --- 1. Toronto (Core & Boroughs) ---
   {
     slug: 'toronto',
+    coordinates: { lat: 43.6532, lng: -79.3832 },
     name: 'Toronto',
     region: 'City of Toronto',
     regionSlug: 'toronto',
@@ -69,6 +71,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'north-york',
+    coordinates: { lat: 43.7615, lng: -79.4111 },
     name: 'North York',
     region: 'City of Toronto',
     regionSlug: 'toronto',
@@ -109,6 +112,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'scarborough',
+    coordinates: { lat: 43.7764, lng: -79.2318 },
     name: 'Scarborough',
     region: 'City of Toronto',
     regionSlug: 'toronto',
@@ -149,6 +153,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'etobicoke',
+    coordinates: { lat: 43.6205, lng: -79.5132 },
     name: 'Etobicoke',
     region: 'City of Toronto',
     regionSlug: 'toronto',
@@ -189,6 +194,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'east-york',
+    coordinates: { lat: 43.6912, lng: -79.3272 },
     name: 'East York',
     region: 'City of Toronto',
     regionSlug: 'toronto',
@@ -231,6 +237,7 @@ export const ontarioLocations: LocationInfo[] = [
   // --- 2. Peel Region ---
   {
     slug: 'mississauga',
+    coordinates: { lat: 43.589, lng: -79.6441 },
     name: 'Mississauga',
     region: 'Peel Region',
     regionSlug: 'peel',
@@ -271,6 +278,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'brampton',
+    coordinates: { lat: 43.7315, lng: -79.7624 },
     name: 'Brampton',
     region: 'Peel Region',
     regionSlug: 'peel',
@@ -311,6 +319,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'caledon',
+    coordinates: { lat: 43.8643, lng: -79.9984 },
     name: 'Caledon',
     region: 'Peel Region',
     regionSlug: 'peel',
@@ -353,6 +362,7 @@ export const ontarioLocations: LocationInfo[] = [
   // --- 3. York Region ---
   {
     slug: 'vaughan',
+    coordinates: { lat: 43.8563, lng: -79.5085 },
     name: 'Vaughan',
     region: 'York Region',
     regionSlug: 'york',
@@ -393,6 +403,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'markham',
+    coordinates: { lat: 43.8561, lng: -79.337 },
     name: 'Markham',
     region: 'York Region',
     regionSlug: 'york',
@@ -433,6 +444,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'richmond-hill',
+    coordinates: { lat: 43.8828, lng: -79.4403 },
     name: 'Richmond Hill',
     region: 'York Region',
     regionSlug: 'york',
@@ -473,6 +485,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'newmarket',
+    coordinates: { lat: 44.0592, lng: -79.4613 },
     name: 'Newmarket',
     region: 'York Region',
     regionSlug: 'york',
@@ -513,6 +526,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'aurora',
+    coordinates: { lat: 44.0065, lng: -79.4504 },
     name: 'Aurora',
     region: 'York Region',
     regionSlug: 'york',
@@ -553,6 +567,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'king-city',
+    coordinates: { lat: 43.9298, lng: -79.5298 },
     name: 'King City',
     region: 'York Region',
     regionSlug: 'york',
@@ -593,6 +608,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'whitchurch-stouffville',
+    coordinates: { lat: 43.971, lng: -79.2504 },
     name: 'Whitchurch-Stouffville',
     region: 'York Region',
     regionSlug: 'york',
@@ -633,6 +649,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'georgina',
+    coordinates: { lat: 44.2989, lng: -79.4315 },
     name: 'Georgina',
     region: 'York Region',
     regionSlug: 'york',
@@ -673,6 +690,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'east-gwillimbury',
+    coordinates: { lat: 44.1378, lng: -79.4402 },
     name: 'East Gwillimbury',
     region: 'York Region',
     regionSlug: 'york',
@@ -715,6 +733,7 @@ export const ontarioLocations: LocationInfo[] = [
   // --- 4. Halton Region ---
   {
     slug: 'oakville',
+    coordinates: { lat: 43.4675, lng: -79.6877 },
     name: 'Oakville',
     region: 'Halton Region',
     regionSlug: 'hamilton',
@@ -755,6 +774,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'burlington',
+    coordinates: { lat: 43.3255, lng: -79.799 },
     name: 'Burlington',
     region: 'Halton Region',
     regionSlug: 'hamilton',
@@ -795,6 +815,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'milton',
+    coordinates: { lat: 43.5183, lng: -79.8774 },
     name: 'Milton',
     region: 'Halton Region',
     regionSlug: 'hamilton',
@@ -835,6 +856,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'halton-hills',
+    coordinates: { lat: 43.63, lng: -79.95 },
     name: 'Halton Hills (Georgetown & Acton)',
     region: 'Halton Region',
     regionSlug: 'hamilton',
@@ -877,6 +899,7 @@ export const ontarioLocations: LocationInfo[] = [
   // --- 5. Durham Region ---
   {
     slug: 'pickering',
+    coordinates: { lat: 43.8384, lng: -79.0868 },
     name: 'Pickering',
     region: 'Durham Region',
     regionSlug: 'durham',
@@ -917,6 +940,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'ajax',
+    coordinates: { lat: 43.8509, lng: -79.0204 },
     name: 'Ajax',
     region: 'Durham Region',
     regionSlug: 'durham',
@@ -957,6 +981,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'whitby',
+    coordinates: { lat: 43.8975, lng: -78.9429 },
     name: 'Whitby',
     region: 'Durham Region',
     regionSlug: 'durham',
@@ -997,6 +1022,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'oshawa',
+    coordinates: { lat: 43.8971, lng: -78.8658 },
     name: 'Oshawa',
     region: 'Durham Region',
     regionSlug: 'durham',
@@ -1037,6 +1063,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'clarington',
+    coordinates: { lat: 43.9167, lng: -78.6 },
     name: 'Clarington (Bowmanville & Courtice)',
     region: 'Durham Region',
     regionSlug: 'durham',
@@ -1077,6 +1104,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'uxbridge',
+    coordinates: { lat: 44.1085, lng: -79.1205 },
     name: 'Uxbridge',
     region: 'Durham Region',
     regionSlug: 'durham',
@@ -1117,6 +1145,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'scugog',
+    coordinates: { lat: 44.1167, lng: -78.9333 },
     name: 'Scugog (Port Perry)',
     region: 'Durham Region',
     regionSlug: 'durham',
@@ -1159,6 +1188,7 @@ export const ontarioLocations: LocationInfo[] = [
   // --- 6. Hamilton & Niagara ---
   {
     slug: 'hamilton',
+    coordinates: { lat: 43.2557, lng: -79.8711 },
     name: 'Hamilton',
     region: 'Hamilton & Niagara',
     regionSlug: 'hamilton',
@@ -1199,6 +1229,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'ancaster',
+    coordinates: { lat: 43.2167, lng: -79.9833 },
     name: 'Ancaster',
     region: 'Hamilton & Niagara',
     regionSlug: 'hamilton',
@@ -1239,6 +1270,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'dundas',
+    coordinates: { lat: 43.2667, lng: -79.95 },
     name: 'Dundas',
     region: 'Hamilton & Niagara',
     regionSlug: 'hamilton',
@@ -1279,6 +1311,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'stoney-creek',
+    coordinates: { lat: 43.2167, lng: -79.7667 },
     name: 'Stoney Creek',
     region: 'Hamilton & Niagara',
     regionSlug: 'hamilton',
@@ -1319,6 +1352,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'grimsby',
+    coordinates: { lat: 43.1936, lng: -79.5606 },
     name: 'Grimsby',
     region: 'Hamilton & Niagara',
     regionSlug: 'niagara',
@@ -1359,6 +1393,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'lincoln',
+    coordinates: { lat: 43.1667, lng: -79.4167 },
     name: 'Lincoln (Beamsville)',
     region: 'Hamilton & Niagara',
     regionSlug: 'niagara',
@@ -1399,6 +1434,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'st-catharines',
+    coordinates: { lat: 43.1594, lng: -79.2469 },
     name: 'St. Catharines',
     region: 'Hamilton & Niagara',
     regionSlug: 'niagara',
@@ -1439,6 +1475,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'niagara-falls',
+    coordinates: { lat: 43.0896, lng: -79.0849 },
     name: 'Niagara Falls',
     region: 'Hamilton & Niagara',
     regionSlug: 'niagara',
@@ -1479,6 +1516,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'welland',
+    coordinates: { lat: 42.9922, lng: -79.2483 },
     name: 'Welland',
     region: 'Hamilton & Niagara',
     regionSlug: 'niagara',
@@ -1519,6 +1557,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'niagara-on-the-lake',
+    coordinates: { lat: 43.2553, lng: -79.0717 },
     name: 'Niagara-on-the-Lake',
     region: 'Hamilton & Niagara',
     regionSlug: 'niagara',
@@ -1559,6 +1598,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'fort-erie',
+    coordinates: { lat: 42.8989, lng: -78.9381 },
     name: 'Fort Erie',
     region: 'Hamilton & Niagara',
     regionSlug: 'niagara',
@@ -1601,6 +1641,7 @@ export const ontarioLocations: LocationInfo[] = [
   // --- 7. Waterloo Region & Guelph (Southwestern Ontario) ---
   {
     slug: 'kitchener',
+    coordinates: { lat: 43.4516, lng: -80.4925 },
     name: 'Kitchener',
     region: 'Waterloo Region',
     regionSlug: 'waterloo',
@@ -1641,6 +1682,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'waterloo',
+    coordinates: { lat: 43.4643, lng: -80.5204 },
     name: 'Waterloo',
     region: 'Waterloo Region',
     regionSlug: 'waterloo',
@@ -1681,6 +1723,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'cambridge',
+    coordinates: { lat: 43.3616, lng: -80.3144 },
     name: 'Cambridge',
     region: 'Waterloo Region',
     regionSlug: 'waterloo',
@@ -1721,6 +1764,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'guelph',
+    coordinates: { lat: 43.5448, lng: -80.2482 },
     name: 'Guelph',
     region: 'Wellington County',
     regionSlug: 'waterloo',
@@ -1761,6 +1805,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'fergus',
+    coordinates: { lat: 43.7042, lng: -80.3789 },
     name: 'Fergus & Elora (Centre Wellington)',
     region: 'Wellington County',
     regionSlug: 'waterloo',
@@ -1801,6 +1846,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'brantford',
+    coordinates: { lat: 43.1394, lng: -80.2644 },
     name: 'Brantford',
     region: 'Brant County',
     regionSlug: 'waterloo',
@@ -1841,6 +1887,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'woodstock',
+    coordinates: { lat: 43.1315, lng: -80.7472 },
     name: 'Woodstock',
     region: 'Oxford County',
     regionSlug: 'waterloo',
@@ -1881,6 +1928,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'stratford',
+    coordinates: { lat: 43.37, lng: -80.9822 },
     name: 'Stratford',
     region: 'Perth County',
     regionSlug: 'waterloo',
@@ -1921,6 +1969,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'london',
+    coordinates: { lat: 42.9849, lng: -81.2453 },
     name: 'London',
     region: 'Middlesex County',
     regionSlug: 'waterloo',
@@ -1961,6 +2010,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'st-thomas',
+    coordinates: { lat: 42.7788, lng: -81.1824 },
     name: 'St. Thomas',
     region: 'Elgin County',
     regionSlug: 'waterloo',
@@ -2003,6 +2053,7 @@ export const ontarioLocations: LocationInfo[] = [
   // --- 8. Simcoe County & Georgian Bay ---
   {
     slug: 'barrie',
+    coordinates: { lat: 44.3894, lng: -79.6903 },
     name: 'Barrie',
     region: 'Simcoe County',
     regionSlug: 'barrie',
@@ -2043,6 +2094,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'innisfil',
+    coordinates: { lat: 44.3, lng: -79.5833 },
     name: 'Innisfil',
     region: 'Simcoe County',
     regionSlug: 'barrie',
@@ -2083,6 +2135,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'bradford-west-gwillimbury',
+    coordinates: { lat: 44.1167, lng: -79.5667 },
     name: 'Bradford West Gwillimbury',
     region: 'Simcoe County',
     regionSlug: 'barrie',
@@ -2123,6 +2176,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'orillia',
+    coordinates: { lat: 44.6086, lng: -79.4197 },
     name: 'Orillia',
     region: 'Simcoe County',
     regionSlug: 'barrie',
@@ -2163,6 +2217,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'collingwood',
+    coordinates: { lat: 44.5, lng: -80.2167 },
     name: 'Collingwood & Blue Mountains',
     region: 'Simcoe County',
     regionSlug: 'barrie',
@@ -2203,6 +2258,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'wasaga-beach',
+    coordinates: { lat: 44.5206, lng: -80.0167 },
     name: 'Wasaga Beach',
     region: 'Simcoe County',
     regionSlug: 'barrie',
@@ -2243,6 +2299,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'new-tecumseth',
+    coordinates: { lat: 44.0833, lng: -79.75 },
     name: 'New Tecumseth (Alliston)',
     region: 'Simcoe County',
     regionSlug: 'barrie',
@@ -2283,6 +2340,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'midland',
+    coordinates: { lat: 44.75, lng: -79.8833 },
     name: 'Midland & Penetanguishene',
     region: 'Simcoe County',
     regionSlug: 'barrie',
@@ -2325,6 +2383,7 @@ export const ontarioLocations: LocationInfo[] = [
   // --- 9. Dufferin & Orangeville ---
   {
     slug: 'orangeville',
+    coordinates: { lat: 43.9197, lng: -80.0943 },
     name: 'Orangeville',
     region: 'Dufferin County',
     regionSlug: 'barrie',
@@ -2365,6 +2424,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'shelburne',
+    coordinates: { lat: 44.0792, lng: -80.2044 },
     name: 'Shelburne',
     region: 'Dufferin County',
     regionSlug: 'barrie',
@@ -2407,6 +2467,7 @@ export const ontarioLocations: LocationInfo[] = [
   // --- 10. Peterborough & Kawartha Lakes (Eastern Gateway) ---
   {
     slug: 'peterborough',
+    coordinates: { lat: 44.3091, lng: -78.3197 },
     name: 'Peterborough',
     region: 'Peterborough County',
     regionSlug: 'peterborough',
@@ -2447,6 +2508,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'kawartha-lakes',
+    coordinates: { lat: 44.35, lng: -78.75 },
     name: 'Kawartha Lakes (Lindsay)',
     region: 'Kawartha Lakes',
     regionSlug: 'peterborough',
@@ -2487,6 +2549,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'cobourg',
+    coordinates: { lat: 43.9598, lng: -78.1652 },
     name: 'Cobourg',
     region: 'Northumberland County',
     regionSlug: 'durham',
@@ -2527,6 +2590,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'port-hope',
+    coordinates: { lat: 43.95, lng: -78.3 },
     name: 'Port Hope',
     region: 'Northumberland County',
     regionSlug: 'durham',
@@ -2569,6 +2633,7 @@ export const ontarioLocations: LocationInfo[] = [
   // --- 11. Eastern Ontario & Belleville / Kingston Corridor ---
   {
     slug: 'belleville',
+    coordinates: { lat: 44.1628, lng: -77.3832 },
     name: 'Belleville & Quinte',
     region: 'Hastings County',
     regionSlug: 'ottawa',
@@ -2609,6 +2674,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'kingston',
+    coordinates: { lat: 44.2312, lng: -76.486 },
     name: 'Kingston',
     region: 'Frontenac County',
     regionSlug: 'ottawa',
@@ -2651,6 +2717,7 @@ export const ontarioLocations: LocationInfo[] = [
   // --- 12. Ottawa & National Capital Region ---
   {
     slug: 'ottawa',
+    coordinates: { lat: 45.4215, lng: -75.6972 },
     name: 'Ottawa',
     region: 'National Capital Region',
     regionSlug: 'ottawa',
@@ -2691,6 +2758,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'kanata',
+    coordinates: { lat: 45.3088, lng: -75.8986 },
     name: 'Kanata',
     region: 'National Capital Region',
     regionSlug: 'ottawa',
@@ -2731,6 +2799,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'nepean',
+    coordinates: { lat: 45.3349, lng: -75.7241 },
     name: 'Nepean & Barrhaven',
     region: 'National Capital Region',
     regionSlug: 'ottawa',
@@ -2771,6 +2840,7 @@ export const ontarioLocations: LocationInfo[] = [
   },
   {
     slug: 'orleans',
+    coordinates: { lat: 45.4745, lng: -75.52 },
     name: 'Orleans',
     region: 'National Capital Region',
     regionSlug: 'ottawa',

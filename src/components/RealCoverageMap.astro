@@ -1,0 +1,231 @@
+---
+import type { LocationInfo } from '../data/locations';
+
+interface Props {
+  location: LocationInfo;
+}
+
+const { location } = Astro.props;
+
+// Compute school positions relative to location coordinates so each school has an authentic geo anchor
+const schoolOffsets = [
+  { dLat: 0.016, dLng: -0.021 },
+  { dLat: -0.014, dLng: 0.023 },
+  { dLat: 0.019, dLng: 0.016 },
+];
+
+const schoolsWithCoords = (location.schools || []).map((school, i) => {
+  const offset = schoolOffsets[i % schoolOffsets.length];
+  return {
+    ...school,
+    lat: location.coordinates.lat + offset.dLat,
+    lng: location.coordinates.lng + offset.dLng,
+  };
+});
+---
+
+<div class="bg-gradient-to-br from-slate-900 to-brand-dark text-white rounded-3xl p-6 sm:p-7 shadow-card border border-brand-orchid/30 relative overflow-hidden flex flex-col">
+  <!-- Map Header & Status -->
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-white/10 pb-4 mb-4 gap-3">
+    <div>
+      <div class="flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="text-[11px] uppercase tracking-wider font-bold text-brand-peony">Live GPS Territory Coverage</span>
+      </div>
+      <h3 class="text-xl font-bold text-white mt-0.5">{location.name} In-Home Coverage Map</h3>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 inline-flex items-center gap-1.5">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        <span>Full 15km Radius Active</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- Real Interactive Map Container -->
+  <div class="relative w-full rounded-2xl overflow-hidden border border-white/15 bg-slate-950 shadow-inner flex-grow">
+    <!-- Map viewport -->
+    <div
+      id={`leaflet-map-${location.slug}`}
+      class="w-full h-[360px] sm:h-[430px] z-0"
+      data-lat={location.coordinates.lat}
+      data-lng={location.coordinates.lng}
+      data-name={location.name}
+      data-region={location.region}
+      data-schools={JSON.stringify(schoolsWithCoords)}
+    >
+      <!-- Fallback / Loading Skeleton -->
+      <div class="w-full h-full flex flex-col items-center justify-center bg-slate-900/80 text-slate-400 p-6 text-center">
+        <div class="w-10 h-10 border-4 border-brand-orchid border-t-transparent rounded-full animate-spin mb-3"></div>
+        <p class="text-sm font-semibold text-white">Loading High-Resolution Cartography...</p>
+        <p class="text-xs text-slate-400 mt-1">{location.name}, Ontario Territory Map</p>
+      </div>
+    </div>
+
+    <!-- Quick Floating Action Overlay -->
+    <div class="absolute top-3 right-3 z-[400] flex flex-col gap-1.5">
+      <button
+        type="button"
+        id={`reset-map-${location.slug}`}
+        title="Reset map view to center"
+        class="bg-white/95 hover:bg-white text-slate-800 px-3 py-1.5 rounded-xl shadow-md border border-slate-200 transition-all active:scale-95 text-xs font-bold flex items-center gap-1.5 backdrop-blur-sm cursor-pointer"
+      >
+        <svg class="w-3.5 h-3.5 text-brand-orchid" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+        </svg>
+        <span>Recenter</span>
+      </button>
+    </div>
+
+    <!-- Badge Info Pin at Bottom Left -->
+    <div class="absolute bottom-3 left-3 z-[400] bg-slate-900/90 backdrop-blur-md px-3.5 py-2 rounded-xl border border-white/15 text-xs text-slate-200 shadow-lg pointer-events-none">
+      <div class="font-bold text-white flex items-center gap-1.5">
+        <span class="w-2 h-2 rounded-full bg-brand-ocean"></span>
+        <span>{location.name} Clinical In-Home Hub</span>
+      </div>
+      <div class="text-[11px] text-slate-400 mt-0.5">
+        Therapist travel included • Zero clinic commute
+      </div>
+    </div>
+  </div>
+
+  <!-- Legend & Distance Footer -->
+  <div class="mt-4 pt-3 border-t border-white/10 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-300">
+    <div class="flex flex-wrap items-center gap-3 sm:gap-4">
+      <div class="flex items-center gap-1.5">
+        <span class="w-3 h-3 rounded-full bg-brand-ocean border border-white/40"></span>
+        <span class="text-slate-300">In-Home Clinical Hub</span>
+      </div>
+      <div class="flex items-center gap-1.5">
+        <span class="w-3 h-3 rounded-full bg-brand-orchid border border-white/40"></span>
+        <span class="text-slate-300">Partner School &amp; IEP Catchment</span>
+      </div>
+      <div class="flex items-center gap-1.5">
+        <span class="w-3 h-3 rounded-full border border-dashed border-brand-peony bg-brand-peony/20"></span>
+        <span class="text-slate-300">Direct Travel Perimeter</span>
+      </div>
+    </div>
+    <div class="text-slate-400 text-[11px]">
+      Metro Core Distance: <strong class="text-white">{location.approxDistanceKm} km</strong>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  (function() {
+    function initMap() {
+      if (typeof L === 'undefined') {
+        setTimeout(initMap, 80);
+        return;
+      }
+
+      const containers = document.querySelectorAll('[id^="leaflet-map-"]');
+      containers.forEach(function(el) {
+        if (el.dataset.initialized === 'true') return;
+        el.dataset.initialized = 'true';
+
+        // Clear loading skeleton
+        el.innerHTML = '';
+
+        const lat = parseFloat(el.dataset.lat || '43.6532');
+        const lng = parseFloat(el.dataset.lng || '-79.3832');
+        const name = el.dataset.name || 'Location';
+        const region = el.dataset.region || 'Ontario';
+        const schools = JSON.parse(el.dataset.schools || '[]');
+
+        // Initialize Map
+        const map = L.map(el.id, {
+          center: [lat, lng],
+          zoom: 12,
+          scrollWheelZoom: false,
+          zoomControl: true,
+        });
+
+        // CartoDB Voyager High-Res Clean Tiles
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>',
+          subdomains: 'abcd',
+          maxZoom: 19,
+        }).addTo(map);
+
+        // In-Home Direct Service Radius Circle (~13 km)
+        const serviceRadius = L.circle([lat, lng], {
+          color: '#8224e3',
+          fillColor: '#8224e3',
+          fillOpacity: 0.12,
+          weight: 2,
+          dashArray: '5, 5',
+          radius: 13500,
+        }).addTo(map);
+
+        serviceRadius.bindTooltip('Side by Side Direct In-Home Coverage Radius (' + name + ')', {
+          direction: 'top',
+          className: 'custom-map-tooltip'
+        });
+
+        // Custom Pulsing Hub Marker
+        const hubIcon = L.divIcon({
+          className: 'custom-hub-icon',
+          html: '<div style="position: relative; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center;">' +
+                  '<div style="position: absolute; width: 34px; height: 34px; border-radius: 50%; background: #009cc2; opacity: 0.45; animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;"></div>' +
+                  '<div style="position: relative; width: 30px; height: 30px; border-radius: 50%; background: #19053b; border: 2.5px solid #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center; color: #009cc2;">' +
+                    '<svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg>' +
+                  '</div>' +
+                '</div>',
+          iconSize: [34, 34],
+          iconAnchor: [17, 17],
+        });
+
+        const hubMarker = L.marker([lat, lng], { icon: hubIcon }).addTo(map);
+        hubMarker.bindPopup(
+          '<div style="font-family: Montserrat, sans-serif; min-width: 210px;">' +
+            '<div style="font-size: 10px; text-transform: uppercase; font-weight: 700; color: #8224e3; letter-spacing: 0.5px;">Side by Side Direct In-Home Hub</div>' +
+            '<h4 style="font-size: 14px; font-weight: 700; color: #0f172a; margin: 2px 0 4px 0;">' + name + ' Active Caseload</h4>' +
+            '<p style="font-size: 12px; color: #475569; margin: 0 0 6px 0; line-height: 1.4;">Registered Behaviour Analysts (R.B.A.) and Instructor Therapists travel directly to your family residence in ' + name + ' and surrounding ' + region + ' neighbourhoods.</p>' +
+            '<span style="display: inline-block; padding: 2px 8px; background: #e0f2fe; color: #0369a1; font-size: 10px; font-weight: 600; border-radius: 9999px;">✓ In-Home Service Active</span>' +
+          '</div>'
+        );
+
+        // School Markers
+        schools.forEach(function(sch) {
+          const schoolIcon = L.divIcon({
+            className: 'custom-school-icon',
+            html: '<div style="width: 28px; height: 28px; border-radius: 50%; background: #b02994; border: 2px solid #ffffff; box-shadow: 0 3px 8px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; color: #ffffff; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform=\'scale(1.15)\'" onmouseout="this.style.transform=\'scale(1)\'">' +
+                    '<svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a10.97 10.97 0 00-.25 2.449c0 3.327 2.14 6.136 5 6.945 2.86-.809 5-3.618 5-6.945 0-.853-.09-1.677-.25-2.449l2.644-1.131a1 1 0 000-1.84l-7-3z" /></svg>' +
+                  '</div>',
+            iconSize: [28, 28],
+            iconAnchor: [14, 14],
+          });
+
+          const schoolMarker = L.marker([sch.lat, sch.lng], { icon: schoolIcon }).addTo(map);
+          schoolMarker.bindPopup(
+            '<div style="font-family: Montserrat, sans-serif; min-width: 230px;">' +
+              '<span style="display: inline-block; padding: 2px 8px; background: #fdf2f8; color: #b02994; font-size: 10px; font-weight: 700; border-radius: 9999px; margin-bottom: 4px;">' + sch.type + '</span>' +
+              '<h4 style="font-size: 13px; font-weight: 700; color: #0f172a; margin: 0 0 4px 0;">' + sch.name + '</h4>' +
+              '<div style="font-size: 11px; font-weight: 600; color: #64748b; margin-bottom: 6px;">' + sch.grades + '</div>' +
+              '<p style="font-size: 11px; color: #334155; line-height: 1.4; margin: 0 0 6px 0; background: #f8fafc; padding: 6px 8px; border-radius: 6px; border-left: 3px solid #b02994;">' + sch.iepFocus + '</p>' +
+              '<span style="font-size: 10px; color: #166534; font-weight: 600;">✓ In-Home ABA &amp; IEP Alignment Supported</span>' +
+            '</div>'
+          );
+        });
+
+        // Recenter Button
+        const slug = el.id.replace('leaflet-map-', '');
+        const resetBtn = document.getElementById('reset-map-' + slug);
+        if (resetBtn) {
+          resetBtn.addEventListener('click', function() {
+            map.setView([lat, lng], 12);
+          });
+        }
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initMap);
+    } else {
+      initMap();
+    }
+  })();
+</script>
