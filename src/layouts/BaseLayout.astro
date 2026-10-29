@@ -58,6 +58,19 @@ const schemaGraph = {
 
     <!-- Structured Data Graph (E-E-A-T & CPBAO Compliance) -->
     <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
+
+    <!-- Simple Password Protection Check -->
+    <script is:inline>
+      (function() {
+        const path = window.location.pathname;
+        if (!path.startsWith('/password')) {
+          if (sessionStorage.getItem('sbs_auth') !== 'true') {
+            const currentUrl = encodeURIComponent(window.location.pathname + window.location.search);
+            window.location.replace('/password?returnUrl=' + currentUrl);
+          }
+        }
+      })();
+    </script>
   </head>
   <body
     class="bg-brand-surface font-sans text-slate-800 antialiased min-h-screen flex flex-col selection:bg-brand-peony selection:text-brand-dark"
