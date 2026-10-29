@@ -1,0 +1,367 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Modals from '../../components/Modals.astro';
+import { ontarioLocations, type LocationInfo } from '../../data/locations';
+import { therapyTeamsData } from '../../data/therapyTeams';
+
+export function getStaticPaths() {
+  return ontarioLocations.map((location) => ({
+    params: { slug: location.slug },
+    props: { location },
+  }));
+}
+
+interface Props {
+  location: LocationInfo;
+}
+
+const { location } = Astro.props;
+
+// Filter matching or nearby clinical teams based on regionSlug
+const matchingTeams = therapyTeamsData.filter((t) => {
+  if (location.regionSlug === 'toronto' && t.region === 'toronto') return true;
+  if (location.regionSlug === 'peel' && t.region === 'peel') return true;
+  if (location.regionSlug === 'york' && t.region === 'york') return true;
+  if (location.regionSlug === 'hamilton' && (t.region === 'hamilton' || t.region === 'peel')) return true;
+  if (location.regionSlug === 'niagara' && t.region === 'hamilton') return true;
+  if (location.regionSlug === 'waterloo' && (t.region === 'waterloo' || t.region === 'hamilton')) return true;
+  if (location.regionSlug === 'barrie' && (t.region === 'york' || t.region === 'toronto')) return true;
+  if (location.regionSlug === 'durham' && (t.region === 'toronto' || t.region === 'york')) return true;
+  if (location.regionSlug === 'peterborough' && (t.region === 'toronto' || t.region === 'york')) return true;
+  if (location.regionSlug === 'ottawa' && t.region === 'ottawa') return true;
+  return false;
+});
+
+// Fallback to top teams if none directly matched
+const displayTeams = matchingTeams.length > 0 ? matchingTeams : therapyTeamsData.slice(0, 3);
+
+const pageTitle = `In-Home Autism ABA Therapy in ${location.name}, Ontario | Side by Side Therapy Connect`;
+const pageDescription = `Connect your family with vetted, independent in-home Instructor Therapists and supervising Registered Behaviour Analysts (R.B.A. Ont.) in ${location.name}. 100% OAP-eligible.`;
+
+// LocalBusiness / MedicalBusiness Structured Data tailored specifically to this city/location
+const locationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalBusiness',
+  name: `Side by Side Therapy Connect - ${location.name}`,
+  legalName: 'Side by Side Therapy Inc.',
+  url: `https://sidebysidetherapyconnect.ca/locations/${location.slug}`,
+  description: location.description,
+  areaServed: {
+    '@type': 'City',
+    name: location.name,
+    containedInPlace: {
+      '@type': 'AdministrativeArea',
+      name: 'Ontario, Canada',
+    },
+  },
+  medicalSpecialty: [
+    'Applied Behaviour Analysis',
+    'Assent-based behavioral therapy',
+    'Neurodiversity-affirming care',
+    'In-home pediatric therapy',
+  ],
+  availableService: [
+    {
+      '@type': 'TherapeuticProcedure',
+      name: `In-Home ABA Therapy Clinical Matching in ${location.name}`,
+      description: `Connecting ${location.name} families with certified Instructor Therapists directly supervised by Registered Behaviour Analysts.`,
+    },
+  ],
+};
+
+// BreadcrumbList Schema for Google Search
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://sidebysidetherapyconnect.ca/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Ontario Service Locations',
+      item: 'https://sidebysidetherapyconnect.ca/locations',
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: location.name,
+      item: `https://sidebysidetherapyconnect.ca/locations/${location.slug}`,
+    },
+  ],
+};
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Location-Specific Schema Markup -->
+  <script type="application/ld+json" set:html={JSON.stringify(locationSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <Header />
+
+  <main class="flex-grow">
+    <!-- BREADCRUMBS NAVIGATION -->
+    <nav aria-label="Breadcrumb" class="bg-brand-surface border-b border-brand-border py-3 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto flex items-center gap-2 text-xs font-semibold text-slate-500">
+        <a href="/" class="hover:text-brand-orchid transition-colors">Home</a>
+        <span>/</span>
+        <a href="/locations" class="hover:text-brand-orchid transition-colors">Locations</a>
+        <span>/</span>
+        <span class="text-brand-dark font-bold">{location.name}</span>
+      </div>
+    </nav>
+
+    <!-- LOCATION HERO SECTION -->
+    <section class="relative overflow-hidden pt-12 pb-16 md:pt-16 md:pb-24 bg-gradient-to-b from-white via-brand-surface to-white border-b border-brand-border">
+      <!-- Background Ambient Blobs -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-peony/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+      <div class="absolute top-10 right-10 w-80 h-80 bg-brand-ocean/15 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl">
+          <!-- Regional Pill -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-brand-peony/50 text-brand-dark shadow-sm text-xs font-semibold mb-6">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Serving {location.name} ({location.region}) &bull; In-Home Clinical Duos Available</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-[1.15]">
+            In-Home Autism Therapy in <span class="brand-gradient-text">{location.name}, Ontario</span>
+          </h1>
+
+          <p class="mt-6 text-lg sm:text-xl text-slate-600 font-medium leading-relaxed">
+            {location.description} We hand-pair your family with a certified front-line Instructor Therapist backed by direct, live supervision from a licensed <strong class="text-brand-ocean">Registered Behaviour Analyst (R.B.A. Ont.)</strong> per CPBAO Standard 4.
+          </p>
+
+          <!-- Fast Action CTA Bar -->
+          <div class="mt-8 flex flex-wrap items-center gap-4">
+            <button
+              type="button"
+              data-start-intake-location={location.name}
+              class="px-8 py-3.5 rounded-full brand-gradient text-white font-bold text-sm shadow-glow-orchid hover:opacity-95 transition-all active:scale-95 flex items-center gap-2"
+            >
+              <span>Match with a Team in {location.name}</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </button>
+
+            <a
+              href="#local-teams"
+              class="px-6 py-3.5 rounded-full bg-white hover:bg-brand-surface text-slate-700 font-bold text-sm border border-brand-border transition-all shadow-sm"
+            >
+              View Available Teams
+            </a>
+          </div>
+
+          <!-- Postal / Coverage Pills -->
+          <div class="mt-8 pt-6 border-t border-brand-border flex flex-wrap items-center gap-2 text-xs text-slate-500 font-medium">
+            <span class="font-bold text-slate-700 uppercase tracking-wider text-[11px] mr-1">Postal Code Prefixes Serviced:</span>
+            {location.postalPrefixes.map((prefix) => (
+              <span class="px-2.5 py-1 rounded-md bg-white border border-brand-border text-slate-700 font-mono text-[11px] font-bold">
+                {prefix}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY IN-HOME IN THIS REGION -->
+    <section class="py-16 bg-white border-b border-brand-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-6 rounded-3xl bg-brand-surface border border-brand-border">
+            <div class="w-12 h-12 rounded-2xl bg-brand-orchid/10 text-brand-orchid flex items-center justify-center font-bold text-lg mb-4">
+              🏡
+            </div>
+            <h3 class="font-bold text-slate-900 text-lg mb-2">No Clinic Commute</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Skip stressful highway drives and traffic across {location.name}. Sessions happen in your child's natural environment—kitchen, bedroom, living room, and backyard.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-brand-surface border border-brand-border">
+            <div class="w-12 h-12 rounded-2xl bg-brand-ocean/10 text-brand-ocean flex items-center justify-center font-bold text-lg mb-4">
+              🛡️
+            </div>
+            <h3 class="font-bold text-slate-900 text-lg mb-2">CPBAO Standard 4 Compliance</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Every Instructor Therapist in {location.name} is directly supervised by a licensed Ontario Registered Behaviour Analyst. Zero unregulated tiered supervision.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-brand-surface border border-brand-border">
+            <div class="w-12 h-12 rounded-2xl bg-brand-berry/10 text-brand-berry flex items-center justify-center font-bold text-lg mb-4">
+              📋
+            </div>
+            <h3 class="font-bold text-slate-900 text-lg mb-2">100% OAP Reconcilable</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Invoices are structured to satisfy Ontario Autism Program (OAP Core Clinical Services, Childhood Budgets) and private health insurance requirements.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AVAILABLE TEAMS COVERING THIS AREA -->
+    <section id="local-teams" class="py-20 bg-brand-surface">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-12">
+          <span class="text-xs uppercase tracking-widest font-bold text-brand-ocean">Local Clinical Network</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-2">
+            Clinical Duos Servicing {location.name}
+          </h2>
+          <p class="mt-3 text-slate-600 text-sm sm:text-base font-medium">
+            These pre-paired Instructor Therapists and Supervising RBAs are accepting new clients for in-home sessions in {location.name} and surrounding communities.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {displayTeams.map((team) => (
+            <article class="bg-white rounded-3xl p-6 border border-brand-border shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-4">
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-brand-surface text-brand-dark border border-brand-border">
+                    <svg class="w-3 h-3 text-brand-ocean" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                    </svg>
+                    Covers {location.name}
+                  </span>
+                  <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    In-Home Ready
+                  </span>
+                </div>
+
+                <div class="flex items-center gap-4 mb-4">
+                  <img
+                    src={team.therapist.avatar}
+                    alt={team.therapist.name}
+                    loading="lazy"
+                    class="w-14 h-14 rounded-2xl object-cover border-2 border-brand-orchid/30 shadow-sm"
+                  />
+                  <div>
+                    <h3 class="font-bold text-slate-900 text-lg leading-snug group-hover:text-brand-orchid transition-colors">
+                      {team.therapist.name}
+                    </h3>
+                    <span class="text-xs font-semibold text-brand-orchid block">{team.therapist.title}</span>
+                    <span class="text-[11px] text-slate-400 font-medium">{team.therapist.experience}</span>
+                  </div>
+                </div>
+
+                <div class="p-3.5 rounded-2xl bg-brand-surface/90 border border-brand-border mb-4 text-xs">
+                  <div class="flex items-center justify-between text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">
+                    <span>Supervising Registrant</span>
+                    <span class="text-brand-ocean font-mono">{team.supervisor.cpbaoReg}</span>
+                  </div>
+                  <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-brand-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                    {team.supervisor.name}
+                  </div>
+                  <div class="text-[11px] text-slate-500 mt-0.5">{team.supervisor.credentials}</div>
+                </div>
+
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  {team.disciplines.map((d) => (
+                    <span class="px-2.5 py-1 rounded-lg text-[10px] font-bold bg-slate-100 text-slate-600">{d}</span>
+                  ))}
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100">
+                <button
+                  type="button"
+                  data-match-specific-team={team.id}
+                  data-team-location={location.name}
+                  class="w-full py-2.5 rounded-xl brand-gradient text-white font-bold text-xs shadow-glow-orchid hover:opacity-95 transition-all text-center"
+                >
+                  Request Match with This Team in {location.name}
+                </button>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- NEARBY SERVICE AREAS -->
+    <section class="py-16 bg-white border-t border-brand-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-xl font-bold text-slate-900 mb-4">
+          Adjacent In-Home Service Locations to {location.name}
+        </h2>
+        <p class="text-sm text-slate-600 mb-6 max-w-2xl">
+          Our therapists travel throughout {location.region}. We also support families residing in neighbouring communities:
+        </p>
+
+        <div class="flex flex-wrap gap-2">
+          {location.nearbyAreas.map((area) => {
+            const matchedLocation = ontarioLocations.find(
+              (l) => l.name.toLowerCase() === area.toLowerCase() || l.name.toLowerCase().includes(area.toLowerCase())
+            );
+            return matchedLocation ? (
+              <a
+                href={`/locations/${matchedLocation.slug}`}
+                class="px-4 py-2 rounded-xl bg-brand-surface hover:bg-brand-peony/20 border border-brand-border text-xs font-bold text-brand-dark transition-colors"
+              >
+                {area} &rarr;
+              </a>
+            ) : (
+              <span class="px-4 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs font-medium text-slate-600">
+                {area}
+              </span>
+            );
+          })}
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-100">
+          <a href="/locations" class="text-xs font-bold text-brand-orchid hover:underline inline-flex items-center gap-1">
+            &larr; View All Ontario Service Hubs (GTA, Hamilton, Niagara, Waterloo, Simcoe, Ottawa)
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <Modals />
+
+  <script>
+    import { therapyTeamsData } from '../../data/therapyTeams';
+
+    const intakeModal = document.getElementById('intakeModal') as HTMLDialogElement | null;
+
+    document.querySelectorAll<HTMLElement>('[data-start-intake-location]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const loc = btn.dataset.startIntakeLocation || '';
+        const notes = document.getElementById('intakeNotes') as HTMLTextAreaElement | null;
+        if (notes && loc) {
+          notes.value = `Family requesting in-home therapy services in ${loc}.`;
+        }
+        intakeModal?.showModal();
+      });
+    });
+
+    document.querySelectorAll<HTMLElement>('[data-match-specific-team]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const teamId = btn.dataset.matchSpecificTeam || '';
+        const loc = btn.dataset.teamLocation || '';
+        const team = therapyTeamsData.find((t) => t.id === teamId);
+        const notes = document.getElementById('intakeNotes') as HTMLTextAreaElement | null;
+        if (notes && team) {
+          notes.value = `Requesting match with ${team.therapist.name} & ${team.supervisor.name} in ${loc}.`;
+        }
+        intakeModal?.showModal();
+      });
+    });
+  </script>
+</BaseLayout>
