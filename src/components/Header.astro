@@ -1,0 +1,181 @@
+---
+---
+<!-- TOP ANNOUNCEMENT BAR (OAP & CPBAO COMPLIANCE BANNER) -->
+<aside
+  aria-label="Regulatory Notice"
+  class="bg-gradient-to-r from-brand-dark via-brand-amethyst to-brand-dark text-white text-xs md:text-sm py-2 px-4 border-b border-brand-orchid/30"
+>
+  <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+    <div class="flex items-center gap-2">
+      <span
+        class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-ocean text-white uppercase tracking-wider"
+        >CPBAO Standard 4</span
+      >
+      <span class="text-slate-200"
+        >All connections feature direct supervision by licensed <strong
+          >Registered Behaviour Analysts (R.B.A. Ont.)</strong
+        >. No tiered middlemen.</span
+      >
+    </div>
+    <div class="flex items-center gap-4 text-xs">
+      <a
+        href="#funding"
+        class="text-brand-peony hover:text-white underline font-semibold transition-colors"
+        >Ontario Autism Program (OAP) Invoicing Ready</a
+      >
+      <button
+        type="button"
+        data-open-schema-modal
+        class="hidden md:inline-flex items-center gap-1 text-slate-300 hover:text-white transition-colors"
+      >
+        <svg class="w-3.5 h-3.5 text-brand-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg
+        >
+        GEO / Schema View
+      </button>
+    </div>
+  </div>
+</aside>
+
+<!-- MAIN NAVIGATION BAR (BRAND BOOK: 25px CLEAR PADDING & >= 80px MIN LOGO) -->
+<header class="sticky top-0 z-40 glass-nav border-b border-brand-border">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
+    <!-- Brand Logo Container with Required 25px Padding & Minimum Width -->
+    <a href="#hero" class="flex items-center gap-3 p-[18px] md:p-[25px] group">
+      <!-- SVG Brand Symbol: Two Connected Figures / Heart Embraced Hands -->
+      <div
+        class="w-10 h-10 md:w-11 md:h-11 rounded-2xl brand-gradient flex items-center justify-center text-white shadow-glow-orchid transition-transform duration-300 group-hover:scale-105"
+      >
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+          ></path>
+        </svg>
+      </div>
+      <div class="min-w-[120px]">
+        <span
+          class="block text-lg md:text-xl font-bold tracking-tight text-slate-900 group-hover:text-brand-orchid transition-colors"
+        >
+          Side by Side
+        </span>
+        <span class="block text-[11px] md:text-xs font-semibold tracking-wider uppercase text-brand-ocean -mt-1">
+          Therapy Connect
+        </span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation Menu -->
+    <nav class="hidden lg:flex items-center gap-8" aria-label="Main Navigation">
+      <a href="#how-it-works" class="font-bold text-sm text-slate-700 hover:text-brand-orchid transition-colors"
+        >How We Connect</a
+      >
+      <a href="#directory" class="font-bold text-sm text-slate-700 hover:text-brand-orchid transition-colors"
+        >Therapy Teams</a
+      >
+      <a href="#services" class="font-bold text-sm text-slate-700 hover:text-brand-orchid transition-colors"
+        >Disciplines</a
+      >
+      <a href="#funding" class="font-bold text-sm text-slate-700 hover:text-brand-orchid transition-colors"
+        >OAP & Funding</a
+      >
+      <a href="#for-therapists" class="font-bold text-sm text-slate-700 hover:text-brand-orchid transition-colors"
+        >Join as Clinician</a
+      >
+    </nav>
+
+    <!-- Action Buttons & Quick Modals -->
+    <div class="hidden sm:flex items-center gap-3">
+      <button
+        type="button"
+        data-open-llms-modal
+        title="View LLM Knowledge Graph Document"
+        class="p-2.5 rounded-full text-slate-600 hover:text-brand-orchid hover:bg-brand-peony/20 transition-all border border-transparent hover:border-brand-peony/40"
+      >
+        <span class="text-xs font-mono font-bold px-1 py-0.5 bg-slate-100 rounded">llms.txt</span>
+      </button>
+
+      <button
+        type="button"
+        data-start-intake-wizard
+        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold text-white bg-brand-orchid hover:bg-brand-amethyst shadow-glow-orchid transition-all hover:shadow-lg active:scale-95"
+      >
+        <span>Find My Team Match</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3"
+          ></path></svg
+        >
+      </button>
+    </div>
+
+    <!-- Mobile Hamburger Toggle -->
+    <button
+      id="mobileMenuBtn"
+      type="button"
+      class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-brand-peony/20 transition-colors"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="mobileMenu"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          id="menuIconClosed"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+        <path
+          id="menuIconOpen"
+          class="hidden"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-brand-border bg-white px-6 py-6 space-y-4 shadow-xl">
+    <nav class="flex flex-col space-y-3" aria-label="Mobile Navigation">
+      <a href="#how-it-works" data-mobile-nav-link class="text-base font-bold text-slate-800 hover:text-brand-orchid py-1"
+        >How We Connect</a
+      >
+      <a href="#directory" data-mobile-nav-link class="text-base font-bold text-slate-800 hover:text-brand-orchid py-1"
+        >Therapy Teams Directory</a
+      >
+      <a href="#services" data-mobile-nav-link class="text-base font-bold text-slate-800 hover:text-brand-orchid py-1"
+        >Connected Disciplines</a
+      >
+      <a href="#funding" data-mobile-nav-link class="text-base font-bold text-slate-800 hover:text-brand-orchid py-1"
+        >OAP & Private Insurance</a
+      >
+      <a
+        href="#for-therapists"
+        data-mobile-nav-link
+        class="text-base font-bold text-slate-800 hover:text-brand-orchid py-1">For Clinicians / Contractors</a
+      >
+    </nav>
+    <div class="pt-4 border-t border-slate-100 flex flex-col gap-3">
+      <button
+        type="button"
+        data-mobile-nav-link
+        data-start-intake-wizard
+        class="w-full py-3 rounded-full text-center font-bold text-white bg-brand-orchid shadow-glow-orchid"
+      >
+        Find My Team Match
+      </button>
+      <div class="flex items-center justify-between text-xs text-slate-500 pt-1">
+        <button type="button" data-mobile-nav-link data-open-llms-modal class="underline"
+          >View llms.txt standard</button
+        >
+        <button type="button" data-mobile-nav-link data-open-schema-modal class="underline"
+          >View JSON-LD Schema</button
+        >
+      </div>
+    </div>
+  </div>
+</header>

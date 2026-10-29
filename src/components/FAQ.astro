@@ -1,0 +1,39 @@
+---
+import { faqsData } from '../data/therapyTeams';
+---
+<!-- SECTION: FREQUENTLY ASKED QUESTIONS (STRUCTURED DATA READY) -->
+<section class="py-20 bg-brand-surface border-t border-brand-border">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="text-xs uppercase tracking-widest font-bold text-brand-ocean">Family Questions Answered</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-2">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="space-y-4" id="faqAccordion">
+      {
+        faqsData.map((faq) => (
+          <details
+            name="faq-accordion"
+            class="group bg-white rounded-2xl border border-brand-border overflow-hidden shadow-sm"
+          >
+            <summary class="w-full text-left p-6 font-bold text-slate-900 flex justify-between items-center gap-4 hover:text-brand-orchid transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+              <span>{faq.question}</span>
+              <svg
+                class="w-5 h-5 text-slate-400 transition-transform duration-200 group-open:rotate-180 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div
+              class="px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-50 pt-4"
+              set:html={faq.answer}
+            />
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</section>

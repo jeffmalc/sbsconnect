@@ -1,0 +1,129 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Side by Side Therapy Connect | In-Home Autism Therapy Teams in Ontario',
+  description = 'Connecting Ontario families with vetted, independent in-home ABA therapy teams under direct Registered Behaviour Analyst (R.B.A. Ont.) supervision. OAP-eligible.',
+} = Astro.props;
+
+const schemaGraph = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalBusiness',
+  name: 'Side by Side Therapy Connect',
+  legalName: 'Side by Side Therapy Inc.',
+  url: 'https://sidebysidetherapyconnect.ca',
+  description:
+    'Ontario platform connecting families of children with ASD with vetted, independent in-home therapy teams under direct Registered Behaviour Analyst supervision.',
+  areaServed: {
+    '@type': 'AdministrativeArea',
+    name: 'Ontario, Canada',
+  },
+  medicalSpecialty: [
+    'Applied Behaviour Analysis',
+    'Assent-based behavioral therapy',
+    'Neurodiversity-affirming care',
+    'Speech-Language Pathology coordination',
+  ],
+  availableService: [
+    {
+      '@type': 'TherapeuticProcedure',
+      name: 'In-Home ABA Therapy Clinical Matching',
+    },
+    {
+      '@type': 'TherapeuticProcedure',
+      name: 'Transdisciplinary Care Coordination',
+    },
+  ],
+};
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Google Fonts: Montserrat (400, 500, 600, 700) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Structured Data Graph (E-E-A-T & CPBAO Compliance) -->
+    <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
+  </head>
+  <body
+    class="bg-brand-surface font-sans text-slate-800 antialiased min-h-screen flex flex-col selection:bg-brand-peony selection:text-brand-dark"
+  >
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1edfa;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #c3a1ed;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8224e3;
+  }
+
+  /* Subtle Glassmorphism */
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Animated gradient badge */
+  .brand-gradient {
+    background: linear-gradient(135deg, #8224e3 0%, #b02994 50%, #009cc2 100%);
+  }
+
+  .brand-gradient-text {
+    background: linear-gradient(135deg, #8224e3 0%, #b02994 60%, #009cc2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Modal Animation */
+  @keyframes modalFadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.97) translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  .animate-modal {
+    animation: modalFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* MANDATORY Dialog scroll containment rules */
+  dialog:modal {
+    overscroll-behavior: contain;
+  }
+  dialog::backdrop {
+    overflow: hidden;
+    overscroll-behavior: contain;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+</style>

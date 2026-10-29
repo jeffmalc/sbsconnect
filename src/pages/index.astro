@@ -1,0 +1,473 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Directory from '../components/Directory.astro';
+import Services from '../components/Services.astro';
+import FundingCalculator from '../components/FundingCalculator.astro';
+import ClinicianNetwork from '../components/ClinicianNetwork.astro';
+import FAQ from '../components/FAQ.astro';
+import Footer from '../components/Footer.astro';
+import Modals from '../components/Modals.astro';
+---
+
+<BaseLayout>
+  <Header />
+  <main class="flex-grow">
+    <Hero />
+    <HowItWorks />
+    <Directory />
+    <Services />
+    <FundingCalculator />
+    <ClinicianNetwork />
+    <FAQ />
+  </main>
+  <Footer />
+  <Modals />
+
+  <script>
+    import { therapyTeamsData } from '../data/therapyTeams';
+
+    // --- 1. POLYFILL FOR <dialog closedby="any"> LIGHT DISMISS ---
+    if (!('closedBy' in HTMLDialogElement.prototype)) {
+      const outside = (e: PointerEvent, dialog: HTMLDialogElement) => {
+        const r = dialog.getBoundingClientRect();
+        return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+      };
+      for (const dialog of document.querySelectorAll<HTMLDialogElement>('dialog[closedby="any"]')) {
+        let pressedOutside = false;
+        dialog.addEventListener('pointerdown', (e) => {
+          pressedOutside = outside(e, dialog);
+        });
+        dialog.addEventListener('pointerup', (e) => {
+          if (pressedOutside && outside(e, dialog)) dialog.close();
+        });
+      }
+    }
+
+    // --- 2. CUSTOM TOAST NOTIFICATION ---
+    function showToast(message: string, type: 'success' | 'error' = 'success') {
+      const toast = document.getElementById('toastNotification');
+      const title = document.getElementById('toastTitle');
+      const msg = document.getElementById('toastMessage');
+      const icon = document.getElementById('toastIcon');
+      if (!toast || !title || !msg || !icon) return;
+
+      title.textContent = type === 'success' ? 'Success' : 'Notice';
+      msg.textContent = message;
+
+      if (type === 'error') {
+        icon.className = 'w-7 h-7 rounded-full bg-rose-500 text-white flex items-center justify-center text-xs font-bold';
+        icon.textContent = '!';
+      } else {
+        icon.className =
+          'w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center text-xs font-bold';
+        icon.textContent = '✓';
+      }
+
+      toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+      }, 4500);
+    }
+
+    // --- 3. FILTER & DIRECTORY LOGIC ---
+    let currentRegion = 'all';
+    let activeTags: string[] = [];
+
+    function updateDirectoryDisplay() {
+      const cards = document.querySelectorAll<HTMLElement>('.team-card');
+      const countBadge = document.getElementById('resultsCountBadge');
+      const emptyMsg = document.getElementById('emptyTeamsMessage');
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        const region = card.dataset.region || '';
+        const tags = (card.dataset.tags || '').split(',').filter(Boolean);
+
+        const matchesRegion = currentRegion === 'all' || region === currentRegion;
+        const matchesTags = activeTags.length === 0 || activeTags.some((t) => tags.includes(t));
+
+        if (matchesRegion && matchesTags) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (countBadge) {
+        countBadge.textContent = `Showing ${visibleCount} Teams Available`;
+      }
+      if (emptyMsg) {
+        emptyMsg.classList.toggle('hidden', visibleCount > 0);
+      }
+    }
+
+    function filterByRegion(region: string) {
+      currentRegion = region;
+      document.querySelectorAll<HTMLButtonElement>('.region-btn').forEach((btn) => {
+        if (btn.dataset.region === region) {
+          btn.className =
+            'region-btn active px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-brand-orchid text-white';
+        } else {
+          btn.className =
+            'region-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 text-slate-700 hover:bg-brand-peony/20';
+        }
+      });
+      updateDirectoryDisplay();
+    }
+
+    function toggleSpecialtyTag(tag: string) {
+      const btn = document.querySelector<HTMLButtonElement>(`.tag-btn[data-tag="${tag}"]`);
+      if (!btn) return;
+
+      if (activeTags.includes(tag)) {
+        activeTags = activeTags.filter((t) => t !== tag);
+        btn.classList.remove('bg-brand-orchid', 'text-white', 'border-brand-orchid');
+        btn.classList.add('border-slate-200', 'text-slate-600');
+      } else {
+        activeTags.push(tag);
+        btn.classList.add('bg-brand-orchid', 'text-white', 'border-brand-orchid');
+        btn.classList.remove('border-slate-200', 'text-slate-600');
+      }
+      updateDirectoryDisplay();
+    }
+
+    function resetFilters() {
+      currentRegion = 'all';
+      activeTags = [];
+      document.querySelectorAll<HTMLButtonElement>('.tag-btn').forEach((btn) => {
+        btn.classList.remove('bg-brand-orchid', 'text-white', 'border-brand-orchid');
+        btn.classList.add('border-slate-200', 'text-slate-600');
+      });
+      filterByRegion('all');
+    }
+
+    // Bind Region & Tag Filter Buttons
+    document.querySelectorAll<HTMLButtonElement>('.region-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        if (btn.dataset.region) filterByRegion(btn.dataset.region);
+      });
+    });
+
+    document.querySelectorAll<HTMLButtonElement>('.tag-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        if (btn.dataset.tag) toggleSpecialtyTag(btn.dataset.tag);
+      });
+    });
+
+    document.getElementById('resetFiltersBtn')?.addEventListener('click', resetFilters);
+
+    // Hero Quick Filter
+    document.getElementById('heroQuickFilterBtn')?.addEventListener('click', () => {
+      const regionSelect = document.getElementById('heroRegionSelect') as HTMLSelectElement | null;
+      const goalSelect = document.getElementById('heroGoalSelect') as HTMLSelectElement | null;
+      const region = regionSelect?.value || 'all';
+      const goal = goalSelect?.value || 'all';
+
+      // Reset tag buttons first
+      activeTags = [];
+      document.querySelectorAll<HTMLButtonElement>('.tag-btn').forEach((btn) => {
+        btn.classList.remove('bg-brand-orchid', 'text-white', 'border-brand-orchid');
+        btn.classList.add('border-slate-200', 'text-slate-600');
+      });
+
+      if (goal === 'communication') toggleSpecialtyTag('aac');
+      if (goal === 'daily-living') toggleSpecialtyTag('toilet');
+      if (goal === 'regulation') toggleSpecialtyTag('assent');
+      if (goal === 'school') toggleSpecialtyTag('school');
+
+      filterByRegion(region);
+      document.getElementById('directory')?.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // --- 4. MULTI-STEP INTAKE WIZARD LOGIC ---
+    let wizardCurrentStep = 1;
+    const intakeModal = document.getElementById('intakeModal') as HTMLDialogElement | null;
+
+    function updateWizardUI() {
+      const title = document.getElementById('wizardTitle');
+      const bar = document.getElementById('wizardProgressBar');
+      const backBtn = document.getElementById('wizardBackBtn');
+      const nextBtn = document.getElementById('wizardNextBtn');
+
+      for (let i = 1; i <= 4; i++) {
+        document.getElementById(`wizardStep${i}`)?.classList.toggle('hidden', i !== wizardCurrentStep);
+      }
+
+      if (!title || !bar || !backBtn || !nextBtn) return;
+
+      if (wizardCurrentStep === 1) {
+        title.textContent = 'Step 1 of 4: Where Are You Located?';
+        bar.style.width = '25%';
+        backBtn.classList.add('hidden');
+        nextBtn.textContent = 'Continue to Child Info →';
+      } else if (wizardCurrentStep === 2) {
+        title.textContent = 'Step 2 of 4: Child & Schedule Info';
+        bar.style.width = '50%';
+        backBtn.classList.remove('hidden');
+        nextBtn.textContent = 'Continue to Clinical Goals →';
+      } else if (wizardCurrentStep === 3) {
+        title.textContent = 'Step 3 of 4: Clinical Priorities';
+        bar.style.width = '75%';
+        backBtn.classList.remove('hidden');
+        nextBtn.textContent = 'Continue to Funding →';
+      } else if (wizardCurrentStep === 4) {
+        title.textContent = 'Step 4 of 4: Funding & Final Match';
+        bar.style.width = '100%';
+        backBtn.classList.remove('hidden');
+        nextBtn.textContent = 'Submit Match Request 🎉';
+      }
+    }
+
+    function startIntakeWizard() {
+      wizardCurrentStep = 1;
+      updateWizardUI();
+      intakeModal?.showModal();
+    }
+
+    document.querySelectorAll('[data-start-intake-wizard]').forEach((btn) => {
+      btn.addEventListener('click', startIntakeWizard);
+    });
+
+    document.querySelectorAll<HTMLElement>('[data-prefill-goal]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const goalText = btn.dataset.prefillGoal || '';
+        startIntakeWizard();
+        const notes = document.getElementById('intakeNotes') as HTMLTextAreaElement | null;
+        if (notes) notes.value = `Family priority: ${goalText}.`;
+      });
+    });
+
+    document.getElementById('wizardNextBtn')?.addEventListener('click', () => {
+      if (wizardCurrentStep === 1) {
+        const nameInput = document.getElementById('intakeParentName') as HTMLInputElement | null;
+        const emailInput = document.getElementById('intakeEmail') as HTMLInputElement | null;
+        const name = nameInput?.value.trim() || '';
+        const email = emailInput?.value.trim() || '';
+        if (!name || !email) {
+          showToast('Please fill in your name and email to proceed.', 'error');
+          return;
+        }
+      }
+
+      if (wizardCurrentStep < 4) {
+        wizardCurrentStep++;
+        updateWizardUI();
+      } else {
+        const parentName = (document.getElementById('intakeParentName') as HTMLInputElement | null)?.value || 'there';
+        const city = (document.getElementById('intakeCity') as HTMLSelectElement | null)?.value || 'your region';
+        intakeModal?.close();
+        showToast(
+          `Thank you, ${parentName}! We are matching you with an in-home team in ${city}. You will receive a clinical match brief within 24 hours.`,
+          'success'
+        );
+      }
+    });
+
+    document.getElementById('wizardBackBtn')?.addEventListener('click', () => {
+      if (wizardCurrentStep > 1) {
+        wizardCurrentStep--;
+        updateWizardUI();
+      }
+    });
+
+    // --- 5. DETAILED TEAM PROFILE MODAL ---
+    const teamProfileModal = document.getElementById('teamProfileModal') as HTMLDialogElement | null;
+
+    function connectDirectWithTeam(teamId: string) {
+      const team = therapyTeamsData.find((t) => t.id === teamId);
+      startIntakeWizard();
+      const notes = document.getElementById('intakeNotes') as HTMLTextAreaElement | null;
+      if (team && notes) {
+        notes.value = `Interested in connecting with ${team.therapist.name} & ${team.supervisor.name} in ${team.regionName}.`;
+      }
+    }
+
+    function viewTeamProfile(teamId: string) {
+      const team = therapyTeamsData.find((t) => t.id === teamId);
+      const modalContent = document.getElementById('teamModalContent');
+      if (!team || !modalContent || !teamProfileModal) return;
+
+      modalContent.innerHTML = `
+        <form method="dialog">
+          <button type="submit" aria-label="Close Team Profile" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors">✕</button>
+        </form>
+
+        <div class="flex items-center gap-2 mb-4">
+          <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-surface text-brand-orchid border border-brand-border">
+            ${team.regionName} Clinical Duo
+          </span>
+          <span class="text-xs text-slate-400 font-semibold">${team.activeHours}</span>
+        </div>
+
+        <h2 id="teamProfileModalTitle" class="text-2xl font-bold text-slate-900 mb-1">
+          ${team.therapist.name} & ${team.supervisor.name}
+        </h2>
+        <p class="text-xs text-slate-500 mb-6">Connected In-Home Clinical Pair</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-5 rounded-2xl bg-brand-surface/70 border border-brand-border mb-6">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-brand-orchid block mb-1">In-Home Instructor Therapist</span>
+            <h3 class="font-bold text-base text-slate-900">${team.therapist.name}</h3>
+            <span class="text-xs text-slate-500 block mb-2">${team.therapist.credentials}</span>
+            <p class="text-xs text-slate-600 leading-relaxed">${team.therapist.bio}</p>
+          </div>
+
+          <div class="border-t md:border-t-0 md:border-l border-brand-border pt-4 md:pt-0 md:pl-5">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-brand-ocean block mb-1">Direct Supervising Registrant</span>
+            <h3 class="font-bold text-base text-slate-900">${team.supervisor.name}</h3>
+            <span class="text-xs text-brand-ocean font-mono block mb-2">${team.supervisor.cpbaoReg}</span>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Maintains full statutory responsibility for assessment, treatment planning, and real-time session fidelity per <strong>CPBAO Standard 4</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="space-y-2 mb-6">
+          <div class="flex items-center gap-2 text-xs text-slate-700">
+            <span class="text-emerald-500 font-bold">✓</span>
+            <span>Signed CPBAO Standard 4.4 Clinical Supervision Agreement on file</span>
+          </div>
+          <div class="flex items-center gap-2 text-xs text-slate-700">
+            <span class="text-emerald-500 font-bold">✓</span>
+            <span>OAP Core Clinical Services Invoicing format compliant</span>
+          </div>
+          <div class="flex items-center gap-2 text-xs text-slate-700">
+            <span class="text-emerald-500 font-bold">✓</span>
+            <span>Clean Ontario Vulnerable Sector Check & $2M Liability Insured</span>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-100 flex gap-3">
+          <form method="dialog" class="w-1/3">
+            <button type="submit" class="w-full py-2.5 rounded-xl border border-slate-200 text-xs font-bold text-slate-600 hover:bg-slate-50">
+              Close
+            </button>
+          </form>
+          <button type="button" id="modalConnectTeamBtn" autofocus class="w-2/3 py-2.5 rounded-xl brand-gradient text-white font-bold text-xs sm:text-sm shadow-glow-orchid hover:opacity-95">
+            Request Connection with This Team
+          </button>
+        </div>
+      `;
+
+      document.getElementById('modalConnectTeamBtn')?.addEventListener('click', () => {
+        teamProfileModal.close();
+        connectDirectWithTeam(team.id);
+      });
+
+      teamProfileModal.showModal();
+    }
+
+    document.querySelectorAll<HTMLButtonElement>('[data-view-team]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        if (btn.dataset.viewTeam) viewTeamProfile(btn.dataset.viewTeam);
+      });
+    });
+
+    document.querySelectorAll<HTMLButtonElement>('[data-connect-team]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        if (btn.dataset.connectTeam) connectDirectWithTeam(btn.dataset.connectTeam);
+      });
+    });
+
+    // --- 6. FUNDING CALCULATOR LOGIC ---
+    const hoursSlider = document.getElementById('hoursSlider') as HTMLInputElement | null;
+    const calcFundingType = document.getElementById('calcFundingType') as HTMLSelectElement | null;
+
+    function recalculateFunding() {
+      const weeklyHours = parseInt(hoursSlider?.value || '8', 10);
+      const hoursDisplay = document.getElementById('hoursDisplay');
+      if (hoursDisplay) hoursDisplay.textContent = `${weeklyHours} hrs/week`;
+
+      const monthlyHours = weeklyHours * 4;
+      const rbaHours = Math.max(2, Math.round(monthlyHours * 0.12));
+
+      const therapistRate = 70;
+      const rbaRate = 170;
+
+      const directCost = monthlyHours * therapistRate;
+      const rbaCost = rbaHours * rbaRate;
+      const totalCost = directCost + rbaCost;
+
+      const elMonthly = document.getElementById('calcMonthlyHours');
+      const elDirect = document.getElementById('calcDirectCost');
+      const elRbaHrs = document.getElementById('calcRbaHours');
+      const elRbaCost = document.getElementById('calcRbaCost');
+      const elTotal = document.getElementById('calcTotalCost');
+
+      if (elMonthly) elMonthly.textContent = String(monthlyHours);
+      if (elDirect) elDirect.textContent = `$${directCost.toLocaleString()}`;
+      if (elRbaHrs) elRbaHrs.textContent = String(rbaHours);
+      if (elRbaCost) elRbaCost.textContent = `$${rbaCost.toLocaleString()}`;
+      if (elTotal) elTotal.textContent = `$${totalCost.toLocaleString()}`;
+    }
+
+    hoursSlider?.addEventListener('input', recalculateFunding);
+    calcFundingType?.addEventListener('change', recalculateFunding);
+
+    // --- 7. OTHER MODALS (LLMs, Schema, Clinician) ---
+    const llmsModal = document.getElementById('llmsModal') as HTMLDialogElement | null;
+    const schemaModal = document.getElementById('schemaModal') as HTMLDialogElement | null;
+    const clinicianModal = document.getElementById('clinicianModal') as HTMLDialogElement | null;
+
+    document.querySelectorAll('[data-open-llms-modal]').forEach((btn) => {
+      btn.addEventListener('click', () => llmsModal?.showModal());
+    });
+
+    document.querySelectorAll('[data-open-schema-modal]').forEach((btn) => {
+      btn.addEventListener('click', () => schemaModal?.showModal());
+    });
+
+    document.querySelectorAll('[data-open-clinician-modal]').forEach((btn) => {
+      btn.addEventListener('click', () => clinicianModal?.showModal());
+    });
+
+    document.getElementById('copyLlmsBtn')?.addEventListener('click', async () => {
+      const text = document.getElementById('llmsTextSnippet')?.innerText || '';
+      try {
+        await navigator.clipboard.writeText(text);
+        showToast('llms.txt content copied to clipboard!', 'success');
+      } catch {
+        showToast('Could not copy to clipboard.', 'error');
+      }
+    });
+
+    document.getElementById('clinicianForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      clinicianModal?.close();
+      showToast(
+        'Application submitted! Our clinical director will reach out within 48 hours for credential verification.',
+        'success'
+      );
+    });
+
+    // --- 8. MOBILE MENU TOGGLE ---
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closedIcon = document.getElementById('menuIconClosed');
+    const openIcon = document.getElementById('menuIconOpen');
+
+    function toggleMobileMenu() {
+      if (!mobileMenu || !closedIcon || !openIcon || !mobileMenuBtn) return;
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      closedIcon.classList.toggle('hidden', !isHidden);
+      openIcon.classList.toggle('hidden', isHidden);
+      mobileMenuBtn.setAttribute('aria-expanded', String(!isHidden));
+    }
+
+    mobileMenuBtn?.addEventListener('click', toggleMobileMenu);
+    document.querySelectorAll('[data-mobile-nav-link]').forEach((link) => {
+      link.addEventListener('click', () => {
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+          toggleMobileMenu();
+        }
+      });
+    });
+
+    // Initialize calculator on load
+    recalculateFunding();
+  </script>
+</BaseLayout>

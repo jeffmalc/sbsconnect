@@ -1,0 +1,223 @@
+---
+import { therapyTeamsData } from '../data/therapyTeams';
+---
+<!-- SECTION: THERAPY TEAMS DIRECTORY (CONNECTED CLINICIANS) -->
+<section id="directory" class="py-20 bg-brand-surface">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+      <div>
+        <span class="text-xs uppercase tracking-widest font-bold text-brand-ocean">Verified Clinical Pairings</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-2">
+          Explore Connected Therapy Teams in Ontario
+        </h2>
+        <p class="mt-2 text-slate-600 text-sm sm:text-base font-medium">
+          Every profile shows the dedicated front-line therapist and the licensed Supervising RBA responsible for
+          clinical programming.
+        </p>
+      </div>
+
+      <!-- Live Counter & Active Filters Indicator -->
+      <div class="flex items-center gap-3">
+        <span
+          id="resultsCountBadge"
+          class="px-4 py-2 rounded-full bg-white text-xs font-bold text-brand-dark border border-brand-border shadow-sm"
+        >
+          Showing {therapyTeamsData.length} Teams Available
+        </span>
+        <button id="resetFiltersBtn" type="button" class="text-xs font-semibold text-brand-orchid hover:underline">
+          Reset Filters
+        </button>
+      </div>
+    </div>
+
+    <!-- Filter Control Tabs -->
+    <div class="bg-white p-4 rounded-3xl border border-brand-border shadow-sm mb-8 space-y-4">
+      <!-- Region Filter Pills -->
+      <div>
+        <span class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Filter by Region:</span>
+        <div class="flex flex-wrap gap-2" id="regionFiltersContainer">
+          <button
+            type="button"
+            class="region-btn active px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-brand-orchid text-white"
+            data-region="all">All Ontario</button
+          >
+          <button
+            type="button"
+            class="region-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 text-slate-700 hover:bg-brand-peony/20"
+            data-region="toronto">Toronto Central</button
+          >
+          <button
+            type="button"
+            class="region-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 text-slate-700 hover:bg-brand-peony/20"
+            data-region="peel">Peel (Mississauga / Brampton)</button
+          >
+          <button
+            type="button"
+            class="region-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 text-slate-700 hover:bg-brand-peony/20"
+            data-region="york">York Region</button
+          >
+          <button
+            type="button"
+            class="region-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 text-slate-700 hover:bg-brand-peony/20"
+            data-region="ottawa">Ottawa</button
+          >
+          <button
+            type="button"
+            class="region-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 text-slate-700 hover:bg-brand-peony/20"
+            data-region="waterloo">Waterloo / Guelph</button
+          >
+          <button
+            type="button"
+            class="region-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 text-slate-700 hover:bg-brand-peony/20"
+            data-region="hamilton">Hamilton / Halton</button
+          >
+        </div>
+      </div>
+
+      <!-- Specialty Quick Tags -->
+      <div class="pt-2 border-t border-slate-100 flex flex-wrap items-center gap-2">
+        <span class="text-xs font-bold text-slate-500 uppercase tracking-wider mr-2">Specialty Focus:</span>
+        <button
+          type="button"
+          class="tag-btn text-[11px] font-semibold px-3 py-1 rounded-lg border border-slate-200 text-slate-600 hover:border-brand-orchid transition-colors"
+          data-tag="aac">Non-Vocal / AAC</button
+        >
+        <button
+          type="button"
+          class="tag-btn text-[11px] font-semibold px-3 py-1 rounded-lg border border-slate-200 text-slate-600 hover:border-brand-orchid transition-colors"
+          data-tag="toilet">Toileting & Daily Routines</button
+        >
+        <button
+          type="button"
+          class="tag-btn text-[11px] font-semibold px-3 py-1 rounded-lg border border-slate-200 text-slate-600 hover:border-brand-orchid transition-colors"
+          data-tag="assent">Assent & Trauma-Informed</button
+        >
+        <button
+          type="button"
+          class="tag-btn text-[11px] font-semibold px-3 py-1 rounded-lg border border-slate-200 text-slate-600 hover:border-brand-orchid transition-colors"
+          data-tag="school">Kindergarten / School Prep</button
+        >
+      </div>
+    </div>
+
+    <!-- Clinician Teams Grid (Server-Rendered for SEO + Client-Filtered) -->
+    <div id="therapyTeamsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        therapyTeamsData.map((team) => (
+          <article
+            class="team-card bg-white rounded-3xl p-6 border border-brand-border shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group"
+            data-team-id={team.id}
+            data-region={team.region}
+            data-tags={team.tags.join(',')}
+          >
+            <div>
+              <!-- Region Badge & Active Status -->
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-brand-surface text-brand-dark border border-brand-border">
+                  <svg class="w-3 h-3 text-brand-ocean" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  {team.regionName}
+                </span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                  In-Home Ready
+                </span>
+              </div>
+
+              <!-- Front-Line Instructor Therapist Info -->
+              <div class="flex items-center gap-4 mb-4">
+                <img
+                  src={team.therapist.avatar}
+                  alt={team.therapist.name}
+                  loading="lazy"
+                  class="w-14 h-14 rounded-2xl object-cover border-2 border-brand-orchid/30 shadow-sm"
+                />
+                <div>
+                  <h3 class="font-bold text-slate-900 text-lg leading-snug group-hover:text-brand-orchid transition-colors">
+                    {team.therapist.name}
+                  </h3>
+                  <span class="text-xs font-semibold text-brand-orchid block">{team.therapist.title}</span>
+                  <span class="text-[11px] text-slate-400 font-medium">{team.therapist.experience}</span>
+                </div>
+              </div>
+
+              <!-- Regulatory Supervision Disclosure (CPBAO Requirement) -->
+              <div class="p-3.5 rounded-2xl bg-brand-surface/90 border border-brand-border mb-4 text-xs">
+                <div class="flex items-center justify-between text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">
+                  <span>Supervising Registrant</span>
+                  <span class="text-brand-ocean font-mono">{team.supervisor.cpbaoReg}</span>
+                </div>
+                <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5 text-brand-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                    />
+                  </svg>
+                  {team.supervisor.name}
+                </div>
+                <div class="text-[11px] text-slate-500 mt-0.5">{team.supervisor.credentials}</div>
+              </div>
+
+              <!-- Disciplines Pills -->
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                {team.disciplines.map((d) => (
+                  <span class="px-2.5 py-1 rounded-lg text-[10px] font-bold bg-slate-100 text-slate-600">{d}</span>
+                ))}
+              </div>
+            </div>
+
+            <!-- Card Actions -->
+            <div class="pt-4 border-t border-slate-100 flex items-center gap-2">
+              <button
+                type="button"
+                data-view-team={team.id}
+                class="flex-1 py-2.5 rounded-xl bg-brand-surface hover:bg-brand-peony/20 text-brand-dark font-bold text-xs transition-colors"
+              >
+                View Team Profile
+              </button>
+              <button
+                type="button"
+                data-connect-team={team.id}
+                class="flex-1 py-2.5 rounded-xl brand-gradient text-white font-bold text-xs shadow-glow-orchid hover:opacity-95 transition-all text-center"
+              >
+                Request Match
+              </button>
+            </div>
+          </article>
+        ))
+      }
+
+      <!-- Empty State Card -->
+      <div
+        id="emptyTeamsMessage"
+        class="hidden col-span-full py-16 text-center bg-white rounded-3xl border border-brand-border p-8"
+      >
+        <div
+          class="w-16 h-16 rounded-full bg-brand-peony/20 text-brand-orchid flex items-center justify-center mx-auto mb-4 text-2xl font-bold"
+        >
+          🔍
+        </div>
+        <h3 class="text-xl font-bold text-slate-800">No Pre-Paired Teams Matching Those Specific Filters</h3>
+        <p class="text-sm text-slate-500 mt-2 max-w-md mx-auto">
+          Our roster expands weekly across Ontario. Submit an intake request and we will curate a custom clinical duo in
+          your area.
+        </p>
+        <button
+          type="button"
+          data-start-intake-wizard
+          class="mt-6 px-6 py-2.5 rounded-full brand-gradient text-white font-bold text-xs shadow-md"
+        >
+          Submit Custom Match Request
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

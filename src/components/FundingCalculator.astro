@@ -1,0 +1,143 @@
+---
+---
+<!-- SECTION: ONTARIO AUTISM PROGRAM (OAP) & FUNDING CALCULATOR -->
+<section id="funding" class="py-20 bg-gradient-to-b from-brand-surface to-white border-t border-brand-border">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <span class="text-xs uppercase tracking-widest font-bold text-brand-orchid">Funding & Financial Transparency</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-2">Connecting Your Ontario Autism Funding</h2>
+      <p class="mt-4 text-slate-600 font-medium leading-relaxed">
+        Because our connected teams are supervised directly by Registered Behaviour Analysts (R.B.A. Ont.), 100% of your
+        clinical receipts are eligible for Ontario Autism Program (OAP) reconciliation and private insurance
+        reimbursement.
+      </p>
+    </div>
+
+    <!-- Interactive Budget & Invoice Calculator -->
+    <div class="bg-white rounded-3xl p-6 sm:p-10 border border-brand-border shadow-card max-w-4xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <!-- Controls Form -->
+        <div>
+          <h3 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+            <svg class="w-5 h-5 text-brand-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+              ></path></svg
+            >
+            OAP Allocation Estimator
+          </h3>
+
+          <!-- Funding Stream Selector -->
+          <div class="mb-5">
+            <label for="calcFundingType" class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2"
+              >Select Your Funding Source</label
+            >
+            <select
+              id="calcFundingType"
+              class="w-full p-3 rounded-2xl bg-brand-surface border border-brand-border text-sm font-semibold text-slate-800 focus:outline-none focus:border-brand-orchid"
+            >
+              <option value="oap-core">OAP Core Clinical Services (Determination of Needs)</option>
+              <option value="oap-childhood">OAP Childhood Budget / Interim One-Time ($20k / $5k)</option>
+              <option value="private-insurance">Private Extended Health Benefits (Psychology/RBA)</option>
+              <option value="self-pay">Direct Family Self-Pay</option>
+            </select>
+          </div>
+
+          <!-- Weekly In-Home Hours Slider -->
+          <div class="mb-6">
+            <div class="flex justify-between items-center mb-2">
+              <label for="hoursSlider" class="text-xs font-bold text-slate-500 uppercase tracking-wider"
+                >Weekly In-Home Hours</label
+              >
+              <span id="hoursDisplay" class="text-base font-bold text-brand-orchid">8 hrs/week</span>
+            </div>
+            <input
+              type="range"
+              id="hoursSlider"
+              min="2"
+              max="25"
+              value="8"
+              step="1"
+              class="w-full h-2 bg-brand-border rounded-lg appearance-none cursor-pointer accent-brand-orchid"
+            />
+            <div class="flex justify-between text-[11px] text-slate-400 mt-1 font-semibold">
+              <span>2 hrs (Focal)</span>
+              <span>10 hrs (Comprehensive)</span>
+              <span>25 hrs (Intensive)</span>
+            </div>
+          </div>
+
+          <!-- CPBAO Supervision Ratio Guarantee -->
+          <div class="p-4 rounded-2xl bg-brand-surface/70 border border-brand-border/60 text-xs text-slate-600">
+            <div class="flex items-center gap-2 font-bold text-brand-dark mb-1">
+              <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"
+                ><path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path></svg
+              >
+              CPBAO Standard 4.1(e) Supervision Included
+            </div>
+            Every connected team includes direct RBA clinical supervision (average 10-15% of direct hours) factored into
+            your billing package.
+          </div>
+        </div>
+
+        <!-- Dynamic Live Receipt & Breakdown Card -->
+        <div
+          class="bg-gradient-to-br from-slate-900 to-brand-dark text-white p-6 sm:p-7 rounded-3xl shadow-glow-orchid flex flex-col justify-between"
+        >
+          <div>
+            <div class="flex justify-between items-center border-b border-white/10 pb-4 mb-4">
+              <span class="text-xs uppercase font-bold text-brand-peony">Monthly Estimate</span>
+              <span
+                id="reimbursementStatusBadge"
+                class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"
+              >
+                100% OAP Reconcilable
+              </span>
+            </div>
+
+            <div class="space-y-3 text-sm">
+              <div class="flex justify-between">
+                <span class="text-slate-300"
+                  >Direct Instructor Therapist (<span id="calcMonthlyHours">32</span> hrs/mo):</span
+                >
+                <span id="calcDirectCost" class="font-bold text-white">$2,240</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-300">Supervising R.B.A. (Ont.) (<span id="calcRbaHours">4</span> hrs/mo):</span>
+                <span id="calcRbaCost" class="font-bold text-white">$680</span>
+              </div>
+              <div class="flex justify-between text-xs text-slate-400">
+                <span>PHIPA Platform & Graphing System:</span>
+                <span class="text-emerald-400 font-semibold">Included</span>
+              </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-4 mt-4 flex justify-between items-baseline">
+              <div>
+                <span class="block text-xs uppercase text-slate-400 font-semibold">Estimated Monthly Total</span>
+                <span class="text-[11px] text-slate-400">Based on standard Ontario contractor rates</span>
+              </div>
+              <span id="calcTotalCost" class="text-3xl font-bold text-brand-peony">$2,920</span>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-white/10">
+            <button
+              type="button"
+              data-start-intake-wizard
+              class="w-full py-3 rounded-2xl bg-brand-ocean hover:bg-brand-ocean/90 text-white font-bold text-sm shadow-md transition-all"
+            >
+              Request Match with These Hours
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

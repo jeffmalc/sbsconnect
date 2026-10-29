@@ -1,0 +1,494 @@
+---
+---
+<!-- ======================================================== -->
+<!-- MODAL: INTERACTIVE FAMILY INTAKE & MATCH WIZARD -->
+<!-- ======================================================== -->
+<dialog
+  id="intakeModal"
+  closedby="any"
+  aria-labelledby="wizardTitle"
+  class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-brand-border relative animate-modal m-auto text-slate-800"
+>
+  <!-- Close button -->
+  <form method="dialog">
+    <button
+      type="submit"
+      aria-label="Close Family Connection Matcher"
+      class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors"
+    >
+      ✕
+    </button>
+  </form>
+
+  <!-- Wizard Header & Progress Bar -->
+  <div class="mb-6">
+    <span class="text-[11px] uppercase tracking-wider font-bold text-brand-orchid">Family Connection Matcher</span>
+    <h2 id="wizardTitle" class="text-2xl font-bold text-slate-900 mt-1">Step 1 of 4: Where Are You Located?</h2>
+    <div class="w-full bg-slate-100 h-2 rounded-full mt-3 overflow-hidden">
+      <div id="wizardProgressBar" class="h-full brand-gradient transition-all duration-300 w-1/4"></div>
+    </div>
+  </div>
+
+  <!-- Step 1: Location & Contact -->
+  <div id="wizardStep1" class="space-y-4">
+    <p class="text-sm text-slate-600">
+      To connect you with an in-home Instructor Therapist within comfortable driving distance, please share your
+      location details:
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div>
+        <label for="intakeParentName" class="block text-xs font-bold text-slate-600 mb-1">Parent / Guardian Name *</label>
+        <input
+          type="text"
+          id="intakeParentName"
+          autofocus
+          placeholder="e.g. Rachel Miller"
+          class="w-full p-3 rounded-xl bg-brand-surface border border-brand-border text-sm focus:outline-none focus:border-brand-orchid"
+        />
+      </div>
+      <div>
+        <label for="intakeEmail" class="block text-xs font-bold text-slate-600 mb-1">Contact Email *</label>
+        <input
+          type="email"
+          id="intakeEmail"
+          placeholder="rachel@example.com"
+          class="w-full p-3 rounded-xl bg-brand-surface border border-brand-border text-sm focus:outline-none focus:border-brand-orchid"
+        />
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div>
+        <label for="intakePostal" class="block text-xs font-bold text-slate-600 mb-1">Postal Code (First 3 digits) *</label>
+        <input
+          type="text"
+          id="intakePostal"
+          placeholder="e.g. L5B or K1P"
+          maxlength="7"
+          class="w-full p-3 rounded-xl bg-brand-surface border border-brand-border text-sm focus:outline-none focus:border-brand-orchid uppercase"
+        />
+      </div>
+      <div>
+        <label for="intakeCity" class="block text-xs font-bold text-slate-600 mb-1">City / Region *</label>
+        <select
+          id="intakeCity"
+          class="w-full p-3 rounded-xl bg-brand-surface border border-brand-border text-sm font-semibold focus:outline-none focus:border-brand-orchid"
+        >
+          <option value="Toronto">Toronto / North York / Etobicoke</option>
+          <option value="Mississauga">Mississauga / Brampton (Peel)</option>
+          <option value="Vaughan">Vaughan / Richmond Hill / Markham (York)</option>
+          <option value="Ottawa">Ottawa & Surrounding Areas</option>
+          <option value="Waterloo">Kitchener / Waterloo / Cambridge</option>
+          <option value="Hamilton">Hamilton / Burlington / Oakville</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 2: Child Profile -->
+  <div id="wizardStep2" class="space-y-4 hidden">
+    <p class="text-sm text-slate-600">
+      Tell us a bit about your child so our supervising RBA can evaluate clinical compatibility:
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div>
+        <label for="intakeChildAge" class="block text-xs font-bold text-slate-600 mb-1">Child's Current Age *</label>
+        <select
+          id="intakeChildAge"
+          class="w-full p-3 rounded-xl bg-brand-surface border border-brand-border text-sm font-semibold focus:outline-none focus:border-brand-orchid"
+        >
+          <option value="2-4">Early Years (2 – 4 years old)</option>
+          <option value="5-7">Primary (5 – 7 years old)</option>
+          <option value="8-12">Junior (8 – 12 years old)</option>
+          <option value="13+">Youth / Teen (13+ years old)</option>
+        </select>
+      </div>
+      <div>
+        <label for="intakeDiagnosis" class="block text-xs font-bold text-slate-600 mb-1">Diagnosis Status *</label>
+        <select
+          id="intakeDiagnosis"
+          class="w-full p-3 rounded-xl bg-brand-surface border border-brand-border text-sm font-semibold focus:outline-none focus:border-brand-orchid"
+        >
+          <option value="diagnosed">Formal ASD Diagnosis Confirmed</option>
+          <option value="assessing">Currently Undergoing Assessment</option>
+          <option value="other">Other Neurodivergence / Developmental Delay</option>
+        </select>
+      </div>
+    </div>
+
+    <div>
+      <span class="block text-xs font-bold text-slate-600 mb-1">Preferred In-Home Schedule</span>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
+        <label class="p-2.5 rounded-xl border border-brand-border flex items-center gap-2 cursor-pointer hover:bg-brand-surface">
+          <input type="checkbox" name="sched" value="weekday-morning" class="accent-brand-orchid" />
+          <span>Weekday Mornings</span>
+        </label>
+        <label class="p-2.5 rounded-xl border border-brand-border flex items-center gap-2 cursor-pointer hover:bg-brand-surface">
+          <input type="checkbox" name="sched" value="weekday-afternoon" checked class="accent-brand-orchid" />
+          <span>After School (3-6pm)</span>
+        </label>
+        <label class="p-2.5 rounded-xl border border-brand-border flex items-center gap-2 cursor-pointer hover:bg-brand-surface">
+          <input type="checkbox" name="sched" value="weekend" class="accent-brand-orchid" />
+          <span>Weekends</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 3: Clinical Focus Areas -->
+  <div id="wizardStep3" class="space-y-4 hidden">
+    <p class="text-sm text-slate-600">Select the developmental priorities your family wants to target:</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+      <label class="p-3 rounded-xl border border-brand-border flex items-center gap-2.5 cursor-pointer hover:bg-brand-surface">
+        <input type="checkbox" name="goals" value="Communication / Speech / AAC" checked class="accent-brand-orchid" />
+        <span class="font-semibold text-slate-800">Communication & Functional Speech (AAC/PECS)</span>
+      </label>
+      <label class="p-3 rounded-xl border border-brand-border flex items-center gap-2.5 cursor-pointer hover:bg-brand-surface">
+        <input type="checkbox" name="goals" value="Daily Living & Toilet Training" checked class="accent-brand-orchid" />
+        <span class="font-semibold text-slate-800">Toilet Training & Personal Routines</span>
+      </label>
+      <label class="p-3 rounded-xl border border-brand-border flex items-center gap-2.5 cursor-pointer hover:bg-brand-surface">
+        <input type="checkbox" name="goals" value="Emotion Regulation & Assent" class="accent-brand-orchid" />
+        <span class="font-semibold text-slate-800">Emotion Regulation & Assent-Based Support</span>
+      </label>
+      <label class="p-3 rounded-xl border border-brand-border flex items-center gap-2.5 cursor-pointer hover:bg-brand-surface">
+        <input type="checkbox" name="goals" value="School Transition & Peer Play" class="accent-brand-orchid" />
+        <span class="font-semibold text-slate-800">Kindergarten Readiness & Social Peer Play</span>
+      </label>
+    </div>
+
+    <div>
+      <label for="intakeNotes" class="block text-xs font-bold text-slate-600 mb-1"
+        >Additional Notes for the Supervising RBA (Optional)</label
+      >
+      <textarea
+        id="intakeNotes"
+        rows="2"
+        placeholder="e.g. Loves trains, prefers quiet rooms, currently using TouchChat on iPad..."
+        class="w-full p-3 rounded-xl bg-brand-surface border border-brand-border text-sm focus:outline-none focus:border-brand-orchid"
+      ></textarea>
+    </div>
+  </div>
+
+  <!-- Step 4: Funding & Confirmation -->
+  <div id="wizardStep4" class="space-y-4 hidden">
+    <p class="text-sm text-slate-600">How will you be funding these in-home therapy sessions?</p>
+
+    <div class="space-y-2 text-xs">
+      <label class="p-3 rounded-2xl border border-brand-border flex items-center gap-3 cursor-pointer hover:bg-brand-surface">
+        <input type="radio" name="fundingSelection" value="OAP Core Clinical Services" checked class="accent-brand-orchid" />
+        <div>
+          <span class="font-bold text-slate-900 block">Ontario Autism Program (OAP) Core Clinical Services</span>
+          <span class="text-slate-500">I have received an invitation / funding allocation from the Ministry.</span>
+        </div>
+      </label>
+      <label class="p-3 rounded-2xl border border-brand-border flex items-center gap-3 cursor-pointer hover:bg-brand-surface">
+        <input type="radio" name="fundingSelection" value="OAP Childhood Budget" class="accent-brand-orchid" />
+        <div>
+          <span class="font-bold text-slate-900 block">OAP Childhood Budget / Interim One-Time Funding</span>
+          <span class="text-slate-500">Using the $20,000 or $5,000 funding allocation.</span>
+        </div>
+      </label>
+      <label class="p-3 rounded-2xl border border-brand-border flex items-center gap-3 cursor-pointer hover:bg-brand-surface">
+        <input type="radio" name="fundingSelection" value="Private Extended Health Benefits" class="accent-brand-orchid" />
+        <div>
+          <span class="font-bold text-slate-900 block">Private Extended Health / Employer Benefits</span>
+          <span class="text-slate-500">Reimbursement under Psychological Services or Registered Behaviour Analyst.</span>
+        </div>
+      </label>
+    </div>
+
+    <div class="p-3 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 text-xs">
+      <strong>PHIPA Privacy Guarantee:</strong> Your information is encrypted and handled exclusively by Side by Side
+      Therapy Inc. as an authorized Agent under Ontario's <em>Personal Health Information Protection Act</em>.
+    </div>
+  </div>
+
+  <!-- Wizard Buttons -->
+  <div class="mt-6 pt-4 border-t border-slate-100 flex justify-between items-center">
+    <button
+      id="wizardBackBtn"
+      type="button"
+      class="text-xs font-bold text-slate-500 hover:text-slate-900 px-4 py-2 hidden"
+    >
+      ← Back
+    </button>
+    <button
+      id="wizardNextBtn"
+      type="button"
+      class="ml-auto px-6 py-2.5 rounded-full brand-gradient text-white text-xs sm:text-sm font-bold shadow-glow-orchid hover:opacity-95 transition-all"
+    >
+      Continue to Child Info →
+    </button>
+  </div>
+</dialog>
+
+<!-- ======================================================== -->
+<!-- MODAL: DETAILED CLINICAL TEAM PROFILE -->
+<!-- ======================================================== -->
+<dialog
+  id="teamProfileModal"
+  closedby="any"
+  aria-labelledby="teamProfileModalTitle"
+  class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-brand-border relative animate-modal m-auto text-slate-800"
+>
+  <div id="teamModalContent">
+    <h2 id="teamProfileModalTitle" class="sr-only">Clinical Team Profile</h2>
+    <!-- Dynamic Profile Injected via JS -->
+  </div>
+</dialog>
+
+<!-- ======================================================== -->
+<!-- MODAL: AI KNOWLEDGE AGENT SPECIFICATION (llms.txt) -->
+<!-- ======================================================== -->
+<dialog
+  id="llmsModal"
+  closedby="any"
+  aria-labelledby="llmsModalTitle"
+  class="bg-slate-950 text-slate-200 rounded-3xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl border border-brand-orchid/40 relative animate-modal m-auto font-mono text-xs"
+>
+  <div class="flex justify-between items-center pb-4 mb-4 border-b border-white/10">
+    <div class="flex items-center gap-2">
+      <span class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></span>
+      <h2 id="llmsModalTitle" class="font-bold text-sm text-white">/public/llms.txt Specification</h2>
+    </div>
+    <div class="flex items-center gap-2">
+      <button
+        id="copyLlmsBtn"
+        type="button"
+        autofocus
+        class="px-3 py-1 bg-brand-orchid hover:bg-brand-amethyst text-white font-sans text-xs font-bold rounded-lg transition-colors"
+      >
+        Copy Raw Markdown
+      </button>
+      <form method="dialog">
+        <button
+          type="submit"
+          aria-label="Close llms.txt Specification"
+          class="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center font-sans"
+          >✕</button
+        >
+      </form>
+    </div>
+  </div>
+
+  <div class="max-h-[60vh] overflow-y-auto pr-2 text-slate-300 space-y-4">
+    <pre id="llmsTextSnippet" class="whitespace-pre-wrap leading-relaxed"># Side by Side Therapy Connect
+Website: https://sidebysidetherapyconnect.ca
+Corporate Name: Side by Side Therapy Inc.
+Service Model: Specialized In-Home Clinical Connection & Matching Platform
+Location: Ontario, Canada (In-Home Service Delivery)
+
+## Core Mission & Positioning
+Side by Side Therapy Connect bridges families of children with Autism Spectrum Disorder (ASD) to vetted, autonomous in-home therapy teams across Ontario. We facilitate direct, transparent connections rather than acting as a traditional bureaucratic agency.
+
+## Clinical Team Composition
+Every connected team consists of:
+1. Instructor Therapist (IT): Delivers direct 1-on-1 assent-based, play-informed intervention in the child's home.
+2. Supervising Registered Behaviour Analyst (R.B.A. Ont.): Licensed by the College of Psychologists and Behaviour Analysts of Ontario (CPBAO). Directly designs, monitors, and evaluates the Behaviour Service Plan (BSP).
+
+## Regulatory Standards
+- Full compliance with the Psychology and Applied Behaviour Analysis Act, 2021.
+- Mandatory CPBAO Standard 4.4 Written Supervision Agreements for 100% of caseloads.
+- Zero tiered supervision (Standard 4.9). Unregulated individuals never supervise therapists.
+- Ontario Personal Health Information Protection Act, 2004 (PHIPA) compliant electronic records.
+
+## Funding Compatibility
+- Ontario Autism Program (OAP) Core Clinical Services
+- OAP Childhood Budgets & Interim One-Time Funding
+- Private Extended Health Insurance (Psychology / RBA coverage)</pre>
+  </div>
+
+  <div class="mt-4 pt-3 border-t border-white/10 text-slate-400 text-[11px] font-sans flex justify-between">
+    <span>Designed for ChatGPT Search, Claude, Perplexity & Google AI Overviews</span>
+    <span class="text-brand-peony">Format: Plaintext Markdown</span>
+  </div>
+</dialog>
+
+<!-- ======================================================== -->
+<!-- MODAL: MEDICAL BUSINESS SCHEMA (JSON-LD) -->
+<!-- ======================================================== -->
+<dialog
+  id="schemaModal"
+  closedby="any"
+  aria-labelledby="schemaModalTitle"
+  class="bg-slate-950 text-slate-200 rounded-3xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl border border-brand-ocean/40 relative animate-modal m-auto font-mono text-xs"
+>
+  <div class="flex justify-between items-center pb-4 mb-4 border-b border-white/10">
+    <div class="flex items-center gap-2">
+      <span class="w-3 h-3 rounded-full bg-brand-ocean"></span>
+      <h2 id="schemaModalTitle" class="font-bold text-sm text-white">Local Knowledge Graph: schema.org JSON-LD</h2>
+    </div>
+    <form method="dialog">
+      <button
+        type="submit"
+        autofocus
+        aria-label="Close Schema Modal"
+        class="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center font-sans"
+        >✕</button
+      >
+    </form>
+  </div>
+
+  <div class="max-h-[60vh] overflow-y-auto pr-2 text-slate-300">
+    <pre class="whitespace-pre-wrap leading-relaxed text-emerald-400">&#123;
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Side by Side Therapy Connect",
+  "legalName": "Side by Side Therapy Inc.",
+  "url": "https://sidebysidetherapyconnect.ca",
+  "areaServed": &#123;
+    "@type": "AdministrativeArea",
+    "name": "Ontario, Canada"
+  &#125;,
+  "medicalSpecialty": [
+    "Applied Behaviour Analysis",
+    "Neurodivergent affirming therapy",
+    "Assent-based clinical care",
+    "Trauma-informed behavioural intervention"
+  ],
+  "availableService": [
+    &#123;
+      "@type": "TherapeuticProcedure",
+      "name": "In-Home ABA Clinical Team Matching",
+      "description": "Connecting families with certified Instructor Therapists directly supervised by Registered Behaviour Analysts."
+    &#125;,
+    &#123;
+      "@type": "TherapeuticProcedure",
+      "name": "Transdisciplinary Care Integration",
+      "description": "Coordination between behavioural programming, speech-language therapy, and occupational therapy."
+    &#125;
+  ]
+&#125;</pre>
+  </div>
+</dialog>
+
+<!-- ======================================================== -->
+<!-- MODAL: CLINICIAN JOIN APPLICATION FORM -->
+<!-- ======================================================== -->
+<dialog
+  id="clinicianModal"
+  closedby="any"
+  aria-labelledby="clinicianModalTitle"
+  class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-brand-border relative animate-modal m-auto text-slate-800"
+>
+  <form method="dialog">
+    <button
+      type="submit"
+      aria-label="Close Contractor Application Modal"
+      class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors"
+      >✕</button
+    >
+  </form>
+
+  <span class="text-xs font-bold uppercase tracking-wider text-brand-orchid">Independent Contractor Portal</span>
+  <h2 id="clinicianModalTitle" class="text-2xl font-bold text-slate-900 mt-1 mb-2">Join Ontario's In-Home Network</h2>
+  <p class="text-xs text-slate-600 mb-6">
+    Enjoy true scheduling autonomy, direct CPBAO Standard 4.4 supervision frameworks, and vetted in-home referrals.
+  </p>
+
+  <form id="clinicianForm" class="space-y-4 text-xs font-sans">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div>
+        <label for="clinicianName" class="block font-bold text-slate-700 mb-1">Full Legal Name *</label>
+        <input
+          id="clinicianName"
+          type="text"
+          required
+          autofocus
+          placeholder="e.g. Jordan Bennett"
+          class="w-full p-2.5 rounded-xl bg-brand-surface border border-brand-border text-xs focus:outline-none focus:border-brand-orchid"
+        />
+      </div>
+      <div>
+        <label for="clinicianEmail" class="block font-bold text-slate-700 mb-1">Email Address *</label>
+        <input
+          id="clinicianEmail"
+          type="email"
+          required
+          placeholder="jordan@example.com"
+          class="w-full p-2.5 rounded-xl bg-brand-surface border border-brand-border text-xs focus:outline-none focus:border-brand-orchid"
+        />
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div>
+        <label for="clinicianRole" class="block font-bold text-slate-700 mb-1">Your Primary Clinical Role *</label>
+        <select
+          id="clinicianRole"
+          class="w-full p-2.5 rounded-xl bg-brand-surface border border-brand-border text-xs font-semibold focus:outline-none focus:border-brand-orchid"
+        >
+          <option>Instructor Therapist (Direct In-Home)</option>
+          <option>Supervising R.B.A. (Ont.) / BCBA</option>
+          <option>Speech-Language Pathologist (SLP)</option>
+          <option>Occupational Therapist (OT)</option>
+        </select>
+      </div>
+      <div>
+        <label for="clinicianHub" class="block font-bold text-slate-700 mb-1">Service Hub / Region *</label>
+        <select
+          id="clinicianHub"
+          class="w-full p-2.5 rounded-xl bg-brand-surface border border-brand-border text-xs font-semibold focus:outline-none focus:border-brand-orchid"
+        >
+          <option>Greater Toronto Area (GTA)</option>
+          <option>Peel (Mississauga / Brampton)</option>
+          <option>York (Vaughan / Markham)</option>
+          <option>Ottawa & Eastern Ontario</option>
+          <option>Kitchener / Waterloo</option>
+          <option>Hamilton / Halton</option>
+        </select>
+      </div>
+    </div>
+
+    <div>
+      <label for="clinicianYears" class="block font-bold text-slate-700 mb-1">Years of Autism / ABA Experience *</label>
+      <input
+        id="clinicianYears"
+        type="number"
+        min="1"
+        max="30"
+        value="3"
+        class="w-full p-2.5 rounded-xl bg-brand-surface border border-brand-border text-xs focus:outline-none focus:border-brand-orchid"
+      />
+    </div>
+
+    <div class="p-3 rounded-xl bg-brand-surface border border-brand-border text-slate-600 text-[11px] leading-relaxed">
+      <strong>Requirements checklist:</strong> Clean Vulnerable Sector Screen (within 12 months), CPR-C, and $2M
+      Professional Liability Insurance are required prior to family placement.
+    </div>
+
+    <button
+      type="submit"
+      class="w-full py-3 rounded-full brand-gradient text-white font-bold text-xs sm:text-sm shadow-glow-orchid hover:opacity-95 transition-all"
+    >
+      Submit Contractor Application
+    </button>
+  </form>
+</dialog>
+
+<!-- TOAST NOTIFICATION CONTAINER -->
+<div
+  id="toastNotification"
+  role="status"
+  aria-live="polite"
+  class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none"
+>
+  <div
+    class="bg-brand-dark text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-brand-orchid/50 flex items-center gap-3"
+  >
+    <div
+      id="toastIcon"
+      class="w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center text-xs font-bold"
+    >
+      ✓
+    </div>
+    <div>
+      <h4 id="toastTitle" class="font-bold text-xs">Action Confirmed</h4>
+      <p id="toastMessage" class="text-[11px] text-slate-300">Your match request has been received.</p>
+    </div>
+  </div>
+</div>
