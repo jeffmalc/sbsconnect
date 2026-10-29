@@ -17,6 +17,12 @@ export interface LocationInfo {
     travelFocus: string;
     communityResources: string;
   };
+  schools?: Array<{
+    name: string;
+    type: string;
+    grades: string;
+    iepFocus: string;
+  }>;
 }
 
 export const ontarioLocations: LocationInfo[] = [
@@ -39,7 +45,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Navigating congested urban transit and busy condo or multi-story home routines makes clinic visits exhausting. Our therapists bring calming, assent-based sessions directly into your residence.',
       travelFocus: 'Zero TTC commutes, Don Valley Parkway or Gardiner Expressway delays—therapists come to you.',
       communityResources: 'Collaborating with local pediatricians, Holland Bloorview Kids Rehabilitation Hospital, and community speech teams across Toronto.'
-    }
+    },
+    schools: [
+      {
+        name: 'Rosedale Heights School of the Arts / Jarvis Collegiate',
+        type: 'Public Secondary (TDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Comprehensive special education support and IEP resource accommodations for neurodivergent teens.'
+      },
+      {
+        name: 'Deer Park Junior and Senior Public School',
+        type: 'Public Elementary (TDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Sensory-inclusive classroom transitions and collaboration with private in-home ABA teams.'
+      },
+      {
+        name: 'St. Michael’s Choir & St. Joseph’s College',
+        type: 'Catholic Secondary (TCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Individualized resource learning centers and structured executive functioning coaching.'
+      }
+    ]
   },
   {
     slug: 'north-york',
@@ -59,7 +85,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Navigating congested urban transit and busy condo or multi-story home routines makes clinic visits exhausting. Our therapists bring calming, assent-based sessions directly into your residence.',
       travelFocus: 'Zero TTC commutes, Don Valley Parkway or Gardiner Expressway delays—therapists come to you.',
       communityResources: 'Collaborating with local pediatricians, Holland Bloorview Kids Rehabilitation Hospital, and community speech teams across Toronto.'
-    }
+    },
+    schools: [
+      {
+        name: 'Rosedale Heights School of the Arts / Jarvis Collegiate',
+        type: 'Public Secondary (TDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Comprehensive special education support and IEP resource accommodations for neurodivergent teens.'
+      },
+      {
+        name: 'Deer Park Junior and Senior Public School',
+        type: 'Public Elementary (TDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Sensory-inclusive classroom transitions and collaboration with private in-home ABA teams.'
+      },
+      {
+        name: 'St. Michael’s Choir & St. Joseph’s College',
+        type: 'Catholic Secondary (TCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Individualized resource learning centers and structured executive functioning coaching.'
+      }
+    ]
   },
   {
     slug: 'scarborough',
@@ -79,7 +125,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Navigating congested urban transit and busy condo or multi-story home routines makes clinic visits exhausting. Our therapists bring calming, assent-based sessions directly into your residence.',
       travelFocus: 'Zero TTC commutes, Don Valley Parkway or Gardiner Expressway delays—therapists come to you.',
       communityResources: 'Collaborating with local pediatricians, Holland Bloorview Kids Rehabilitation Hospital, and community speech teams across Toronto.'
-    }
+    },
+    schools: [
+      {
+        name: 'Rosedale Heights School of the Arts / Jarvis Collegiate',
+        type: 'Public Secondary (TDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Comprehensive special education support and IEP resource accommodations for neurodivergent teens.'
+      },
+      {
+        name: 'Deer Park Junior and Senior Public School',
+        type: 'Public Elementary (TDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Sensory-inclusive classroom transitions and collaboration with private in-home ABA teams.'
+      },
+      {
+        name: 'St. Michael’s Choir & St. Joseph’s College',
+        type: 'Catholic Secondary (TCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Individualized resource learning centers and structured executive functioning coaching.'
+      }
+    ]
   },
   {
     slug: 'etobicoke',
@@ -99,7 +165,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Navigating congested urban transit and busy condo or multi-story home routines makes clinic visits exhausting. Our therapists bring calming, assent-based sessions directly into your residence.',
       travelFocus: 'Zero TTC commutes, Don Valley Parkway or Gardiner Expressway delays—therapists come to you.',
       communityResources: 'Collaborating with local pediatricians, Holland Bloorview Kids Rehabilitation Hospital, and community speech teams across Toronto.'
-    }
+    },
+    schools: [
+      {
+        name: 'Rosedale Heights School of the Arts / Jarvis Collegiate',
+        type: 'Public Secondary (TDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Comprehensive special education support and IEP resource accommodations for neurodivergent teens.'
+      },
+      {
+        name: 'Deer Park Junior and Senior Public School',
+        type: 'Public Elementary (TDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Sensory-inclusive classroom transitions and collaboration with private in-home ABA teams.'
+      },
+      {
+        name: 'St. Michael’s Choir & St. Joseph’s College',
+        type: 'Catholic Secondary (TCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Individualized resource learning centers and structured executive functioning coaching.'
+      }
+    ]
   },
   {
     slug: 'east-york',
@@ -119,7 +205,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Navigating congested urban transit and busy condo or multi-story home routines makes clinic visits exhausting. Our therapists bring calming, assent-based sessions directly into your residence.',
       travelFocus: 'Zero TTC commutes, Don Valley Parkway or Gardiner Expressway delays—therapists come to you.',
       communityResources: 'Collaborating with local pediatricians, Holland Bloorview Kids Rehabilitation Hospital, and community speech teams across Toronto.'
-    }
+    },
+    schools: [
+      {
+        name: 'Rosedale Heights School of the Arts / Jarvis Collegiate',
+        type: 'Public Secondary (TDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Comprehensive special education support and IEP resource accommodations for neurodivergent teens.'
+      },
+      {
+        name: 'Deer Park Junior and Senior Public School',
+        type: 'Public Elementary (TDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Sensory-inclusive classroom transitions and collaboration with private in-home ABA teams.'
+      },
+      {
+        name: 'St. Michael’s Choir & St. Joseph’s College',
+        type: 'Catholic Secondary (TCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Individualized resource learning centers and structured executive functioning coaching.'
+      }
+    ]
   },
 
   // --- 2. Peel Region ---
@@ -141,7 +247,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'With rapidly growing communities and high demand at regional treatment centres like ErinoakKids, long waitlists leave children without vital early intervention. We provide immediate in-home team matching.',
       travelFocus: 'Avoid Highway 403, 410, and QEW rush-hour commutes; sessions take place in your living room and local parks.',
       communityResources: 'Close coordination with ErinoakKids Centre for Treatment and Development and local Peel early years programs.'
-    }
+    },
+    schools: [
+      {
+        name: 'Applewood Heights & Port Credit Secondary',
+        type: 'Public Secondary (PDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Regional ASD resource classrooms, life skills vocational training, and peer mentorship.'
+      },
+      {
+        name: 'Hawthorn Public & Fairview Public School',
+        type: 'Public Elementary (PDSB)',
+        grades: 'JK-Grade 5',
+        iepFocus: 'Dedicated early years communication classes and external speech/OT alignment.'
+      },
+      {
+        name: 'St. Francis Xavier Catholic Secondary',
+        type: 'Catholic Secondary (DPCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Academic and modified programming with collaborative Behaviour Service Plan tracking.'
+      }
+    ]
   },
   {
     slug: 'brampton',
@@ -161,7 +287,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'With rapidly growing communities and high demand at regional treatment centres like ErinoakKids, long waitlists leave children without vital early intervention. We provide immediate in-home team matching.',
       travelFocus: 'Avoid Highway 403, 410, and QEW rush-hour commutes; sessions take place in your living room and local parks.',
       communityResources: 'Close coordination with ErinoakKids Centre for Treatment and Development and local Peel early years programs.'
-    }
+    },
+    schools: [
+      {
+        name: 'Applewood Heights & Port Credit Secondary',
+        type: 'Public Secondary (PDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Regional ASD resource classrooms, life skills vocational training, and peer mentorship.'
+      },
+      {
+        name: 'Hawthorn Public & Fairview Public School',
+        type: 'Public Elementary (PDSB)',
+        grades: 'JK-Grade 5',
+        iepFocus: 'Dedicated early years communication classes and external speech/OT alignment.'
+      },
+      {
+        name: 'St. Francis Xavier Catholic Secondary',
+        type: 'Catholic Secondary (DPCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Academic and modified programming with collaborative Behaviour Service Plan tracking.'
+      }
+    ]
   },
   {
     slug: 'caledon',
@@ -181,7 +327,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'With rapidly growing communities and high demand at regional treatment centres like ErinoakKids, long waitlists leave children without vital early intervention. We provide immediate in-home team matching.',
       travelFocus: 'Avoid Highway 403, 410, and QEW rush-hour commutes; sessions take place in your living room and local parks.',
       communityResources: 'Close coordination with ErinoakKids Centre for Treatment and Development and local Peel early years programs.'
-    }
+    },
+    schools: [
+      {
+        name: 'Applewood Heights & Port Credit Secondary',
+        type: 'Public Secondary (PDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Regional ASD resource classrooms, life skills vocational training, and peer mentorship.'
+      },
+      {
+        name: 'Hawthorn Public & Fairview Public School',
+        type: 'Public Elementary (PDSB)',
+        grades: 'JK-Grade 5',
+        iepFocus: 'Dedicated early years communication classes and external speech/OT alignment.'
+      },
+      {
+        name: 'St. Francis Xavier Catholic Secondary',
+        type: 'Catholic Secondary (DPCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Academic and modified programming with collaborative Behaviour Service Plan tracking.'
+      }
+    ]
   },
 
   // --- 3. York Region ---
@@ -203,7 +369,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Suburban sprawl along the Highway 7 and 404 corridors often means lengthy commutes for center-based therapy. We eliminate travel fatigue so your child’s energy is reserved for learning.',
       travelFocus: 'No driving along Highway 400, 404, or 407; our clinicians travel to family homes throughout York Region.',
       communityResources: 'Partnering with Grandview Kids referrals, Mackenzie Health, and local Markham Stouffville pediatric networks.'
-    }
+    },
+    schools: [
+      {
+        name: 'Alexander Mackenzie High School',
+        type: 'Public Secondary (YRDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Community Class programs and adaptive social-emotional transition support.'
+      },
+      {
+        name: 'Silver Stream & Crosby Heights Public School',
+        type: 'Public Elementary (YRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Specialized Autism Spectrum social communication classes and IEP goal integration.'
+      },
+      {
+        name: 'St. Robert Catholic High School',
+        type: 'Catholic Secondary (YCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Transdisciplinary educational support coordinating with community behaviour analysts.'
+      }
+    ]
   },
   {
     slug: 'markham',
@@ -223,7 +409,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Suburban sprawl along the Highway 7 and 404 corridors often means lengthy commutes for center-based therapy. We eliminate travel fatigue so your child’s energy is reserved for learning.',
       travelFocus: 'No driving along Highway 400, 404, or 407; our clinicians travel to family homes throughout York Region.',
       communityResources: 'Partnering with Grandview Kids referrals, Mackenzie Health, and local Markham Stouffville pediatric networks.'
-    }
+    },
+    schools: [
+      {
+        name: 'Alexander Mackenzie High School',
+        type: 'Public Secondary (YRDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Community Class programs and adaptive social-emotional transition support.'
+      },
+      {
+        name: 'Silver Stream & Crosby Heights Public School',
+        type: 'Public Elementary (YRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Specialized Autism Spectrum social communication classes and IEP goal integration.'
+      },
+      {
+        name: 'St. Robert Catholic High School',
+        type: 'Catholic Secondary (YCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Transdisciplinary educational support coordinating with community behaviour analysts.'
+      }
+    ]
   },
   {
     slug: 'richmond-hill',
@@ -243,7 +449,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Suburban sprawl along the Highway 7 and 404 corridors often means lengthy commutes for center-based therapy. We eliminate travel fatigue so your child’s energy is reserved for learning.',
       travelFocus: 'No driving along Highway 400, 404, or 407; our clinicians travel to family homes throughout York Region.',
       communityResources: 'Partnering with Grandview Kids referrals, Mackenzie Health, and local Markham Stouffville pediatric networks.'
-    }
+    },
+    schools: [
+      {
+        name: 'Alexander Mackenzie High School',
+        type: 'Public Secondary (YRDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Community Class programs and adaptive social-emotional transition support.'
+      },
+      {
+        name: 'Silver Stream & Crosby Heights Public School',
+        type: 'Public Elementary (YRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Specialized Autism Spectrum social communication classes and IEP goal integration.'
+      },
+      {
+        name: 'St. Robert Catholic High School',
+        type: 'Catholic Secondary (YCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Transdisciplinary educational support coordinating with community behaviour analysts.'
+      }
+    ]
   },
   {
     slug: 'newmarket',
@@ -263,7 +489,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Suburban sprawl along the Highway 7 and 404 corridors often means lengthy commutes for center-based therapy. We eliminate travel fatigue so your child’s energy is reserved for learning.',
       travelFocus: 'No driving along Highway 400, 404, or 407; our clinicians travel to family homes throughout York Region.',
       communityResources: 'Partnering with Grandview Kids referrals, Mackenzie Health, and local Markham Stouffville pediatric networks.'
-    }
+    },
+    schools: [
+      {
+        name: 'Alexander Mackenzie High School',
+        type: 'Public Secondary (YRDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Community Class programs and adaptive social-emotional transition support.'
+      },
+      {
+        name: 'Silver Stream & Crosby Heights Public School',
+        type: 'Public Elementary (YRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Specialized Autism Spectrum social communication classes and IEP goal integration.'
+      },
+      {
+        name: 'St. Robert Catholic High School',
+        type: 'Catholic Secondary (YCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Transdisciplinary educational support coordinating with community behaviour analysts.'
+      }
+    ]
   },
   {
     slug: 'aurora',
@@ -283,7 +529,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Suburban sprawl along the Highway 7 and 404 corridors often means lengthy commutes for center-based therapy. We eliminate travel fatigue so your child’s energy is reserved for learning.',
       travelFocus: 'No driving along Highway 400, 404, or 407; our clinicians travel to family homes throughout York Region.',
       communityResources: 'Partnering with Grandview Kids referrals, Mackenzie Health, and local Markham Stouffville pediatric networks.'
-    }
+    },
+    schools: [
+      {
+        name: 'Alexander Mackenzie High School',
+        type: 'Public Secondary (YRDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Community Class programs and adaptive social-emotional transition support.'
+      },
+      {
+        name: 'Silver Stream & Crosby Heights Public School',
+        type: 'Public Elementary (YRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Specialized Autism Spectrum social communication classes and IEP goal integration.'
+      },
+      {
+        name: 'St. Robert Catholic High School',
+        type: 'Catholic Secondary (YCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Transdisciplinary educational support coordinating with community behaviour analysts.'
+      }
+    ]
   },
   {
     slug: 'king-city',
@@ -303,7 +569,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Suburban sprawl along the Highway 7 and 404 corridors often means lengthy commutes for center-based therapy. We eliminate travel fatigue so your child’s energy is reserved for learning.',
       travelFocus: 'No driving along Highway 400, 404, or 407; our clinicians travel to family homes throughout York Region.',
       communityResources: 'Partnering with Grandview Kids referrals, Mackenzie Health, and local Markham Stouffville pediatric networks.'
-    }
+    },
+    schools: [
+      {
+        name: 'Alexander Mackenzie High School',
+        type: 'Public Secondary (YRDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Community Class programs and adaptive social-emotional transition support.'
+      },
+      {
+        name: 'Silver Stream & Crosby Heights Public School',
+        type: 'Public Elementary (YRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Specialized Autism Spectrum social communication classes and IEP goal integration.'
+      },
+      {
+        name: 'St. Robert Catholic High School',
+        type: 'Catholic Secondary (YCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Transdisciplinary educational support coordinating with community behaviour analysts.'
+      }
+    ]
   },
   {
     slug: 'whitchurch-stouffville',
@@ -323,7 +609,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Suburban sprawl along the Highway 7 and 404 corridors often means lengthy commutes for center-based therapy. We eliminate travel fatigue so your child’s energy is reserved for learning.',
       travelFocus: 'No driving along Highway 400, 404, or 407; our clinicians travel to family homes throughout York Region.',
       communityResources: 'Partnering with Grandview Kids referrals, Mackenzie Health, and local Markham Stouffville pediatric networks.'
-    }
+    },
+    schools: [
+      {
+        name: 'Alexander Mackenzie High School',
+        type: 'Public Secondary (YRDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Community Class programs and adaptive social-emotional transition support.'
+      },
+      {
+        name: 'Silver Stream & Crosby Heights Public School',
+        type: 'Public Elementary (YRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Specialized Autism Spectrum social communication classes and IEP goal integration.'
+      },
+      {
+        name: 'St. Robert Catholic High School',
+        type: 'Catholic Secondary (YCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Transdisciplinary educational support coordinating with community behaviour analysts.'
+      }
+    ]
   },
   {
     slug: 'georgina',
@@ -343,7 +649,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Suburban sprawl along the Highway 7 and 404 corridors often means lengthy commutes for center-based therapy. We eliminate travel fatigue so your child’s energy is reserved for learning.',
       travelFocus: 'No driving along Highway 400, 404, or 407; our clinicians travel to family homes throughout York Region.',
       communityResources: 'Partnering with Grandview Kids referrals, Mackenzie Health, and local Markham Stouffville pediatric networks.'
-    }
+    },
+    schools: [
+      {
+        name: 'Alexander Mackenzie High School',
+        type: 'Public Secondary (YRDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Community Class programs and adaptive social-emotional transition support.'
+      },
+      {
+        name: 'Silver Stream & Crosby Heights Public School',
+        type: 'Public Elementary (YRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Specialized Autism Spectrum social communication classes and IEP goal integration.'
+      },
+      {
+        name: 'St. Robert Catholic High School',
+        type: 'Catholic Secondary (YCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Transdisciplinary educational support coordinating with community behaviour analysts.'
+      }
+    ]
   },
   {
     slug: 'east-gwillimbury',
@@ -363,7 +689,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Suburban sprawl along the Highway 7 and 404 corridors often means lengthy commutes for center-based therapy. We eliminate travel fatigue so your child’s energy is reserved for learning.',
       travelFocus: 'No driving along Highway 400, 404, or 407; our clinicians travel to family homes throughout York Region.',
       communityResources: 'Partnering with Grandview Kids referrals, Mackenzie Health, and local Markham Stouffville pediatric networks.'
-    }
+    },
+    schools: [
+      {
+        name: 'Alexander Mackenzie High School',
+        type: 'Public Secondary (YRDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Community Class programs and adaptive social-emotional transition support.'
+      },
+      {
+        name: 'Silver Stream & Crosby Heights Public School',
+        type: 'Public Elementary (YRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Specialized Autism Spectrum social communication classes and IEP goal integration.'
+      },
+      {
+        name: 'St. Robert Catholic High School',
+        type: 'Catholic Secondary (YCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Transdisciplinary educational support coordinating with community behaviour analysts.'
+      }
+    ]
   },
 
   // --- 4. Halton Region ---
@@ -385,7 +731,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Escarpment travel and busy arterial corridors can disrupt daily schedules. In-home therapy ensures functional skill trials (toileting, feeding, sibling play) happen right in the home setting.',
       travelFocus: 'No commuting up and down the Mountain accesses, QEW, or Red Hill Valley Parkway.',
       communityResources: 'Integration with McMaster Children’s Hospital (Ron Joyce Children’s Health Centre) and local Halton/Hamilton allied health providers.'
-    }
+    },
+    schools: [
+      {
+        name: 'Westdale Secondary & Ancaster High',
+        type: 'Public Secondary (HWDSB / HDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Integrated resource learning pods and vocational life-skills development.'
+      },
+      {
+        name: 'Norwood Park & Earl Kitchener School',
+        type: 'Public Elementary (HWDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Natural environment play modifications and assistive AAC technology implementation.'
+      },
+      {
+        name: 'St. Mary Catholic Secondary School',
+        type: 'Catholic Secondary (HWCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Collaborative multi-disciplinary team reviews and modified evaluation plans.'
+      }
+    ]
   },
   {
     slug: 'burlington',
@@ -405,7 +771,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Escarpment travel and busy arterial corridors can disrupt daily schedules. In-home therapy ensures functional skill trials (toileting, feeding, sibling play) happen right in the home setting.',
       travelFocus: 'No commuting up and down the Mountain accesses, QEW, or Red Hill Valley Parkway.',
       communityResources: 'Integration with McMaster Children’s Hospital (Ron Joyce Children’s Health Centre) and local Halton/Hamilton allied health providers.'
-    }
+    },
+    schools: [
+      {
+        name: 'Westdale Secondary & Ancaster High',
+        type: 'Public Secondary (HWDSB / HDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Integrated resource learning pods and vocational life-skills development.'
+      },
+      {
+        name: 'Norwood Park & Earl Kitchener School',
+        type: 'Public Elementary (HWDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Natural environment play modifications and assistive AAC technology implementation.'
+      },
+      {
+        name: 'St. Mary Catholic Secondary School',
+        type: 'Catholic Secondary (HWCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Collaborative multi-disciplinary team reviews and modified evaluation plans.'
+      }
+    ]
   },
   {
     slug: 'milton',
@@ -425,7 +811,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Escarpment travel and busy arterial corridors can disrupt daily schedules. In-home therapy ensures functional skill trials (toileting, feeding, sibling play) happen right in the home setting.',
       travelFocus: 'No commuting up and down the Mountain accesses, QEW, or Red Hill Valley Parkway.',
       communityResources: 'Integration with McMaster Children’s Hospital (Ron Joyce Children’s Health Centre) and local Halton/Hamilton allied health providers.'
-    }
+    },
+    schools: [
+      {
+        name: 'Westdale Secondary & Ancaster High',
+        type: 'Public Secondary (HWDSB / HDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Integrated resource learning pods and vocational life-skills development.'
+      },
+      {
+        name: 'Norwood Park & Earl Kitchener School',
+        type: 'Public Elementary (HWDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Natural environment play modifications and assistive AAC technology implementation.'
+      },
+      {
+        name: 'St. Mary Catholic Secondary School',
+        type: 'Catholic Secondary (HWCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Collaborative multi-disciplinary team reviews and modified evaluation plans.'
+      }
+    ]
   },
   {
     slug: 'halton-hills',
@@ -445,7 +851,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Escarpment travel and busy arterial corridors can disrupt daily schedules. In-home therapy ensures functional skill trials (toileting, feeding, sibling play) happen right in the home setting.',
       travelFocus: 'No commuting up and down the Mountain accesses, QEW, or Red Hill Valley Parkway.',
       communityResources: 'Integration with McMaster Children’s Hospital (Ron Joyce Children’s Health Centre) and local Halton/Hamilton allied health providers.'
-    }
+    },
+    schools: [
+      {
+        name: 'Westdale Secondary & Ancaster High',
+        type: 'Public Secondary (HWDSB / HDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Integrated resource learning pods and vocational life-skills development.'
+      },
+      {
+        name: 'Norwood Park & Earl Kitchener School',
+        type: 'Public Elementary (HWDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Natural environment play modifications and assistive AAC technology implementation.'
+      },
+      {
+        name: 'St. Mary Catholic Secondary School',
+        type: 'Catholic Secondary (HWCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Collaborative multi-disciplinary team reviews and modified evaluation plans.'
+      }
+    ]
   },
 
   // --- 5. Durham Region ---
@@ -467,7 +893,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Families along Highway 401 and the Kingston Road corridor often find clinic slots conflict with commuter parent schedules. We offer flexible in-home morning, after-school, and weekend blocks.',
       travelFocus: 'Zero Highway 401 or 407 rush hour trips; consistent therapist visits in your neighbourhood.',
       communityResources: 'Alignment with Grandview Kids Children’s Treatment Centre and Durham Region early years hubs.'
-    }
+    },
+    schools: [
+      {
+        name: 'Dunbarton High & Sinclair Secondary',
+        type: 'Public Secondary (DDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Practical academic classes, social navigation, and sensory integration spaces.'
+      },
+      {
+        name: 'William Dunbar & Valley View Public School',
+        type: 'Public Elementary (DDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Intensive communication early intervention paired with in-home therapy trials.'
+      },
+      {
+        name: 'St. Mary Catholic Secondary School',
+        type: 'Catholic Secondary (DCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Collaborative student success team meetings and assistive tech integration.'
+      }
+    ]
   },
   {
     slug: 'ajax',
@@ -487,7 +933,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Families along Highway 401 and the Kingston Road corridor often find clinic slots conflict with commuter parent schedules. We offer flexible in-home morning, after-school, and weekend blocks.',
       travelFocus: 'Zero Highway 401 or 407 rush hour trips; consistent therapist visits in your neighbourhood.',
       communityResources: 'Alignment with Grandview Kids Children’s Treatment Centre and Durham Region early years hubs.'
-    }
+    },
+    schools: [
+      {
+        name: 'Dunbarton High & Sinclair Secondary',
+        type: 'Public Secondary (DDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Practical academic classes, social navigation, and sensory integration spaces.'
+      },
+      {
+        name: 'William Dunbar & Valley View Public School',
+        type: 'Public Elementary (DDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Intensive communication early intervention paired with in-home therapy trials.'
+      },
+      {
+        name: 'St. Mary Catholic Secondary School',
+        type: 'Catholic Secondary (DCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Collaborative student success team meetings and assistive tech integration.'
+      }
+    ]
   },
   {
     slug: 'whitby',
@@ -507,7 +973,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Families along Highway 401 and the Kingston Road corridor often find clinic slots conflict with commuter parent schedules. We offer flexible in-home morning, after-school, and weekend blocks.',
       travelFocus: 'Zero Highway 401 or 407 rush hour trips; consistent therapist visits in your neighbourhood.',
       communityResources: 'Alignment with Grandview Kids Children’s Treatment Centre and Durham Region early years hubs.'
-    }
+    },
+    schools: [
+      {
+        name: 'Dunbarton High & Sinclair Secondary',
+        type: 'Public Secondary (DDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Practical academic classes, social navigation, and sensory integration spaces.'
+      },
+      {
+        name: 'William Dunbar & Valley View Public School',
+        type: 'Public Elementary (DDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Intensive communication early intervention paired with in-home therapy trials.'
+      },
+      {
+        name: 'St. Mary Catholic Secondary School',
+        type: 'Catholic Secondary (DCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Collaborative student success team meetings and assistive tech integration.'
+      }
+    ]
   },
   {
     slug: 'oshawa',
@@ -527,7 +1013,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Families along Highway 401 and the Kingston Road corridor often find clinic slots conflict with commuter parent schedules. We offer flexible in-home morning, after-school, and weekend blocks.',
       travelFocus: 'Zero Highway 401 or 407 rush hour trips; consistent therapist visits in your neighbourhood.',
       communityResources: 'Alignment with Grandview Kids Children’s Treatment Centre and Durham Region early years hubs.'
-    }
+    },
+    schools: [
+      {
+        name: 'Dunbarton High & Sinclair Secondary',
+        type: 'Public Secondary (DDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Practical academic classes, social navigation, and sensory integration spaces.'
+      },
+      {
+        name: 'William Dunbar & Valley View Public School',
+        type: 'Public Elementary (DDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Intensive communication early intervention paired with in-home therapy trials.'
+      },
+      {
+        name: 'St. Mary Catholic Secondary School',
+        type: 'Catholic Secondary (DCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Collaborative student success team meetings and assistive tech integration.'
+      }
+    ]
   },
   {
     slug: 'clarington',
@@ -547,7 +1053,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Families along Highway 401 and the Kingston Road corridor often find clinic slots conflict with commuter parent schedules. We offer flexible in-home morning, after-school, and weekend blocks.',
       travelFocus: 'Zero Highway 401 or 407 rush hour trips; consistent therapist visits in your neighbourhood.',
       communityResources: 'Alignment with Grandview Kids Children’s Treatment Centre and Durham Region early years hubs.'
-    }
+    },
+    schools: [
+      {
+        name: 'Dunbarton High & Sinclair Secondary',
+        type: 'Public Secondary (DDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Practical academic classes, social navigation, and sensory integration spaces.'
+      },
+      {
+        name: 'William Dunbar & Valley View Public School',
+        type: 'Public Elementary (DDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Intensive communication early intervention paired with in-home therapy trials.'
+      },
+      {
+        name: 'St. Mary Catholic Secondary School',
+        type: 'Catholic Secondary (DCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Collaborative student success team meetings and assistive tech integration.'
+      }
+    ]
   },
   {
     slug: 'uxbridge',
@@ -567,7 +1093,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Families along Highway 401 and the Kingston Road corridor often find clinic slots conflict with commuter parent schedules. We offer flexible in-home morning, after-school, and weekend blocks.',
       travelFocus: 'Zero Highway 401 or 407 rush hour trips; consistent therapist visits in your neighbourhood.',
       communityResources: 'Alignment with Grandview Kids Children’s Treatment Centre and Durham Region early years hubs.'
-    }
+    },
+    schools: [
+      {
+        name: 'Dunbarton High & Sinclair Secondary',
+        type: 'Public Secondary (DDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Practical academic classes, social navigation, and sensory integration spaces.'
+      },
+      {
+        name: 'William Dunbar & Valley View Public School',
+        type: 'Public Elementary (DDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Intensive communication early intervention paired with in-home therapy trials.'
+      },
+      {
+        name: 'St. Mary Catholic Secondary School',
+        type: 'Catholic Secondary (DCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Collaborative student success team meetings and assistive tech integration.'
+      }
+    ]
   },
   {
     slug: 'scugog',
@@ -587,7 +1133,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Families along Highway 401 and the Kingston Road corridor often find clinic slots conflict with commuter parent schedules. We offer flexible in-home morning, after-school, and weekend blocks.',
       travelFocus: 'Zero Highway 401 or 407 rush hour trips; consistent therapist visits in your neighbourhood.',
       communityResources: 'Alignment with Grandview Kids Children’s Treatment Centre and Durham Region early years hubs.'
-    }
+    },
+    schools: [
+      {
+        name: 'Dunbarton High & Sinclair Secondary',
+        type: 'Public Secondary (DDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Practical academic classes, social navigation, and sensory integration spaces.'
+      },
+      {
+        name: 'William Dunbar & Valley View Public School',
+        type: 'Public Elementary (DDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Intensive communication early intervention paired with in-home therapy trials.'
+      },
+      {
+        name: 'St. Mary Catholic Secondary School',
+        type: 'Catholic Secondary (DCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Collaborative student success team meetings and assistive tech integration.'
+      }
+    ]
   },
 
   // --- 6. Hamilton & Niagara ---
@@ -609,7 +1175,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Escarpment travel and busy arterial corridors can disrupt daily schedules. In-home therapy ensures functional skill trials (toileting, feeding, sibling play) happen right in the home setting.',
       travelFocus: 'No commuting up and down the Mountain accesses, QEW, or Red Hill Valley Parkway.',
       communityResources: 'Integration with McMaster Children’s Hospital (Ron Joyce Children’s Health Centre) and local Halton/Hamilton allied health providers.'
-    }
+    },
+    schools: [
+      {
+        name: 'Westdale Secondary & Ancaster High',
+        type: 'Public Secondary (HWDSB / HDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Integrated resource learning pods and vocational life-skills development.'
+      },
+      {
+        name: 'Norwood Park & Earl Kitchener School',
+        type: 'Public Elementary (HWDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Natural environment play modifications and assistive AAC technology implementation.'
+      },
+      {
+        name: 'St. Mary Catholic Secondary School',
+        type: 'Catholic Secondary (HWCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Collaborative multi-disciplinary team reviews and modified evaluation plans.'
+      }
+    ]
   },
   {
     slug: 'ancaster',
@@ -629,7 +1215,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Escarpment travel and busy arterial corridors can disrupt daily schedules. In-home therapy ensures functional skill trials (toileting, feeding, sibling play) happen right in the home setting.',
       travelFocus: 'No commuting up and down the Mountain accesses, QEW, or Red Hill Valley Parkway.',
       communityResources: 'Integration with McMaster Children’s Hospital (Ron Joyce Children’s Health Centre) and local Halton/Hamilton allied health providers.'
-    }
+    },
+    schools: [
+      {
+        name: 'Westdale Secondary & Ancaster High',
+        type: 'Public Secondary (HWDSB / HDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Integrated resource learning pods and vocational life-skills development.'
+      },
+      {
+        name: 'Norwood Park & Earl Kitchener School',
+        type: 'Public Elementary (HWDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Natural environment play modifications and assistive AAC technology implementation.'
+      },
+      {
+        name: 'St. Mary Catholic Secondary School',
+        type: 'Catholic Secondary (HWCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Collaborative multi-disciplinary team reviews and modified evaluation plans.'
+      }
+    ]
   },
   {
     slug: 'dundas',
@@ -649,7 +1255,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Escarpment travel and busy arterial corridors can disrupt daily schedules. In-home therapy ensures functional skill trials (toileting, feeding, sibling play) happen right in the home setting.',
       travelFocus: 'No commuting up and down the Mountain accesses, QEW, or Red Hill Valley Parkway.',
       communityResources: 'Integration with McMaster Children’s Hospital (Ron Joyce Children’s Health Centre) and local Halton/Hamilton allied health providers.'
-    }
+    },
+    schools: [
+      {
+        name: 'Westdale Secondary & Ancaster High',
+        type: 'Public Secondary (HWDSB / HDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Integrated resource learning pods and vocational life-skills development.'
+      },
+      {
+        name: 'Norwood Park & Earl Kitchener School',
+        type: 'Public Elementary (HWDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Natural environment play modifications and assistive AAC technology implementation.'
+      },
+      {
+        name: 'St. Mary Catholic Secondary School',
+        type: 'Catholic Secondary (HWCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Collaborative multi-disciplinary team reviews and modified evaluation plans.'
+      }
+    ]
   },
   {
     slug: 'stoney-creek',
@@ -669,7 +1295,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Escarpment travel and busy arterial corridors can disrupt daily schedules. In-home therapy ensures functional skill trials (toileting, feeding, sibling play) happen right in the home setting.',
       travelFocus: 'No commuting up and down the Mountain accesses, QEW, or Red Hill Valley Parkway.',
       communityResources: 'Integration with McMaster Children’s Hospital (Ron Joyce Children’s Health Centre) and local Halton/Hamilton allied health providers.'
-    }
+    },
+    schools: [
+      {
+        name: 'Westdale Secondary & Ancaster High',
+        type: 'Public Secondary (HWDSB / HDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Integrated resource learning pods and vocational life-skills development.'
+      },
+      {
+        name: 'Norwood Park & Earl Kitchener School',
+        type: 'Public Elementary (HWDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Natural environment play modifications and assistive AAC technology implementation.'
+      },
+      {
+        name: 'St. Mary Catholic Secondary School',
+        type: 'Catholic Secondary (HWCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Collaborative multi-disciplinary team reviews and modified evaluation plans.'
+      }
+    ]
   },
   {
     slug: 'grimsby',
@@ -689,7 +1335,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Families across the Niagara Peninsula frequently report shortages of specialized clinical ABA teams, often having to travel toward Hamilton. We match you with vetted clinicians in your local community.',
       travelFocus: 'No traveling up the QEW toward Hamilton or Toronto; your clinical team arrives at your doorstep.',
       communityResources: 'Working in harmony with Niagara Children’s Centre and local pediatric medical clinics.'
-    }
+    },
+    schools: [
+      {
+        name: 'Sir Winston Churchill & Eden High School',
+        type: 'Public Secondary (DSBN)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Specialized life skills classes and sensory-safe breakout rooms.'
+      },
+      {
+        name: 'Dalewood & Grapeview Public School',
+        type: 'Public Elementary (DSBN)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early intensive reading and functional speech IEP accommodations.'
+      },
+      {
+        name: 'Denis Morris Catholic High School',
+        type: 'Catholic Secondary (NCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Individual education plans customized with independent RBA consultation.'
+      }
+    ]
   },
   {
     slug: 'lincoln',
@@ -709,7 +1375,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Families across the Niagara Peninsula frequently report shortages of specialized clinical ABA teams, often having to travel toward Hamilton. We match you with vetted clinicians in your local community.',
       travelFocus: 'No traveling up the QEW toward Hamilton or Toronto; your clinical team arrives at your doorstep.',
       communityResources: 'Working in harmony with Niagara Children’s Centre and local pediatric medical clinics.'
-    }
+    },
+    schools: [
+      {
+        name: 'Sir Winston Churchill & Eden High School',
+        type: 'Public Secondary (DSBN)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Specialized life skills classes and sensory-safe breakout rooms.'
+      },
+      {
+        name: 'Dalewood & Grapeview Public School',
+        type: 'Public Elementary (DSBN)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early intensive reading and functional speech IEP accommodations.'
+      },
+      {
+        name: 'Denis Morris Catholic High School',
+        type: 'Catholic Secondary (NCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Individual education plans customized with independent RBA consultation.'
+      }
+    ]
   },
   {
     slug: 'st-catharines',
@@ -729,7 +1415,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Families across the Niagara Peninsula frequently report shortages of specialized clinical ABA teams, often having to travel toward Hamilton. We match you with vetted clinicians in your local community.',
       travelFocus: 'No traveling up the QEW toward Hamilton or Toronto; your clinical team arrives at your doorstep.',
       communityResources: 'Working in harmony with Niagara Children’s Centre and local pediatric medical clinics.'
-    }
+    },
+    schools: [
+      {
+        name: 'Sir Winston Churchill & Eden High School',
+        type: 'Public Secondary (DSBN)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Specialized life skills classes and sensory-safe breakout rooms.'
+      },
+      {
+        name: 'Dalewood & Grapeview Public School',
+        type: 'Public Elementary (DSBN)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early intensive reading and functional speech IEP accommodations.'
+      },
+      {
+        name: 'Denis Morris Catholic High School',
+        type: 'Catholic Secondary (NCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Individual education plans customized with independent RBA consultation.'
+      }
+    ]
   },
   {
     slug: 'niagara-falls',
@@ -749,7 +1455,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Families across the Niagara Peninsula frequently report shortages of specialized clinical ABA teams, often having to travel toward Hamilton. We match you with vetted clinicians in your local community.',
       travelFocus: 'No traveling up the QEW toward Hamilton or Toronto; your clinical team arrives at your doorstep.',
       communityResources: 'Working in harmony with Niagara Children’s Centre and local pediatric medical clinics.'
-    }
+    },
+    schools: [
+      {
+        name: 'Sir Winston Churchill & Eden High School',
+        type: 'Public Secondary (DSBN)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Specialized life skills classes and sensory-safe breakout rooms.'
+      },
+      {
+        name: 'Dalewood & Grapeview Public School',
+        type: 'Public Elementary (DSBN)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early intensive reading and functional speech IEP accommodations.'
+      },
+      {
+        name: 'Denis Morris Catholic High School',
+        type: 'Catholic Secondary (NCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Individual education plans customized with independent RBA consultation.'
+      }
+    ]
   },
   {
     slug: 'welland',
@@ -769,7 +1495,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Families across the Niagara Peninsula frequently report shortages of specialized clinical ABA teams, often having to travel toward Hamilton. We match you with vetted clinicians in your local community.',
       travelFocus: 'No traveling up the QEW toward Hamilton or Toronto; your clinical team arrives at your doorstep.',
       communityResources: 'Working in harmony with Niagara Children’s Centre and local pediatric medical clinics.'
-    }
+    },
+    schools: [
+      {
+        name: 'Sir Winston Churchill & Eden High School',
+        type: 'Public Secondary (DSBN)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Specialized life skills classes and sensory-safe breakout rooms.'
+      },
+      {
+        name: 'Dalewood & Grapeview Public School',
+        type: 'Public Elementary (DSBN)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early intensive reading and functional speech IEP accommodations.'
+      },
+      {
+        name: 'Denis Morris Catholic High School',
+        type: 'Catholic Secondary (NCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Individual education plans customized with independent RBA consultation.'
+      }
+    ]
   },
   {
     slug: 'niagara-on-the-lake',
@@ -789,7 +1535,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Families across the Niagara Peninsula frequently report shortages of specialized clinical ABA teams, often having to travel toward Hamilton. We match you with vetted clinicians in your local community.',
       travelFocus: 'No traveling up the QEW toward Hamilton or Toronto; your clinical team arrives at your doorstep.',
       communityResources: 'Working in harmony with Niagara Children’s Centre and local pediatric medical clinics.'
-    }
+    },
+    schools: [
+      {
+        name: 'Sir Winston Churchill & Eden High School',
+        type: 'Public Secondary (DSBN)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Specialized life skills classes and sensory-safe breakout rooms.'
+      },
+      {
+        name: 'Dalewood & Grapeview Public School',
+        type: 'Public Elementary (DSBN)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early intensive reading and functional speech IEP accommodations.'
+      },
+      {
+        name: 'Denis Morris Catholic High School',
+        type: 'Catholic Secondary (NCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Individual education plans customized with independent RBA consultation.'
+      }
+    ]
   },
   {
     slug: 'fort-erie',
@@ -809,7 +1575,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Families across the Niagara Peninsula frequently report shortages of specialized clinical ABA teams, often having to travel toward Hamilton. We match you with vetted clinicians in your local community.',
       travelFocus: 'No traveling up the QEW toward Hamilton or Toronto; your clinical team arrives at your doorstep.',
       communityResources: 'Working in harmony with Niagara Children’s Centre and local pediatric medical clinics.'
-    }
+    },
+    schools: [
+      {
+        name: 'Sir Winston Churchill & Eden High School',
+        type: 'Public Secondary (DSBN)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Specialized life skills classes and sensory-safe breakout rooms.'
+      },
+      {
+        name: 'Dalewood & Grapeview Public School',
+        type: 'Public Elementary (DSBN)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early intensive reading and functional speech IEP accommodations.'
+      },
+      {
+        name: 'Denis Morris Catholic High School',
+        type: 'Catholic Secondary (NCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Individual education plans customized with independent RBA consultation.'
+      }
+    ]
   },
 
   // --- 7. Waterloo Region & Guelph (Southwestern Ontario) ---
@@ -831,7 +1617,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Long regional developmental service waitlists mean precious developmental windows are lost. Our autonomous in-home duos provide fast onboarding and CPBAO Standard 4 direct RBA oversight.',
       travelFocus: 'Skip Highway 7/8 or Highway 401 travel; sessions take place right in your family home or local daycare.',
       communityResources: 'Collaborating with KidsAbility Centre for Child Development and local Tri-City allied health specialists.'
-    }
+    },
+    schools: [
+      {
+        name: 'Cameron Heights Collegiate & Waterloo-Oxford',
+        type: 'Public Secondary (WRDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Lifeskills and developmental education programs with community outing support.'
+      },
+      {
+        name: 'Empire Public & Central Public School',
+        type: 'Public Elementary (WRDSB)',
+        grades: 'JK-Grade 6',
+        iepFocus: 'Assent-based behavioral protocols and collaborative parent coaching alignment.'
+      },
+      {
+        name: 'St. David Catholic Secondary School',
+        type: 'Catholic Secondary (WCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Special education resource teachers supporting social regulation and AAC devices.'
+      }
+    ]
   },
   {
     slug: 'waterloo',
@@ -851,7 +1657,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Long regional developmental service waitlists mean precious developmental windows are lost. Our autonomous in-home duos provide fast onboarding and CPBAO Standard 4 direct RBA oversight.',
       travelFocus: 'Skip Highway 7/8 or Highway 401 travel; sessions take place right in your family home or local daycare.',
       communityResources: 'Collaborating with KidsAbility Centre for Child Development and local Tri-City allied health specialists.'
-    }
+    },
+    schools: [
+      {
+        name: 'Cameron Heights Collegiate & Waterloo-Oxford',
+        type: 'Public Secondary (WRDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Lifeskills and developmental education programs with community outing support.'
+      },
+      {
+        name: 'Empire Public & Central Public School',
+        type: 'Public Elementary (WRDSB)',
+        grades: 'JK-Grade 6',
+        iepFocus: 'Assent-based behavioral protocols and collaborative parent coaching alignment.'
+      },
+      {
+        name: 'St. David Catholic Secondary School',
+        type: 'Catholic Secondary (WCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Special education resource teachers supporting social regulation and AAC devices.'
+      }
+    ]
   },
   {
     slug: 'cambridge',
@@ -871,7 +1697,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Long regional developmental service waitlists mean precious developmental windows are lost. Our autonomous in-home duos provide fast onboarding and CPBAO Standard 4 direct RBA oversight.',
       travelFocus: 'Skip Highway 7/8 or Highway 401 travel; sessions take place right in your family home or local daycare.',
       communityResources: 'Collaborating with KidsAbility Centre for Child Development and local Tri-City allied health specialists.'
-    }
+    },
+    schools: [
+      {
+        name: 'Cameron Heights Collegiate & Waterloo-Oxford',
+        type: 'Public Secondary (WRDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Lifeskills and developmental education programs with community outing support.'
+      },
+      {
+        name: 'Empire Public & Central Public School',
+        type: 'Public Elementary (WRDSB)',
+        grades: 'JK-Grade 6',
+        iepFocus: 'Assent-based behavioral protocols and collaborative parent coaching alignment.'
+      },
+      {
+        name: 'St. David Catholic Secondary School',
+        type: 'Catholic Secondary (WCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Special education resource teachers supporting social regulation and AAC devices.'
+      }
+    ]
   },
   {
     slug: 'guelph',
@@ -891,7 +1737,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Long regional developmental service waitlists mean precious developmental windows are lost. Our autonomous in-home duos provide fast onboarding and CPBAO Standard 4 direct RBA oversight.',
       travelFocus: 'Skip Highway 7/8 or Highway 401 travel; sessions take place right in your family home or local daycare.',
       communityResources: 'Collaborating with KidsAbility Centre for Child Development and local Tri-City allied health specialists.'
-    }
+    },
+    schools: [
+      {
+        name: 'Cameron Heights Collegiate & Waterloo-Oxford',
+        type: 'Public Secondary (WRDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Lifeskills and developmental education programs with community outing support.'
+      },
+      {
+        name: 'Empire Public & Central Public School',
+        type: 'Public Elementary (WRDSB)',
+        grades: 'JK-Grade 6',
+        iepFocus: 'Assent-based behavioral protocols and collaborative parent coaching alignment.'
+      },
+      {
+        name: 'St. David Catholic Secondary School',
+        type: 'Catholic Secondary (WCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Special education resource teachers supporting social regulation and AAC devices.'
+      }
+    ]
   },
   {
     slug: 'fergus',
@@ -911,7 +1777,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Long regional developmental service waitlists mean precious developmental windows are lost. Our autonomous in-home duos provide fast onboarding and CPBAO Standard 4 direct RBA oversight.',
       travelFocus: 'Skip Highway 7/8 or Highway 401 travel; sessions take place right in your family home or local daycare.',
       communityResources: 'Collaborating with KidsAbility Centre for Child Development and local Tri-City allied health specialists.'
-    }
+    },
+    schools: [
+      {
+        name: 'Cameron Heights Collegiate & Waterloo-Oxford',
+        type: 'Public Secondary (WRDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Lifeskills and developmental education programs with community outing support.'
+      },
+      {
+        name: 'Empire Public & Central Public School',
+        type: 'Public Elementary (WRDSB)',
+        grades: 'JK-Grade 6',
+        iepFocus: 'Assent-based behavioral protocols and collaborative parent coaching alignment.'
+      },
+      {
+        name: 'St. David Catholic Secondary School',
+        type: 'Catholic Secondary (WCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Special education resource teachers supporting social regulation and AAC devices.'
+      }
+    ]
   },
   {
     slug: 'brantford',
@@ -931,7 +1817,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Long regional developmental service waitlists mean precious developmental windows are lost. Our autonomous in-home duos provide fast onboarding and CPBAO Standard 4 direct RBA oversight.',
       travelFocus: 'Skip Highway 7/8 or Highway 401 travel; sessions take place right in your family home or local daycare.',
       communityResources: 'Collaborating with KidsAbility Centre for Child Development and local Tri-City allied health specialists.'
-    }
+    },
+    schools: [
+      {
+        name: 'Cameron Heights Collegiate & Waterloo-Oxford',
+        type: 'Public Secondary (WRDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Lifeskills and developmental education programs with community outing support.'
+      },
+      {
+        name: 'Empire Public & Central Public School',
+        type: 'Public Elementary (WRDSB)',
+        grades: 'JK-Grade 6',
+        iepFocus: 'Assent-based behavioral protocols and collaborative parent coaching alignment.'
+      },
+      {
+        name: 'St. David Catholic Secondary School',
+        type: 'Catholic Secondary (WCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Special education resource teachers supporting social regulation and AAC devices.'
+      }
+    ]
   },
   {
     slug: 'woodstock',
@@ -951,7 +1857,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Long regional developmental service waitlists mean precious developmental windows are lost. Our autonomous in-home duos provide fast onboarding and CPBAO Standard 4 direct RBA oversight.',
       travelFocus: 'Skip Highway 7/8 or Highway 401 travel; sessions take place right in your family home or local daycare.',
       communityResources: 'Collaborating with KidsAbility Centre for Child Development and local Tri-City allied health specialists.'
-    }
+    },
+    schools: [
+      {
+        name: 'Cameron Heights Collegiate & Waterloo-Oxford',
+        type: 'Public Secondary (WRDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Lifeskills and developmental education programs with community outing support.'
+      },
+      {
+        name: 'Empire Public & Central Public School',
+        type: 'Public Elementary (WRDSB)',
+        grades: 'JK-Grade 6',
+        iepFocus: 'Assent-based behavioral protocols and collaborative parent coaching alignment.'
+      },
+      {
+        name: 'St. David Catholic Secondary School',
+        type: 'Catholic Secondary (WCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Special education resource teachers supporting social regulation and AAC devices.'
+      }
+    ]
   },
   {
     slug: 'stratford',
@@ -971,7 +1897,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Long regional developmental service waitlists mean precious developmental windows are lost. Our autonomous in-home duos provide fast onboarding and CPBAO Standard 4 direct RBA oversight.',
       travelFocus: 'Skip Highway 7/8 or Highway 401 travel; sessions take place right in your family home or local daycare.',
       communityResources: 'Collaborating with KidsAbility Centre for Child Development and local Tri-City allied health specialists.'
-    }
+    },
+    schools: [
+      {
+        name: 'Cameron Heights Collegiate & Waterloo-Oxford',
+        type: 'Public Secondary (WRDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Lifeskills and developmental education programs with community outing support.'
+      },
+      {
+        name: 'Empire Public & Central Public School',
+        type: 'Public Elementary (WRDSB)',
+        grades: 'JK-Grade 6',
+        iepFocus: 'Assent-based behavioral protocols and collaborative parent coaching alignment.'
+      },
+      {
+        name: 'St. David Catholic Secondary School',
+        type: 'Catholic Secondary (WCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Special education resource teachers supporting social regulation and AAC devices.'
+      }
+    ]
   },
   {
     slug: 'london',
@@ -991,7 +1937,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Long regional developmental service waitlists mean precious developmental windows are lost. Our autonomous in-home duos provide fast onboarding and CPBAO Standard 4 direct RBA oversight.',
       travelFocus: 'Skip Highway 7/8 or Highway 401 travel; sessions take place right in your family home or local daycare.',
       communityResources: 'Collaborating with KidsAbility Centre for Child Development and local Tri-City allied health specialists.'
-    }
+    },
+    schools: [
+      {
+        name: 'Cameron Heights Collegiate & Waterloo-Oxford',
+        type: 'Public Secondary (WRDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Lifeskills and developmental education programs with community outing support.'
+      },
+      {
+        name: 'Empire Public & Central Public School',
+        type: 'Public Elementary (WRDSB)',
+        grades: 'JK-Grade 6',
+        iepFocus: 'Assent-based behavioral protocols and collaborative parent coaching alignment.'
+      },
+      {
+        name: 'St. David Catholic Secondary School',
+        type: 'Catholic Secondary (WCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Special education resource teachers supporting social regulation and AAC devices.'
+      }
+    ]
   },
   {
     slug: 'st-thomas',
@@ -1011,7 +1977,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Long regional developmental service waitlists mean precious developmental windows are lost. Our autonomous in-home duos provide fast onboarding and CPBAO Standard 4 direct RBA oversight.',
       travelFocus: 'Skip Highway 7/8 or Highway 401 travel; sessions take place right in your family home or local daycare.',
       communityResources: 'Collaborating with KidsAbility Centre for Child Development and local Tri-City allied health specialists.'
-    }
+    },
+    schools: [
+      {
+        name: 'Cameron Heights Collegiate & Waterloo-Oxford',
+        type: 'Public Secondary (WRDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Lifeskills and developmental education programs with community outing support.'
+      },
+      {
+        name: 'Empire Public & Central Public School',
+        type: 'Public Elementary (WRDSB)',
+        grades: 'JK-Grade 6',
+        iepFocus: 'Assent-based behavioral protocols and collaborative parent coaching alignment.'
+      },
+      {
+        name: 'St. David Catholic Secondary School',
+        type: 'Catholic Secondary (WCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Special education resource teachers supporting social regulation and AAC devices.'
+      }
+    ]
   },
 
   // --- 8. Simcoe County & Georgian Bay ---
@@ -1033,7 +2019,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Vast geographical travel across Simcoe County makes frequent clinic visits impractical for many families. Our in-home model delivers high-fidelity clinical intervention across Simcoe communities.',
       travelFocus: 'No battling Highway 400 winter weather or seasonal cottage traffic to access top-tier ABA therapy.',
       communityResources: 'Coordinating with local providers, pediatric clinics, and regional specialized school teams in Simcoe County.'
-    }
+    },
+    schools: [
+      {
+        name: 'Barrie North Collegiate & Innisdale Secondary',
+        type: 'Public Secondary (SCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Life skills learning programs and supported community integration.'
+      },
+      {
+        name: 'Mapleview Public & Oakley Park School',
+        type: 'Public Elementary (SCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Communication-rich classrooms and natural play accommodations.'
+      },
+      {
+        name: 'St. Joseph’s Catholic High School',
+        type: 'Catholic Secondary (SMCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Individualized student plans designed with family and behavioral consultants.'
+      }
+    ]
   },
   {
     slug: 'innisfil',
@@ -1053,7 +2059,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Vast geographical travel across Simcoe County makes frequent clinic visits impractical for many families. Our in-home model delivers high-fidelity clinical intervention across Simcoe communities.',
       travelFocus: 'No battling Highway 400 winter weather or seasonal cottage traffic to access top-tier ABA therapy.',
       communityResources: 'Coordinating with local providers, pediatric clinics, and regional specialized school teams in Simcoe County.'
-    }
+    },
+    schools: [
+      {
+        name: 'Barrie North Collegiate & Innisdale Secondary',
+        type: 'Public Secondary (SCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Life skills learning programs and supported community integration.'
+      },
+      {
+        name: 'Mapleview Public & Oakley Park School',
+        type: 'Public Elementary (SCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Communication-rich classrooms and natural play accommodations.'
+      },
+      {
+        name: 'St. Joseph’s Catholic High School',
+        type: 'Catholic Secondary (SMCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Individualized student plans designed with family and behavioral consultants.'
+      }
+    ]
   },
   {
     slug: 'bradford-west-gwillimbury',
@@ -1073,7 +2099,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Vast geographical travel across Simcoe County makes frequent clinic visits impractical for many families. Our in-home model delivers high-fidelity clinical intervention across Simcoe communities.',
       travelFocus: 'No battling Highway 400 winter weather or seasonal cottage traffic to access top-tier ABA therapy.',
       communityResources: 'Coordinating with local providers, pediatric clinics, and regional specialized school teams in Simcoe County.'
-    }
+    },
+    schools: [
+      {
+        name: 'Barrie North Collegiate & Innisdale Secondary',
+        type: 'Public Secondary (SCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Life skills learning programs and supported community integration.'
+      },
+      {
+        name: 'Mapleview Public & Oakley Park School',
+        type: 'Public Elementary (SCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Communication-rich classrooms and natural play accommodations.'
+      },
+      {
+        name: 'St. Joseph’s Catholic High School',
+        type: 'Catholic Secondary (SMCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Individualized student plans designed with family and behavioral consultants.'
+      }
+    ]
   },
   {
     slug: 'orillia',
@@ -1093,7 +2139,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Vast geographical travel across Simcoe County makes frequent clinic visits impractical for many families. Our in-home model delivers high-fidelity clinical intervention across Simcoe communities.',
       travelFocus: 'No battling Highway 400 winter weather or seasonal cottage traffic to access top-tier ABA therapy.',
       communityResources: 'Coordinating with local providers, pediatric clinics, and regional specialized school teams in Simcoe County.'
-    }
+    },
+    schools: [
+      {
+        name: 'Barrie North Collegiate & Innisdale Secondary',
+        type: 'Public Secondary (SCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Life skills learning programs and supported community integration.'
+      },
+      {
+        name: 'Mapleview Public & Oakley Park School',
+        type: 'Public Elementary (SCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Communication-rich classrooms and natural play accommodations.'
+      },
+      {
+        name: 'St. Joseph’s Catholic High School',
+        type: 'Catholic Secondary (SMCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Individualized student plans designed with family and behavioral consultants.'
+      }
+    ]
   },
   {
     slug: 'collingwood',
@@ -1113,7 +2179,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Vast geographical travel across Simcoe County makes frequent clinic visits impractical for many families. Our in-home model delivers high-fidelity clinical intervention across Simcoe communities.',
       travelFocus: 'No battling Highway 400 winter weather or seasonal cottage traffic to access top-tier ABA therapy.',
       communityResources: 'Coordinating with local providers, pediatric clinics, and regional specialized school teams in Simcoe County.'
-    }
+    },
+    schools: [
+      {
+        name: 'Barrie North Collegiate & Innisdale Secondary',
+        type: 'Public Secondary (SCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Life skills learning programs and supported community integration.'
+      },
+      {
+        name: 'Mapleview Public & Oakley Park School',
+        type: 'Public Elementary (SCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Communication-rich classrooms and natural play accommodations.'
+      },
+      {
+        name: 'St. Joseph’s Catholic High School',
+        type: 'Catholic Secondary (SMCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Individualized student plans designed with family and behavioral consultants.'
+      }
+    ]
   },
   {
     slug: 'wasaga-beach',
@@ -1133,7 +2219,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Vast geographical travel across Simcoe County makes frequent clinic visits impractical for many families. Our in-home model delivers high-fidelity clinical intervention across Simcoe communities.',
       travelFocus: 'No battling Highway 400 winter weather or seasonal cottage traffic to access top-tier ABA therapy.',
       communityResources: 'Coordinating with local providers, pediatric clinics, and regional specialized school teams in Simcoe County.'
-    }
+    },
+    schools: [
+      {
+        name: 'Barrie North Collegiate & Innisdale Secondary',
+        type: 'Public Secondary (SCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Life skills learning programs and supported community integration.'
+      },
+      {
+        name: 'Mapleview Public & Oakley Park School',
+        type: 'Public Elementary (SCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Communication-rich classrooms and natural play accommodations.'
+      },
+      {
+        name: 'St. Joseph’s Catholic High School',
+        type: 'Catholic Secondary (SMCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Individualized student plans designed with family and behavioral consultants.'
+      }
+    ]
   },
   {
     slug: 'new-tecumseth',
@@ -1153,7 +2259,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Vast geographical travel across Simcoe County makes frequent clinic visits impractical for many families. Our in-home model delivers high-fidelity clinical intervention across Simcoe communities.',
       travelFocus: 'No battling Highway 400 winter weather or seasonal cottage traffic to access top-tier ABA therapy.',
       communityResources: 'Coordinating with local providers, pediatric clinics, and regional specialized school teams in Simcoe County.'
-    }
+    },
+    schools: [
+      {
+        name: 'Barrie North Collegiate & Innisdale Secondary',
+        type: 'Public Secondary (SCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Life skills learning programs and supported community integration.'
+      },
+      {
+        name: 'Mapleview Public & Oakley Park School',
+        type: 'Public Elementary (SCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Communication-rich classrooms and natural play accommodations.'
+      },
+      {
+        name: 'St. Joseph’s Catholic High School',
+        type: 'Catholic Secondary (SMCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Individualized student plans designed with family and behavioral consultants.'
+      }
+    ]
   },
   {
     slug: 'midland',
@@ -1173,7 +2299,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Vast geographical travel across Simcoe County makes frequent clinic visits impractical for many families. Our in-home model delivers high-fidelity clinical intervention across Simcoe communities.',
       travelFocus: 'No battling Highway 400 winter weather or seasonal cottage traffic to access top-tier ABA therapy.',
       communityResources: 'Coordinating with local providers, pediatric clinics, and regional specialized school teams in Simcoe County.'
-    }
+    },
+    schools: [
+      {
+        name: 'Barrie North Collegiate & Innisdale Secondary',
+        type: 'Public Secondary (SCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Life skills learning programs and supported community integration.'
+      },
+      {
+        name: 'Mapleview Public & Oakley Park School',
+        type: 'Public Elementary (SCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Communication-rich classrooms and natural play accommodations.'
+      },
+      {
+        name: 'St. Joseph’s Catholic High School',
+        type: 'Catholic Secondary (SMCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Individualized student plans designed with family and behavioral consultants.'
+      }
+    ]
   },
 
   // --- 9. Dufferin & Orangeville ---
@@ -1195,7 +2341,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Vast geographical travel across Simcoe County makes frequent clinic visits impractical for many families. Our in-home model delivers high-fidelity clinical intervention across Simcoe communities.',
       travelFocus: 'No battling Highway 400 winter weather or seasonal cottage traffic to access top-tier ABA therapy.',
       communityResources: 'Coordinating with local providers, pediatric clinics, and regional specialized school teams in Simcoe County.'
-    }
+    },
+    schools: [
+      {
+        name: 'Barrie North Collegiate & Innisdale Secondary',
+        type: 'Public Secondary (SCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Life skills learning programs and supported community integration.'
+      },
+      {
+        name: 'Mapleview Public & Oakley Park School',
+        type: 'Public Elementary (SCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Communication-rich classrooms and natural play accommodations.'
+      },
+      {
+        name: 'St. Joseph’s Catholic High School',
+        type: 'Catholic Secondary (SMCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Individualized student plans designed with family and behavioral consultants.'
+      }
+    ]
   },
   {
     slug: 'shelburne',
@@ -1215,7 +2381,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Vast geographical travel across Simcoe County makes frequent clinic visits impractical for many families. Our in-home model delivers high-fidelity clinical intervention across Simcoe communities.',
       travelFocus: 'No battling Highway 400 winter weather or seasonal cottage traffic to access top-tier ABA therapy.',
       communityResources: 'Coordinating with local providers, pediatric clinics, and regional specialized school teams in Simcoe County.'
-    }
+    },
+    schools: [
+      {
+        name: 'Barrie North Collegiate & Innisdale Secondary',
+        type: 'Public Secondary (SCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Life skills learning programs and supported community integration.'
+      },
+      {
+        name: 'Mapleview Public & Oakley Park School',
+        type: 'Public Elementary (SCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Communication-rich classrooms and natural play accommodations.'
+      },
+      {
+        name: 'St. Joseph’s Catholic High School',
+        type: 'Catholic Secondary (SMCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Individualized student plans designed with family and behavioral consultants.'
+      }
+    ]
   },
 
   // --- 10. Peterborough & Kawartha Lakes (Eastern Gateway) ---
@@ -1237,7 +2423,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Accessing licensed Registered Behaviour Analysts (R.B.A. Ont.) outside the major metropolitan core can be difficult. We bring licensed RBA clinical oversight directly to Kawartha and Northumberland homes.',
       travelFocus: 'Direct home visits throughout rural and urban Kawarthas without requiring trips to the GTA.',
       communityResources: 'Close communication with Five Counties Children’s Centre and Peterborough regional healthcare teams.'
-    }
+    },
+    schools: [
+      {
+        name: 'Peterborough Collegiate (PACE) & Adam Scott',
+        type: 'Public Secondary (KPRDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Adaptive secondary education and vocational transitional programming.'
+      },
+      {
+        name: 'Westmount & Prince of Wales Public School',
+        type: 'Public Elementary (KPRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Dedicated special education resource classes and sensory diet accommodations.'
+      },
+      {
+        name: 'Holy Cross Catholic Secondary School',
+        type: 'Catholic Secondary (PVNCCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Collaborative IEP goal coordination with local regional treatment teams.'
+      }
+    ]
   },
   {
     slug: 'kawartha-lakes',
@@ -1257,7 +2463,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Accessing licensed Registered Behaviour Analysts (R.B.A. Ont.) outside the major metropolitan core can be difficult. We bring licensed RBA clinical oversight directly to Kawartha and Northumberland homes.',
       travelFocus: 'Direct home visits throughout rural and urban Kawarthas without requiring trips to the GTA.',
       communityResources: 'Close communication with Five Counties Children’s Centre and Peterborough regional healthcare teams.'
-    }
+    },
+    schools: [
+      {
+        name: 'Peterborough Collegiate (PACE) & Adam Scott',
+        type: 'Public Secondary (KPRDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Adaptive secondary education and vocational transitional programming.'
+      },
+      {
+        name: 'Westmount & Prince of Wales Public School',
+        type: 'Public Elementary (KPRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Dedicated special education resource classes and sensory diet accommodations.'
+      },
+      {
+        name: 'Holy Cross Catholic Secondary School',
+        type: 'Catholic Secondary (PVNCCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Collaborative IEP goal coordination with local regional treatment teams.'
+      }
+    ]
   },
   {
     slug: 'cobourg',
@@ -1277,7 +2503,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Families along Highway 401 and the Kingston Road corridor often find clinic slots conflict with commuter parent schedules. We offer flexible in-home morning, after-school, and weekend blocks.',
       travelFocus: 'Zero Highway 401 or 407 rush hour trips; consistent therapist visits in your neighbourhood.',
       communityResources: 'Alignment with Grandview Kids Children’s Treatment Centre and Durham Region early years hubs.'
-    }
+    },
+    schools: [
+      {
+        name: 'Dunbarton High & Sinclair Secondary',
+        type: 'Public Secondary (DDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Practical academic classes, social navigation, and sensory integration spaces.'
+      },
+      {
+        name: 'William Dunbar & Valley View Public School',
+        type: 'Public Elementary (DDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Intensive communication early intervention paired with in-home therapy trials.'
+      },
+      {
+        name: 'St. Mary Catholic Secondary School',
+        type: 'Catholic Secondary (DCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Collaborative student success team meetings and assistive tech integration.'
+      }
+    ]
   },
   {
     slug: 'port-hope',
@@ -1297,7 +2543,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Families along Highway 401 and the Kingston Road corridor often find clinic slots conflict with commuter parent schedules. We offer flexible in-home morning, after-school, and weekend blocks.',
       travelFocus: 'Zero Highway 401 or 407 rush hour trips; consistent therapist visits in your neighbourhood.',
       communityResources: 'Alignment with Grandview Kids Children’s Treatment Centre and Durham Region early years hubs.'
-    }
+    },
+    schools: [
+      {
+        name: 'Dunbarton High & Sinclair Secondary',
+        type: 'Public Secondary (DDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Practical academic classes, social navigation, and sensory integration spaces.'
+      },
+      {
+        name: 'William Dunbar & Valley View Public School',
+        type: 'Public Elementary (DDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Intensive communication early intervention paired with in-home therapy trials.'
+      },
+      {
+        name: 'St. Mary Catholic Secondary School',
+        type: 'Catholic Secondary (DCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Collaborative student success team meetings and assistive tech integration.'
+      }
+    ]
   },
 
   // --- 11. Eastern Ontario & Belleville / Kingston Corridor ---
@@ -1319,7 +2585,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Navigating bilingual education requirements and finding assent-based ABA teams fluent in English or French can be challenging. We pair families with culturally affirming, bilingual-ready clinicians.',
       travelFocus: 'Eliminate Queensway (Highway 417) congestion; sessions are conducted in your living room and natural community.',
       communityResources: 'Coordinated with CHEO (Children’s Hospital of Eastern Ontario) autism programming and local allied health clinics.'
-    }
+    },
+    schools: [
+      {
+        name: 'Nepean High School & Lisgar Collegiate',
+        type: 'Public Secondary (OCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Bilingual special education classes and differentiated learning strategies.'
+      },
+      {
+        name: 'Elmdale Public & Broadview Public School',
+        type: 'Public Elementary (OCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early speech, AAC device adoption, and positive behavioral teaching plans.'
+      },
+      {
+        name: 'St. Pius X High School / Collège catholique Samuel-Genest',
+        type: 'Catholic Secondary (OCSB / CECCE)',
+        grades: 'Grades 7-12',
+        iepFocus: 'Comprehensive student support services with assent-based clinical goals.'
+      }
+    ]
   },
   {
     slug: 'kingston',
@@ -1339,7 +2625,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Navigating bilingual education requirements and finding assent-based ABA teams fluent in English or French can be challenging. We pair families with culturally affirming, bilingual-ready clinicians.',
       travelFocus: 'Eliminate Queensway (Highway 417) congestion; sessions are conducted in your living room and natural community.',
       communityResources: 'Coordinated with CHEO (Children’s Hospital of Eastern Ontario) autism programming and local allied health clinics.'
-    }
+    },
+    schools: [
+      {
+        name: 'Nepean High School & Lisgar Collegiate',
+        type: 'Public Secondary (OCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Bilingual special education classes and differentiated learning strategies.'
+      },
+      {
+        name: 'Elmdale Public & Broadview Public School',
+        type: 'Public Elementary (OCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early speech, AAC device adoption, and positive behavioral teaching plans.'
+      },
+      {
+        name: 'St. Pius X High School / Collège catholique Samuel-Genest',
+        type: 'Catholic Secondary (OCSB / CECCE)',
+        grades: 'Grades 7-12',
+        iepFocus: 'Comprehensive student support services with assent-based clinical goals.'
+      }
+    ]
   },
 
   // --- 12. Ottawa & National Capital Region ---
@@ -1361,7 +2667,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Navigating bilingual education requirements and finding assent-based ABA teams fluent in English or French can be challenging. We pair families with culturally affirming, bilingual-ready clinicians.',
       travelFocus: 'Eliminate Queensway (Highway 417) congestion; sessions are conducted in your living room and natural community.',
       communityResources: 'Coordinated with CHEO (Children’s Hospital of Eastern Ontario) autism programming and local allied health clinics.'
-    }
+    },
+    schools: [
+      {
+        name: 'Nepean High School & Lisgar Collegiate',
+        type: 'Public Secondary (OCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Bilingual special education classes and differentiated learning strategies.'
+      },
+      {
+        name: 'Elmdale Public & Broadview Public School',
+        type: 'Public Elementary (OCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early speech, AAC device adoption, and positive behavioral teaching plans.'
+      },
+      {
+        name: 'St. Pius X High School / Collège catholique Samuel-Genest',
+        type: 'Catholic Secondary (OCSB / CECCE)',
+        grades: 'Grades 7-12',
+        iepFocus: 'Comprehensive student support services with assent-based clinical goals.'
+      }
+    ]
   },
   {
     slug: 'kanata',
@@ -1381,7 +2707,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Navigating bilingual education requirements and finding assent-based ABA teams fluent in English or French can be challenging. We pair families with culturally affirming, bilingual-ready clinicians.',
       travelFocus: 'Eliminate Queensway (Highway 417) congestion; sessions are conducted in your living room and natural community.',
       communityResources: 'Coordinated with CHEO (Children’s Hospital of Eastern Ontario) autism programming and local allied health clinics.'
-    }
+    },
+    schools: [
+      {
+        name: 'Nepean High School & Lisgar Collegiate',
+        type: 'Public Secondary (OCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Bilingual special education classes and differentiated learning strategies.'
+      },
+      {
+        name: 'Elmdale Public & Broadview Public School',
+        type: 'Public Elementary (OCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early speech, AAC device adoption, and positive behavioral teaching plans.'
+      },
+      {
+        name: 'St. Pius X High School / Collège catholique Samuel-Genest',
+        type: 'Catholic Secondary (OCSB / CECCE)',
+        grades: 'Grades 7-12',
+        iepFocus: 'Comprehensive student support services with assent-based clinical goals.'
+      }
+    ]
   },
   {
     slug: 'nepean',
@@ -1401,7 +2747,27 @@ export const ontarioLocations: LocationInfo[] = [
       localChallengeHighlight: 'Navigating bilingual education requirements and finding assent-based ABA teams fluent in English or French can be challenging. We pair families with culturally affirming, bilingual-ready clinicians.',
       travelFocus: 'Eliminate Queensway (Highway 417) congestion; sessions are conducted in your living room and natural community.',
       communityResources: 'Coordinated with CHEO (Children’s Hospital of Eastern Ontario) autism programming and local allied health clinics.'
-    }
+    },
+    schools: [
+      {
+        name: 'Nepean High School & Lisgar Collegiate',
+        type: 'Public Secondary (OCDSB)',
+        grades: 'Grades 9-12',
+        iepFocus: 'Bilingual special education classes and differentiated learning strategies.'
+      },
+      {
+        name: 'Elmdale Public & Broadview Public School',
+        type: 'Public Elementary (OCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early speech, AAC device adoption, and positive behavioral teaching plans.'
+      },
+      {
+        name: 'St. Pius X High School / Collège catholique Samuel-Genest',
+        type: 'Catholic Secondary (OCSB / CECCE)',
+        grades: 'Grades 7-12',
+        iepFocus: 'Comprehensive student support services with assent-based clinical goals.'
+      }
+    ]
   },
   {
     slug: 'orleans',

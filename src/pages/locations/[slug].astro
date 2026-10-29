@@ -302,6 +302,116 @@ const iconSvgMap: Record<string, string> = {
       </div>
     </section>
 
+    <!-- SECTION: LOCAL PUBLIC SCHOOLS & REGIONAL IMAGE MAP -->
+    {location.schools && location.schools.length > 0 && (
+      <section class="py-20 bg-white border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl mb-12">
+            <span class="text-xs uppercase tracking-widest font-bold text-brand-ocean">School IEP &amp; Community Coordination</span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-2">
+              Local Schools in {location.name} &amp; Educational Support
+            </h2>
+            <p class="mt-3 text-slate-600 text-sm sm:text-base font-medium">
+              Our clinical supervisors collaborate with educators and special education resource teachers across {location.name} to align Behaviour Service Plans (BSPs), sensory accommodations, and assistive AAC goals.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <!-- Left: Interactive Styled Image Map Graphic -->
+            <div class="lg:col-span-5 bg-gradient-to-br from-slate-900 to-brand-dark text-white rounded-3xl p-6 sm:p-7 shadow-card border border-brand-orchid/30 relative overflow-hidden">
+              <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-4">
+                <div>
+                  <span class="text-[10px] uppercase font-bold text-brand-peony block">Regional Service Zone</span>
+                  <h3 class="text-lg font-bold text-white">{location.name} In-Home Coverage Map</h3>
+                </div>
+                <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                  Full Radius
+                </span>
+              </div>
+
+              <!-- Stylized Vector Map Illustration -->
+              <div class="relative w-full aspect-[4/3] rounded-2xl bg-white/5 border border-white/10 overflow-hidden flex items-center justify-center p-4">
+                <svg class="w-full h-full text-slate-700/60" viewBox="0 0 320 220" fill="none">
+                  <!-- Road Grid Lines -->
+                  <path d="M20 110 H300 M160 20 V200 M60 40 L260 180 M60 180 L260 40" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" />
+                  <!-- Community Zone Boundary -->
+                  <ellipse cx="160" cy="110" rx="110" ry="75" stroke="#8224e3" stroke-width="2" stroke-opacity="0.4" fill="#8224e3" fill-opacity="0.08" />
+                  
+                  <!-- School Pins -->
+                  <g class="school-pin" transform="translate(100, 75)">
+                    <circle cx="0" cy="0" r="14" fill="#009cc2" fill-opacity="0.25" />
+                    <circle cx="0" cy="0" r="7" fill="#009cc2" />
+                    <text x="12" y="4" font-size="10" font-weight="bold" fill="#ffffff">School A</text>
+                  </g>
+                  <g class="school-pin" transform="translate(200, 90)">
+                    <circle cx="0" cy="0" r="14" fill="#b02994" fill-opacity="0.25" />
+                    <circle cx="0" cy="0" r="7" fill="#b02994" />
+                    <text x="12" y="4" font-size="10" font-weight="bold" fill="#ffffff">School B</text>
+                  </g>
+                  <g class="school-pin" transform="translate(150, 150)">
+                    <circle cx="0" cy="0" r="14" fill="#8224e3" fill-opacity="0.25" />
+                    <circle cx="0" cy="0" r="7" fill="#8224e3" />
+                    <text x="12" y="4" font-size="10" font-weight="bold" fill="#ffffff">School C</text>
+                  </g>
+
+                  <!-- Central Home Indicator -->
+                  <g transform="translate(160, 110)">
+                    <circle cx="0" cy="0" r="18" fill="#ffffff" fill-opacity="0.15" />
+                    <circle cx="0" cy="0" r="9" fill="#ffffff" />
+                    <circle cx="0" cy="0" r="4" fill="#8224e3" />
+                  </g>
+                </svg>
+
+                <div class="absolute bottom-3 left-3 bg-brand-dark/90 px-3 py-1.5 rounded-xl border border-white/10 text-[11px] font-semibold text-slate-300">
+                  📍 In-Home Direct Therapist Range: {location.name}
+                </div>
+              </div>
+
+              <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-slate-400">
+                <span>Distance from Metro Hub: <strong>{location.approxDistanceKm} km</strong></span>
+                <span class="text-brand-peony font-semibold">Active Caseload Zone</span>
+              </div>
+            </div>
+
+            <!-- Right: List of Representative Schools with Descriptions -->
+            <div class="lg:col-span-7 space-y-4">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-500 block mb-1">
+                Sample Public &amp; Catholic School Alignments in {location.name}:
+              </span>
+
+              {location.schools.map((school, index) => (
+                <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border hover:border-brand-orchid transition-all">
+                  <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
+                    <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+                      <span class="w-6 h-6 rounded-lg bg-brand-orchid/10 text-brand-orchid text-xs flex items-center justify-center font-bold">
+                        {index + 1}
+                      </span>
+                      {school.name}
+                    </h3>
+                    <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-white border border-brand-border text-brand-dark">
+                      {school.grades}
+                    </span>
+                  </div>
+
+                  <div class="text-xs font-bold text-brand-ocean mb-2">
+                    {school.type}
+                  </div>
+
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    <strong>IEP &amp; Classroom Transition Focus:</strong> {school.iepFocus}
+                  </p>
+                </div>
+              ))}
+
+              <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-600 leading-relaxed">
+                <strong>Need IEP or School Meeting Representation?</strong> Our Supervising Registered Behaviour Analysts (R.B.A. Ont.) can participate in school transition meetings, review IPRC placements, and help teachers implement positive behaviour support plans for children in {location.name}.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    )}
+
     <!-- AVAILABLE TEAMS COVERING THIS AREA -->
     <section id="local-teams" class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
