@@ -7,21 +7,19 @@ interface Props {
 
 const { location } = Astro.props;
 
-// Compute school positions relative to location coordinates so each school has an authentic geo anchor
-const schoolOffsets = [
-  { dLat: 0.016, dLng: -0.021 },
-  { dLat: -0.014, dLng: 0.023 },
-  { dLat: 0.019, dLng: 0.016 },
-];
+const lat = location.coordinates.lat;
+const lng = location.coordinates.lng;
 
-const schoolsWithCoords = (location.schools || []).map((school, i) => {
-  const offset = schoolOffsets[i % schoolOffsets.length];
-  return {
-    ...school,
-    lat: location.coordinates.lat + offset.dLat,
-    lng: location.coordinates.lng + offset.dLng,
-  };
-});
+// Calculate real bounding box around the city for OpenStreetMap embed
+const minLng = (lng - 0.08).toFixed(4);
+const minLat = (lat - 0.05).toFixed(4);
+const maxLng = (lng + 0.08).toFixed(4);
+const maxLat = (lat + 0.05).toFixed(4);
+
+const osmEmbedUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${minLng}%2C${minLat}%2C${maxLng}%2C${maxLat}&layer=mapnik&marker=${lat}%2C${lng}`;
+const osmFullUrl = `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=13/${lat}/${lng}`;
+const googleMapsSearchUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location.name + ', Ontario In-Home Autism Therapy')}`;
+const googleMapsSatelliteUrl = `https://www.google.com/maps/@${lat},${lng},14z/data=!3m1!1e3`;
 ---
 
 <div class="bg-gradient-to-br from-slate-900 to-brand-dark text-white rounded-3xl p-6 sm:p-7 shadow-card border border-brand-orchid/30 relative overflow-hidden flex flex-col">
@@ -30,211 +28,118 @@ const schoolsWithCoords = (location.schools || []).map((school, i) => {
     <div>
       <div class="flex items-center gap-2">
         <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span class="text-[11px] uppercase tracking-wider font-bold text-brand-peony">Live GPS Territory Coverage</span>
+        <span class="text-[11px] uppercase tracking-wider font-bold text-brand-peony">Real-Time OpenStreetMap</span>
       </div>
-      <h3 class="text-xl font-bold text-white mt-0.5">{location.name} In-Home Coverage Map</h3>
+      <h3 class="text-xl font-bold text-white mt-0.5">{location.name} Real Map &amp; Coverage</h3>
     </div>
     <div class="flex items-center gap-2">
       <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 inline-flex items-center gap-1.5">
         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
         </svg>
-        <span>Full 15km Radius Active</span>
+        <span>15km In-Home Radius Active</span>
       </span>
     </div>
   </div>
 
-  <!-- Real Interactive Map Container -->
-  <div class="relative w-full rounded-2xl overflow-hidden border border-white/15 bg-slate-950 shadow-inner flex-grow">
-    <!-- Map viewport -->
-    <div
-      id={`leaflet-map-${location.slug}`}
-      class="w-full h-[360px] sm:h-[430px] z-0"
-      data-lat={location.coordinates.lat}
-      data-lng={location.coordinates.lng}
-      data-name={location.name}
-      data-region={location.region}
-      data-schools={JSON.stringify(schoolsWithCoords)}
-    >
-      <!-- Fallback / Loading Skeleton -->
-      <div class="w-full h-full flex flex-col items-center justify-center bg-slate-900/80 text-slate-400 p-6 text-center">
-        <div class="w-10 h-10 border-4 border-brand-orchid border-t-transparent rounded-full animate-spin mb-3"></div>
-        <p class="text-sm font-semibold text-white">Loading High-Resolution Cartography...</p>
-        <p class="text-xs text-slate-400 mt-1">{location.name}, Ontario Territory Map</p>
-      </div>
-    </div>
+  <!-- Real Interactive Map Viewport -->
+  <div class="relative w-full rounded-2xl overflow-hidden border border-white/20 bg-slate-900 shadow-2xl flex-grow">
+    <!-- Official Real OpenStreetMap Interactive Frame -->
+    <iframe
+      title={`${location.name} Real OpenStreetMap Coverage Territory`}
+      src={osmEmbedUrl}
+      class="w-full h-[380px] sm:h-[440px] border-0 rounded-2xl filter brightness-95 contrast-105"
+      loading="lazy"
+      allowfullscreen
+    ></iframe>
 
-    <!-- Quick Floating Action Overlay -->
-    <div class="absolute top-3 right-3 z-[400] flex flex-col gap-1.5">
-      <button
-        type="button"
-        id={`reset-map-${location.slug}`}
-        title="Reset map view to center"
-        class="bg-white/95 hover:bg-white text-slate-800 px-3 py-1.5 rounded-xl shadow-md border border-slate-200 transition-all active:scale-95 text-xs font-bold flex items-center gap-1.5 backdrop-blur-sm cursor-pointer"
+    <!-- Floating Map Controls Overlay (Google Maps & Satellite Launchers) -->
+    <div class="absolute top-3 right-3 z-10 flex flex-wrap gap-2">
+      <a
+        href={googleMapsSearchUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Open in Google Maps"
+        class="bg-white/95 hover:bg-white text-slate-800 px-3 py-1.5 rounded-xl shadow-lg border border-slate-200 transition-all active:scale-95 text-xs font-bold flex items-center gap-1.5 backdrop-blur-sm group cursor-pointer"
       >
-        <svg class="w-3.5 h-3.5 text-brand-orchid" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+        <svg class="w-4 h-4 text-emerald-600" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>
-        <span>Recenter</span>
-      </button>
+        <span>Open in Google Maps</span>
+        <svg class="w-3 h-3 text-slate-400 group-hover:text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
+      </a>
+
+      <a
+        href={googleMapsSatelliteUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Open Google Maps Satellite View"
+        class="bg-slate-900/90 hover:bg-slate-900 text-white px-3 py-1.5 rounded-xl shadow-lg border border-white/20 transition-all active:scale-95 text-xs font-bold flex items-center gap-1.5 backdrop-blur-sm group hidden sm:flex cursor-pointer"
+      >
+        <svg class="w-3.5 h-3.5 text-brand-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span>Satellite View</span>
+      </a>
     </div>
 
-    <!-- Badge Info Pin at Bottom Left -->
-    <div class="absolute bottom-3 left-3 z-[400] bg-slate-900/90 backdrop-blur-md px-3.5 py-2 rounded-xl border border-white/15 text-xs text-slate-200 shadow-lg pointer-events-none">
-      <div class="font-bold text-white flex items-center gap-1.5">
-        <span class="w-2 h-2 rounded-full bg-brand-ocean"></span>
-        <span>{location.name} Clinical In-Home Hub</span>
+    <!-- Live Hub Badge Overlay at Bottom Left -->
+    <div class="absolute bottom-3 left-3 z-10 bg-slate-900/95 backdrop-blur-md px-3.5 py-2.5 rounded-2xl border border-white/20 text-xs text-slate-200 shadow-2xl max-w-[280px] pointer-events-none">
+      <div class="font-bold text-white flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-brand-ocean animate-ping"></span>
+        <span>{location.name} In-Home Hub Pin</span>
       </div>
-      <div class="text-[11px] text-slate-400 mt-0.5">
-        Therapist travel included • Zero clinic commute
+      <div class="text-[11px] text-slate-300 mt-1">
+        Direct clinician dispatch across {location.name} • In-home therapy coverage
       </div>
     </div>
   </div>
 
-  <!-- Legend & Distance Footer -->
-  <div class="mt-4 pt-3 border-t border-white/10 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-300">
-    <div class="flex flex-wrap items-center gap-3 sm:gap-4">
-      <div class="flex items-center gap-1.5">
-        <span class="w-3 h-3 rounded-full bg-brand-ocean border border-white/40"></span>
-        <span class="text-slate-300">In-Home Clinical Hub</span>
+  <!-- Legend & Real School Map Links Footer -->
+  <div class="mt-4 pt-3 border-t border-white/10 flex flex-col gap-3">
+    <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-slate-300">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="flex items-center gap-1.5">
+          <span class="w-3 h-3 rounded-full bg-blue-500 border border-white/50"></span>
+          <span>OpenStreetMap Live Pin</span>
+        </span>
+        <span class="flex items-center gap-1.5">
+          <span class="w-3 h-3 rounded-full bg-brand-orchid border border-white/50"></span>
+          <span>In-Home Service Territory</span>
+        </span>
       </div>
-      <div class="flex items-center gap-1.5">
-        <span class="w-3 h-3 rounded-full bg-brand-orchid border border-white/40"></span>
-        <span class="text-slate-300">Partner School &amp; IEP Catchment</span>
-      </div>
-      <div class="flex items-center gap-1.5">
-        <span class="w-3 h-3 rounded-full border border-dashed border-brand-peony bg-brand-peony/20"></span>
-        <span class="text-slate-300">Direct Travel Perimeter</span>
-      </div>
+      <a
+        href={osmFullUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-brand-peony hover:underline font-semibold text-xs inline-flex items-center gap-1"
+      >
+        <span>View Fullscreen on OpenStreetMap</span>
+        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
+      </a>
     </div>
-    <div class="text-slate-400 text-[11px]">
-      Metro Core Distance: <strong class="text-white">{location.approxDistanceKm} km</strong>
+
+    <!-- Direct School GPS Launchers -->
+    <div class="pt-2 border-t border-white/10 flex flex-wrap items-center gap-2 text-xs">
+      <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">View Schools on Map:</span>
+      {(location.schools || []).map((sch) => (
+        <a
+          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(sch.name + ' ' + location.name + ' Ontario')}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          title={`View ${sch.name} on Google Maps`}
+          class="px-2.5 py-1 rounded-lg bg-white/10 hover:bg-white/20 text-slate-200 border border-white/10 hover:border-brand-orchid transition-all inline-flex items-center gap-1 font-medium text-[11px]"
+        >
+          <span>📍 {sch.name.split('/')[0].trim()}</span>
+          <svg class="w-2.5 h-2.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      ))}
     </div>
   </div>
 </div>
-
-<script is:inline>
-  (function() {
-    function initMap() {
-      if (typeof L === 'undefined') {
-        setTimeout(initMap, 80);
-        return;
-      }
-
-      const containers = document.querySelectorAll('[id^="leaflet-map-"]');
-      containers.forEach(function(el) {
-        if (el.dataset.initialized === 'true') return;
-        el.dataset.initialized = 'true';
-
-        // Clear loading skeleton
-        el.innerHTML = '';
-
-        const lat = parseFloat(el.dataset.lat || '43.6532');
-        const lng = parseFloat(el.dataset.lng || '-79.3832');
-        const name = el.dataset.name || 'Location';
-        const region = el.dataset.region || 'Ontario';
-        const schools = JSON.parse(el.dataset.schools || '[]');
-
-        // Initialize Map
-        const map = L.map(el.id, {
-          center: [lat, lng],
-          zoom: 12,
-          scrollWheelZoom: false,
-          zoomControl: true,
-        });
-
-        // CartoDB Voyager High-Res Clean Tiles
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>',
-          subdomains: 'abcd',
-          maxZoom: 19,
-        }).addTo(map);
-
-        // In-Home Direct Service Radius Circle (~13 km)
-        const serviceRadius = L.circle([lat, lng], {
-          color: '#8224e3',
-          fillColor: '#8224e3',
-          fillOpacity: 0.12,
-          weight: 2,
-          dashArray: '5, 5',
-          radius: 13500,
-        }).addTo(map);
-
-        serviceRadius.bindTooltip('Side by Side Direct In-Home Coverage Radius (' + name + ')', {
-          direction: 'top',
-          className: 'custom-map-tooltip'
-        });
-
-        // Custom Pulsing Hub Marker
-        const hubIcon = L.divIcon({
-          className: 'custom-hub-icon',
-          html: '<div style="position: relative; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center;">' +
-                  '<div style="position: absolute; width: 34px; height: 34px; border-radius: 50%; background: #009cc2; opacity: 0.45; animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;"></div>' +
-                  '<div style="position: relative; width: 30px; height: 30px; border-radius: 50%; background: #19053b; border: 2.5px solid #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center; color: #009cc2;">' +
-                    '<svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg>' +
-                  '</div>' +
-                '</div>',
-          iconSize: [34, 34],
-          iconAnchor: [17, 17],
-        });
-
-        const hubMarker = L.marker([lat, lng], { icon: hubIcon }).addTo(map);
-        hubMarker.bindPopup(
-          '<div style="font-family: Montserrat, sans-serif; min-width: 220px;">' +
-            '<div style="font-size: 10px; text-transform: uppercase; font-weight: 700; color: #8224e3; letter-spacing: 0.5px;">Side by Side Direct In-Home Hub</div>' +
-            '<h4 style="font-size: 14px; font-weight: 700; color: #0f172a; margin: 2px 0 4px 0;">' + name + ' Active Caseload</h4>' +
-            '<p style="font-size: 12px; color: #475569; margin: 0 0 6px 0; line-height: 1.4;">Registered Behaviour Analysts (R.B.A.) and Instructor Therapists travel directly to your family residence in ' + name + ' and surrounding ' + region + ' neighbourhoods.</p>' +
-            '<div style="margin-bottom: 6px;"><span style="display: inline-block; padding: 2px 8px; background: #e0f2fe; color: #0369a1; font-size: 10px; font-weight: 600; border-radius: 9999px;">✓ In-Home Service Active</span></div>' +
-            '<div style="padding-top: 6px; border-top: 1px solid #e2e8f0; display: flex; justify-content: space-between; gap: 8px; font-size: 10px; font-weight: 700;">' +
-              '<a href="https://cpbao.ca/public-register/" target="_blank" rel="noopener noreferrer" style="color: #0284c7; text-decoration: underline;">CPBAO Register ↗</a>' +
-              '<a href="https://www.ontario.ca/page/ontario-autism-program" target="_blank" rel="noopener noreferrer" style="color: #b02994; text-decoration: underline;">OAP Guidelines ↗</a>' +
-            '</div>' +
-          '</div>'
-        );
-
-        // School Markers
-        schools.forEach(function(sch) {
-          const schoolIcon = L.divIcon({
-            className: 'custom-school-icon',
-            html: '<div style="width: 28px; height: 28px; border-radius: 50%; background: #b02994; border: 2px solid #ffffff; box-shadow: 0 3px 8px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; color: #ffffff; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform=\'scale(1.15)\'" onmouseout="this.style.transform=\'scale(1)\'">' +
-                    '<svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a10.97 10.97 0 00-.25 2.449c0 3.327 2.14 6.136 5 6.945 2.86-.809 5-3.618 5-6.945 0-.853-.09-1.677-.25-2.449l2.644-1.131a1 1 0 000-1.84l-7-3z" /></svg>' +
-                  '</div>',
-            iconSize: [28, 28],
-            iconAnchor: [14, 14],
-          });
-
-          const schoolMarker = L.marker([sch.lat, sch.lng], { icon: schoolIcon }).addTo(map);
-          schoolMarker.bindPopup(
-            '<div style="font-family: Montserrat, sans-serif; min-width: 230px;">' +
-              '<span style="display: inline-block; padding: 2px 8px; background: #fdf2f8; color: #b02994; font-size: 10px; font-weight: 700; border-radius: 9999px; margin-bottom: 4px;">' + sch.type + '</span>' +
-              '<h4 style="font-size: 13px; font-weight: 700; color: #0f172a; margin: 0 0 4px 0;">' + sch.name + '</h4>' +
-              '<div style="font-size: 11px; font-weight: 600; color: #64748b; margin-bottom: 6px;">' + sch.grades + '</div>' +
-              '<p style="font-size: 11px; color: #334155; line-height: 1.4; margin: 0 0 6px 0; background: #f8fafc; padding: 6px 8px; border-radius: 6px; border-left: 3px solid #b02994;">' + sch.iepFocus + '</p>' +
-              '<div style="margin-top: 8px; padding-top: 6px; border-top: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 4px;">' +
-                '<span style="font-size: 10px; color: #166534; font-weight: 600;">✓ In-Home ABA &amp; IEP Alignment Supported</span>' +
-                '<a href="' + (sch.url || '#') + '" target="_blank" rel="noopener noreferrer" style="font-size: 11px; font-weight: 700; color: #8224e3; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;">' +
-                  '<span>Visit Official School Website &rarr;</span>' +
-                '</a>' +
-              '</div>' +
-            '</div>'
-          );
-        });
-
-        // Recenter Button
-        const slug = el.id.replace('leaflet-map-', '');
-        const resetBtn = document.getElementById('reset-map-' + slug);
-        if (resetBtn) {
-          resetBtn.addEventListener('click', function() {
-            map.setView([lat, lng], 12);
-          });
-        }
-      });
-    }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initMap);
-    } else {
-      initMap();
-    }
-  })();
-</script>
