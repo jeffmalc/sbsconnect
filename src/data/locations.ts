@@ -50,23 +50,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Rosedale Heights School of the Arts / Jarvis Collegiate',
-        type: 'Public Secondary (TDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Comprehensive special education support and IEP resource accommodations for neurodivergent teens.'
+        name: 'Rosedale Junior Public / Lord Lansdowne Junior and Senior Public School',
+        type: 'Public Elementary (TDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Sensory-inclusive classroom accommodations, early language development, and seamless collaboration with private in-home ABA teams.'
       },
       {
         name: 'Deer Park Junior and Senior Public School',
         type: 'Public Elementary (TDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Sensory-inclusive classroom transitions and collaboration with private in-home ABA teams.'
+        iepFocus: 'Structured neurodiversity-affirming classrooms, social regulation support, and school-day transition assistance.'
       },
       {
-        name: 'St. Michael’s Choir & St. Joseph’s College',
-        type: 'Catholic Secondary (TCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Individualized resource learning centers and structured executive functioning coaching.'
-      }
+        name: 'St. Joseph Catholic Elementary / Holy Rosary Catholic School',
+        type: 'Catholic Elementary (TCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized Education Plans (IEPs), specialized educational assistants (EAs), and integrated speech & AAC goals.'
+      },
     ]
   },
   {
@@ -91,23 +91,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Rosedale Heights School of the Arts / Jarvis Collegiate',
-        type: 'Public Secondary (TDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Comprehensive special education support and IEP resource accommodations for neurodivergent teens.'
+        name: 'Rosedale Junior Public / Lord Lansdowne Junior and Senior Public School',
+        type: 'Public Elementary (TDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Sensory-inclusive classroom accommodations, early language development, and seamless collaboration with private in-home ABA teams.'
       },
       {
         name: 'Deer Park Junior and Senior Public School',
         type: 'Public Elementary (TDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Sensory-inclusive classroom transitions and collaboration with private in-home ABA teams.'
+        iepFocus: 'Structured neurodiversity-affirming classrooms, social regulation support, and school-day transition assistance.'
       },
       {
-        name: 'St. Michael’s Choir & St. Joseph’s College',
-        type: 'Catholic Secondary (TCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Individualized resource learning centers and structured executive functioning coaching.'
-      }
+        name: 'St. Joseph Catholic Elementary / Holy Rosary Catholic School',
+        type: 'Catholic Elementary (TCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized Education Plans (IEPs), specialized educational assistants (EAs), and integrated speech & AAC goals.'
+      },
     ]
   },
   {
@@ -132,23 +132,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Rosedale Heights School of the Arts / Jarvis Collegiate',
-        type: 'Public Secondary (TDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Comprehensive special education support and IEP resource accommodations for neurodivergent teens.'
+        name: 'Rosedale Junior Public / Lord Lansdowne Junior and Senior Public School',
+        type: 'Public Elementary (TDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Sensory-inclusive classroom accommodations, early language development, and seamless collaboration with private in-home ABA teams.'
       },
       {
         name: 'Deer Park Junior and Senior Public School',
         type: 'Public Elementary (TDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Sensory-inclusive classroom transitions and collaboration with private in-home ABA teams.'
+        iepFocus: 'Structured neurodiversity-affirming classrooms, social regulation support, and school-day transition assistance.'
       },
       {
-        name: 'St. Michael’s Choir & St. Joseph’s College',
-        type: 'Catholic Secondary (TCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Individualized resource learning centers and structured executive functioning coaching.'
-      }
+        name: 'St. Joseph Catholic Elementary / Holy Rosary Catholic School',
+        type: 'Catholic Elementary (TCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized Education Plans (IEPs), specialized educational assistants (EAs), and integrated speech & AAC goals.'
+      },
     ]
   },
   {
@@ -173,23 +173,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Rosedale Heights School of the Arts / Jarvis Collegiate',
-        type: 'Public Secondary (TDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Comprehensive special education support and IEP resource accommodations for neurodivergent teens.'
+        name: 'Rosedale Junior Public / Lord Lansdowne Junior and Senior Public School',
+        type: 'Public Elementary (TDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Sensory-inclusive classroom accommodations, early language development, and seamless collaboration with private in-home ABA teams.'
       },
       {
         name: 'Deer Park Junior and Senior Public School',
         type: 'Public Elementary (TDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Sensory-inclusive classroom transitions and collaboration with private in-home ABA teams.'
+        iepFocus: 'Structured neurodiversity-affirming classrooms, social regulation support, and school-day transition assistance.'
       },
       {
-        name: 'St. Michael’s Choir & St. Joseph’s College',
-        type: 'Catholic Secondary (TCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Individualized resource learning centers and structured executive functioning coaching.'
-      }
+        name: 'St. Joseph Catholic Elementary / Holy Rosary Catholic School',
+        type: 'Catholic Elementary (TCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized Education Plans (IEPs), specialized educational assistants (EAs), and integrated speech & AAC goals.'
+      },
     ]
   },
   {
@@ -214,23 +214,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Rosedale Heights School of the Arts / Jarvis Collegiate',
-        type: 'Public Secondary (TDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Comprehensive special education support and IEP resource accommodations for neurodivergent teens.'
+        name: 'Rosedale Junior Public / Lord Lansdowne Junior and Senior Public School',
+        type: 'Public Elementary (TDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Sensory-inclusive classroom accommodations, early language development, and seamless collaboration with private in-home ABA teams.'
       },
       {
         name: 'Deer Park Junior and Senior Public School',
         type: 'Public Elementary (TDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Sensory-inclusive classroom transitions and collaboration with private in-home ABA teams.'
+        iepFocus: 'Structured neurodiversity-affirming classrooms, social regulation support, and school-day transition assistance.'
       },
       {
-        name: 'St. Michael’s Choir & St. Joseph’s College',
-        type: 'Catholic Secondary (TCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Individualized resource learning centers and structured executive functioning coaching.'
-      }
+        name: 'St. Joseph Catholic Elementary / Holy Rosary Catholic School',
+        type: 'Catholic Elementary (TCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized Education Plans (IEPs), specialized educational assistants (EAs), and integrated speech & AAC goals.'
+      },
     ]
   },
 
@@ -257,23 +257,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Applewood Heights & Port Credit Secondary',
-        type: 'Public Secondary (PDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Regional ASD resource classrooms, life skills vocational training, and peer mentorship.'
-      },
-      {
         name: 'Hawthorn Public & Fairview Public School',
         type: 'Public Elementary (PDSB)',
-        grades: 'JK-Grade 5',
-        iepFocus: 'Dedicated early years communication classes and external speech/OT alignment.'
+        grades: 'JK-Grade 8',
+        iepFocus: 'Dedicated early years communication classes, sensory rooms, and external speech/OT alignment.'
       },
       {
-        name: 'St. Francis Xavier Catholic Secondary',
-        type: 'Catholic Secondary (DPCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Academic and modified programming with collaborative Behaviour Service Plan tracking.'
-      }
+        name: 'Kenollie Public School & Mineola Public School',
+        type: 'Public Elementary (PDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Autism spectrum support, differentiated learning instruction, and positive behavioral support planning.'
+      },
+      {
+        name: 'St. Philip Elementary & St. Timothy Catholic School',
+        type: 'Catholic Elementary (DPCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource team collaboration, modified learning plans, and functional social communication.'
+      },
     ]
   },
   {
@@ -298,23 +298,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Applewood Heights & Port Credit Secondary',
-        type: 'Public Secondary (PDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Regional ASD resource classrooms, life skills vocational training, and peer mentorship.'
-      },
-      {
         name: 'Hawthorn Public & Fairview Public School',
         type: 'Public Elementary (PDSB)',
-        grades: 'JK-Grade 5',
-        iepFocus: 'Dedicated early years communication classes and external speech/OT alignment.'
+        grades: 'JK-Grade 8',
+        iepFocus: 'Dedicated early years communication classes, sensory rooms, and external speech/OT alignment.'
       },
       {
-        name: 'St. Francis Xavier Catholic Secondary',
-        type: 'Catholic Secondary (DPCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Academic and modified programming with collaborative Behaviour Service Plan tracking.'
-      }
+        name: 'Kenollie Public School & Mineola Public School',
+        type: 'Public Elementary (PDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Autism spectrum support, differentiated learning instruction, and positive behavioral support planning.'
+      },
+      {
+        name: 'St. Philip Elementary & St. Timothy Catholic School',
+        type: 'Catholic Elementary (DPCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource team collaboration, modified learning plans, and functional social communication.'
+      },
     ]
   },
   {
@@ -339,23 +339,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Applewood Heights & Port Credit Secondary',
-        type: 'Public Secondary (PDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Regional ASD resource classrooms, life skills vocational training, and peer mentorship.'
-      },
-      {
         name: 'Hawthorn Public & Fairview Public School',
         type: 'Public Elementary (PDSB)',
-        grades: 'JK-Grade 5',
-        iepFocus: 'Dedicated early years communication classes and external speech/OT alignment.'
+        grades: 'JK-Grade 8',
+        iepFocus: 'Dedicated early years communication classes, sensory rooms, and external speech/OT alignment.'
       },
       {
-        name: 'St. Francis Xavier Catholic Secondary',
-        type: 'Catholic Secondary (DPCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Academic and modified programming with collaborative Behaviour Service Plan tracking.'
-      }
+        name: 'Kenollie Public School & Mineola Public School',
+        type: 'Public Elementary (PDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Autism spectrum support, differentiated learning instruction, and positive behavioral support planning.'
+      },
+      {
+        name: 'St. Philip Elementary & St. Timothy Catholic School',
+        type: 'Catholic Elementary (DPCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource team collaboration, modified learning plans, and functional social communication.'
+      },
     ]
   },
 
@@ -382,23 +382,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Alexander Mackenzie High School',
-        type: 'Public Secondary (YRDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Community Class programs and adaptive social-emotional transition support.'
-      },
-      {
-        name: 'Silver Stream & Crosby Heights Public School',
+        name: 'Silver Stream Public School & Crosby Heights Public',
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Specialized Autism Spectrum social communication classes and IEP goal integration.'
+        iepFocus: 'Comprehensive special education resource teams, autism support classes, and calm sensory spaces.'
       },
       {
-        name: 'St. Robert Catholic High School',
-        type: 'Catholic Secondary (YCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Transdisciplinary educational support coordinating with community behaviour analysts.'
-      }
+        name: 'Bayview Glen Public & Adrienne Clarkson Public School',
+        type: 'Public Elementary (YRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized communication protocols, assistive technology, and structured kindergarten transitions.'
+      },
+      {
+        name: 'St. Charles Garnier & Blessed Scalabrini Catholic Elementary',
+        type: 'Catholic Elementary (YCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Specialized special education learning centers, neurodiversity-affirming accommodations, and peer mentorship.'
+      },
     ]
   },
   {
@@ -423,23 +423,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Alexander Mackenzie High School',
-        type: 'Public Secondary (YRDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Community Class programs and adaptive social-emotional transition support.'
-      },
-      {
-        name: 'Silver Stream & Crosby Heights Public School',
+        name: 'Silver Stream Public School & Crosby Heights Public',
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Specialized Autism Spectrum social communication classes and IEP goal integration.'
+        iepFocus: 'Comprehensive special education resource teams, autism support classes, and calm sensory spaces.'
       },
       {
-        name: 'St. Robert Catholic High School',
-        type: 'Catholic Secondary (YCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Transdisciplinary educational support coordinating with community behaviour analysts.'
-      }
+        name: 'Bayview Glen Public & Adrienne Clarkson Public School',
+        type: 'Public Elementary (YRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized communication protocols, assistive technology, and structured kindergarten transitions.'
+      },
+      {
+        name: 'St. Charles Garnier & Blessed Scalabrini Catholic Elementary',
+        type: 'Catholic Elementary (YCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Specialized special education learning centers, neurodiversity-affirming accommodations, and peer mentorship.'
+      },
     ]
   },
   {
@@ -464,23 +464,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Alexander Mackenzie High School',
-        type: 'Public Secondary (YRDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Community Class programs and adaptive social-emotional transition support.'
-      },
-      {
-        name: 'Silver Stream & Crosby Heights Public School',
+        name: 'Silver Stream Public School & Crosby Heights Public',
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Specialized Autism Spectrum social communication classes and IEP goal integration.'
+        iepFocus: 'Comprehensive special education resource teams, autism support classes, and calm sensory spaces.'
       },
       {
-        name: 'St. Robert Catholic High School',
-        type: 'Catholic Secondary (YCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Transdisciplinary educational support coordinating with community behaviour analysts.'
-      }
+        name: 'Bayview Glen Public & Adrienne Clarkson Public School',
+        type: 'Public Elementary (YRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized communication protocols, assistive technology, and structured kindergarten transitions.'
+      },
+      {
+        name: 'St. Charles Garnier & Blessed Scalabrini Catholic Elementary',
+        type: 'Catholic Elementary (YCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Specialized special education learning centers, neurodiversity-affirming accommodations, and peer mentorship.'
+      },
     ]
   },
   {
@@ -505,23 +505,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Alexander Mackenzie High School',
-        type: 'Public Secondary (YRDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Community Class programs and adaptive social-emotional transition support.'
-      },
-      {
-        name: 'Silver Stream & Crosby Heights Public School',
+        name: 'Silver Stream Public School & Crosby Heights Public',
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Specialized Autism Spectrum social communication classes and IEP goal integration.'
+        iepFocus: 'Comprehensive special education resource teams, autism support classes, and calm sensory spaces.'
       },
       {
-        name: 'St. Robert Catholic High School',
-        type: 'Catholic Secondary (YCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Transdisciplinary educational support coordinating with community behaviour analysts.'
-      }
+        name: 'Bayview Glen Public & Adrienne Clarkson Public School',
+        type: 'Public Elementary (YRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized communication protocols, assistive technology, and structured kindergarten transitions.'
+      },
+      {
+        name: 'St. Charles Garnier & Blessed Scalabrini Catholic Elementary',
+        type: 'Catholic Elementary (YCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Specialized special education learning centers, neurodiversity-affirming accommodations, and peer mentorship.'
+      },
     ]
   },
   {
@@ -546,23 +546,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Alexander Mackenzie High School',
-        type: 'Public Secondary (YRDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Community Class programs and adaptive social-emotional transition support.'
-      },
-      {
-        name: 'Silver Stream & Crosby Heights Public School',
+        name: 'Silver Stream Public School & Crosby Heights Public',
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Specialized Autism Spectrum social communication classes and IEP goal integration.'
+        iepFocus: 'Comprehensive special education resource teams, autism support classes, and calm sensory spaces.'
       },
       {
-        name: 'St. Robert Catholic High School',
-        type: 'Catholic Secondary (YCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Transdisciplinary educational support coordinating with community behaviour analysts.'
-      }
+        name: 'Bayview Glen Public & Adrienne Clarkson Public School',
+        type: 'Public Elementary (YRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized communication protocols, assistive technology, and structured kindergarten transitions.'
+      },
+      {
+        name: 'St. Charles Garnier & Blessed Scalabrini Catholic Elementary',
+        type: 'Catholic Elementary (YCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Specialized special education learning centers, neurodiversity-affirming accommodations, and peer mentorship.'
+      },
     ]
   },
   {
@@ -587,23 +587,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Alexander Mackenzie High School',
-        type: 'Public Secondary (YRDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Community Class programs and adaptive social-emotional transition support.'
-      },
-      {
-        name: 'Silver Stream & Crosby Heights Public School',
+        name: 'Silver Stream Public School & Crosby Heights Public',
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Specialized Autism Spectrum social communication classes and IEP goal integration.'
+        iepFocus: 'Comprehensive special education resource teams, autism support classes, and calm sensory spaces.'
       },
       {
-        name: 'St. Robert Catholic High School',
-        type: 'Catholic Secondary (YCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Transdisciplinary educational support coordinating with community behaviour analysts.'
-      }
+        name: 'Bayview Glen Public & Adrienne Clarkson Public School',
+        type: 'Public Elementary (YRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized communication protocols, assistive technology, and structured kindergarten transitions.'
+      },
+      {
+        name: 'St. Charles Garnier & Blessed Scalabrini Catholic Elementary',
+        type: 'Catholic Elementary (YCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Specialized special education learning centers, neurodiversity-affirming accommodations, and peer mentorship.'
+      },
     ]
   },
   {
@@ -628,23 +628,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Alexander Mackenzie High School',
-        type: 'Public Secondary (YRDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Community Class programs and adaptive social-emotional transition support.'
-      },
-      {
-        name: 'Silver Stream & Crosby Heights Public School',
+        name: 'Silver Stream Public School & Crosby Heights Public',
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Specialized Autism Spectrum social communication classes and IEP goal integration.'
+        iepFocus: 'Comprehensive special education resource teams, autism support classes, and calm sensory spaces.'
       },
       {
-        name: 'St. Robert Catholic High School',
-        type: 'Catholic Secondary (YCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Transdisciplinary educational support coordinating with community behaviour analysts.'
-      }
+        name: 'Bayview Glen Public & Adrienne Clarkson Public School',
+        type: 'Public Elementary (YRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized communication protocols, assistive technology, and structured kindergarten transitions.'
+      },
+      {
+        name: 'St. Charles Garnier & Blessed Scalabrini Catholic Elementary',
+        type: 'Catholic Elementary (YCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Specialized special education learning centers, neurodiversity-affirming accommodations, and peer mentorship.'
+      },
     ]
   },
   {
@@ -669,23 +669,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Alexander Mackenzie High School',
-        type: 'Public Secondary (YRDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Community Class programs and adaptive social-emotional transition support.'
-      },
-      {
-        name: 'Silver Stream & Crosby Heights Public School',
+        name: 'Silver Stream Public School & Crosby Heights Public',
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Specialized Autism Spectrum social communication classes and IEP goal integration.'
+        iepFocus: 'Comprehensive special education resource teams, autism support classes, and calm sensory spaces.'
       },
       {
-        name: 'St. Robert Catholic High School',
-        type: 'Catholic Secondary (YCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Transdisciplinary educational support coordinating with community behaviour analysts.'
-      }
+        name: 'Bayview Glen Public & Adrienne Clarkson Public School',
+        type: 'Public Elementary (YRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized communication protocols, assistive technology, and structured kindergarten transitions.'
+      },
+      {
+        name: 'St. Charles Garnier & Blessed Scalabrini Catholic Elementary',
+        type: 'Catholic Elementary (YCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Specialized special education learning centers, neurodiversity-affirming accommodations, and peer mentorship.'
+      },
     ]
   },
   {
@@ -710,23 +710,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Alexander Mackenzie High School',
-        type: 'Public Secondary (YRDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Community Class programs and adaptive social-emotional transition support.'
-      },
-      {
-        name: 'Silver Stream & Crosby Heights Public School',
+        name: 'Silver Stream Public School & Crosby Heights Public',
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Specialized Autism Spectrum social communication classes and IEP goal integration.'
+        iepFocus: 'Comprehensive special education resource teams, autism support classes, and calm sensory spaces.'
       },
       {
-        name: 'St. Robert Catholic High School',
-        type: 'Catholic Secondary (YCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Transdisciplinary educational support coordinating with community behaviour analysts.'
-      }
+        name: 'Bayview Glen Public & Adrienne Clarkson Public School',
+        type: 'Public Elementary (YRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized communication protocols, assistive technology, and structured kindergarten transitions.'
+      },
+      {
+        name: 'St. Charles Garnier & Blessed Scalabrini Catholic Elementary',
+        type: 'Catholic Elementary (YCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Specialized special education learning centers, neurodiversity-affirming accommodations, and peer mentorship.'
+      },
     ]
   },
 
@@ -753,23 +753,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Westdale Secondary & Ancaster High',
-        type: 'Public Secondary (HWDSB / HDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Integrated resource learning pods and vocational life-skills development.'
-      },
-      {
-        name: 'Norwood Park & Earl Kitchener School',
-        type: 'Public Elementary (HWDSB)',
+        name: 'Norwood Park & Earl Kitchener Elementary School',
+        type: 'Public Elementary (HWDSB / HDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Natural environment play modifications and assistive AAC technology implementation.'
+        iepFocus: 'Comprehensive special education classrooms, assent-based ABA protocol integration, and speech support.'
       },
       {
-        name: 'St. Mary Catholic Secondary School',
-        type: 'Catholic Secondary (HWCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Collaborative multi-disciplinary team reviews and modified evaluation plans.'
-      }
+        name: 'Maple Grove Public & Pine Grove Public School',
+        type: 'Public Elementary (HDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Sensory regulation plans, modified curriculum pacing, and collaborative R.B.A. consultant coordination.'
+      },
+      {
+        name: 'St. Bernadette & St. Marguerite Bourgeoys Catholic Elementary',
+        type: 'Catholic Elementary (HCDSB / HWCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized learning plans, EA coordination, and assistive AAC communication strategies.'
+      },
     ]
   },
   {
@@ -794,23 +794,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Westdale Secondary & Ancaster High',
-        type: 'Public Secondary (HWDSB / HDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Integrated resource learning pods and vocational life-skills development.'
-      },
-      {
-        name: 'Norwood Park & Earl Kitchener School',
-        type: 'Public Elementary (HWDSB)',
+        name: 'Norwood Park & Earl Kitchener Elementary School',
+        type: 'Public Elementary (HWDSB / HDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Natural environment play modifications and assistive AAC technology implementation.'
+        iepFocus: 'Comprehensive special education classrooms, assent-based ABA protocol integration, and speech support.'
       },
       {
-        name: 'St. Mary Catholic Secondary School',
-        type: 'Catholic Secondary (HWCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Collaborative multi-disciplinary team reviews and modified evaluation plans.'
-      }
+        name: 'Maple Grove Public & Pine Grove Public School',
+        type: 'Public Elementary (HDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Sensory regulation plans, modified curriculum pacing, and collaborative R.B.A. consultant coordination.'
+      },
+      {
+        name: 'St. Bernadette & St. Marguerite Bourgeoys Catholic Elementary',
+        type: 'Catholic Elementary (HCDSB / HWCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized learning plans, EA coordination, and assistive AAC communication strategies.'
+      },
     ]
   },
   {
@@ -835,23 +835,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Westdale Secondary & Ancaster High',
-        type: 'Public Secondary (HWDSB / HDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Integrated resource learning pods and vocational life-skills development.'
-      },
-      {
-        name: 'Norwood Park & Earl Kitchener School',
-        type: 'Public Elementary (HWDSB)',
+        name: 'Norwood Park & Earl Kitchener Elementary School',
+        type: 'Public Elementary (HWDSB / HDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Natural environment play modifications and assistive AAC technology implementation.'
+        iepFocus: 'Comprehensive special education classrooms, assent-based ABA protocol integration, and speech support.'
       },
       {
-        name: 'St. Mary Catholic Secondary School',
-        type: 'Catholic Secondary (HWCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Collaborative multi-disciplinary team reviews and modified evaluation plans.'
-      }
+        name: 'Maple Grove Public & Pine Grove Public School',
+        type: 'Public Elementary (HDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Sensory regulation plans, modified curriculum pacing, and collaborative R.B.A. consultant coordination.'
+      },
+      {
+        name: 'St. Bernadette & St. Marguerite Bourgeoys Catholic Elementary',
+        type: 'Catholic Elementary (HCDSB / HWCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized learning plans, EA coordination, and assistive AAC communication strategies.'
+      },
     ]
   },
   {
@@ -876,23 +876,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Westdale Secondary & Ancaster High',
-        type: 'Public Secondary (HWDSB / HDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Integrated resource learning pods and vocational life-skills development.'
-      },
-      {
-        name: 'Norwood Park & Earl Kitchener School',
-        type: 'Public Elementary (HWDSB)',
+        name: 'Norwood Park & Earl Kitchener Elementary School',
+        type: 'Public Elementary (HWDSB / HDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Natural environment play modifications and assistive AAC technology implementation.'
+        iepFocus: 'Comprehensive special education classrooms, assent-based ABA protocol integration, and speech support.'
       },
       {
-        name: 'St. Mary Catholic Secondary School',
-        type: 'Catholic Secondary (HWCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Collaborative multi-disciplinary team reviews and modified evaluation plans.'
-      }
+        name: 'Maple Grove Public & Pine Grove Public School',
+        type: 'Public Elementary (HDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Sensory regulation plans, modified curriculum pacing, and collaborative R.B.A. consultant coordination.'
+      },
+      {
+        name: 'St. Bernadette & St. Marguerite Bourgeoys Catholic Elementary',
+        type: 'Catholic Elementary (HCDSB / HWCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized learning plans, EA coordination, and assistive AAC communication strategies.'
+      },
     ]
   },
 
@@ -919,23 +919,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Dunbarton High & Sinclair Secondary',
-        type: 'Public Secondary (DDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Practical academic classes, social navigation, and sensory integration spaces.'
-      },
-      {
         name: 'William Dunbar & Valley View Public School',
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Intensive communication early intervention paired with in-home therapy trials.'
+        iepFocus: 'Comprehensive developmental classes, proactive sensory breaks, and private clinician coordination.'
       },
       {
-        name: 'St. Mary Catholic Secondary School',
-        type: 'Catholic Secondary (DCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Collaborative student success team meetings and assistive tech integration.'
-      }
+        name: 'Dr. C.F. Cannon & Gandatsetiagon Public School',
+        type: 'Public Elementary (DDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early intervention language enrichment, visual schedule supports, and positive behavioural strategies.'
+      },
+      {
+        name: 'St. Isaac Jogues & St. Kateri Tekakwitha Catholic Elementary',
+        type: 'Catholic Elementary (DCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource rooms, executive functioning coaching, and inclusive peer play groups.'
+      },
     ]
   },
   {
@@ -960,23 +960,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Dunbarton High & Sinclair Secondary',
-        type: 'Public Secondary (DDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Practical academic classes, social navigation, and sensory integration spaces.'
-      },
-      {
         name: 'William Dunbar & Valley View Public School',
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Intensive communication early intervention paired with in-home therapy trials.'
+        iepFocus: 'Comprehensive developmental classes, proactive sensory breaks, and private clinician coordination.'
       },
       {
-        name: 'St. Mary Catholic Secondary School',
-        type: 'Catholic Secondary (DCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Collaborative student success team meetings and assistive tech integration.'
-      }
+        name: 'Dr. C.F. Cannon & Gandatsetiagon Public School',
+        type: 'Public Elementary (DDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early intervention language enrichment, visual schedule supports, and positive behavioural strategies.'
+      },
+      {
+        name: 'St. Isaac Jogues & St. Kateri Tekakwitha Catholic Elementary',
+        type: 'Catholic Elementary (DCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource rooms, executive functioning coaching, and inclusive peer play groups.'
+      },
     ]
   },
   {
@@ -1001,23 +1001,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Dunbarton High & Sinclair Secondary',
-        type: 'Public Secondary (DDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Practical academic classes, social navigation, and sensory integration spaces.'
-      },
-      {
         name: 'William Dunbar & Valley View Public School',
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Intensive communication early intervention paired with in-home therapy trials.'
+        iepFocus: 'Comprehensive developmental classes, proactive sensory breaks, and private clinician coordination.'
       },
       {
-        name: 'St. Mary Catholic Secondary School',
-        type: 'Catholic Secondary (DCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Collaborative student success team meetings and assistive tech integration.'
-      }
+        name: 'Dr. C.F. Cannon & Gandatsetiagon Public School',
+        type: 'Public Elementary (DDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early intervention language enrichment, visual schedule supports, and positive behavioural strategies.'
+      },
+      {
+        name: 'St. Isaac Jogues & St. Kateri Tekakwitha Catholic Elementary',
+        type: 'Catholic Elementary (DCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource rooms, executive functioning coaching, and inclusive peer play groups.'
+      },
     ]
   },
   {
@@ -1042,23 +1042,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Dunbarton High & Sinclair Secondary',
-        type: 'Public Secondary (DDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Practical academic classes, social navigation, and sensory integration spaces.'
-      },
-      {
         name: 'William Dunbar & Valley View Public School',
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Intensive communication early intervention paired with in-home therapy trials.'
+        iepFocus: 'Comprehensive developmental classes, proactive sensory breaks, and private clinician coordination.'
       },
       {
-        name: 'St. Mary Catholic Secondary School',
-        type: 'Catholic Secondary (DCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Collaborative student success team meetings and assistive tech integration.'
-      }
+        name: 'Dr. C.F. Cannon & Gandatsetiagon Public School',
+        type: 'Public Elementary (DDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early intervention language enrichment, visual schedule supports, and positive behavioural strategies.'
+      },
+      {
+        name: 'St. Isaac Jogues & St. Kateri Tekakwitha Catholic Elementary',
+        type: 'Catholic Elementary (DCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource rooms, executive functioning coaching, and inclusive peer play groups.'
+      },
     ]
   },
   {
@@ -1083,23 +1083,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Dunbarton High & Sinclair Secondary',
-        type: 'Public Secondary (DDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Practical academic classes, social navigation, and sensory integration spaces.'
-      },
-      {
         name: 'William Dunbar & Valley View Public School',
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Intensive communication early intervention paired with in-home therapy trials.'
+        iepFocus: 'Comprehensive developmental classes, proactive sensory breaks, and private clinician coordination.'
       },
       {
-        name: 'St. Mary Catholic Secondary School',
-        type: 'Catholic Secondary (DCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Collaborative student success team meetings and assistive tech integration.'
-      }
+        name: 'Dr. C.F. Cannon & Gandatsetiagon Public School',
+        type: 'Public Elementary (DDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early intervention language enrichment, visual schedule supports, and positive behavioural strategies.'
+      },
+      {
+        name: 'St. Isaac Jogues & St. Kateri Tekakwitha Catholic Elementary',
+        type: 'Catholic Elementary (DCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource rooms, executive functioning coaching, and inclusive peer play groups.'
+      },
     ]
   },
   {
@@ -1124,23 +1124,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Dunbarton High & Sinclair Secondary',
-        type: 'Public Secondary (DDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Practical academic classes, social navigation, and sensory integration spaces.'
-      },
-      {
         name: 'William Dunbar & Valley View Public School',
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Intensive communication early intervention paired with in-home therapy trials.'
+        iepFocus: 'Comprehensive developmental classes, proactive sensory breaks, and private clinician coordination.'
       },
       {
-        name: 'St. Mary Catholic Secondary School',
-        type: 'Catholic Secondary (DCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Collaborative student success team meetings and assistive tech integration.'
-      }
+        name: 'Dr. C.F. Cannon & Gandatsetiagon Public School',
+        type: 'Public Elementary (DDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early intervention language enrichment, visual schedule supports, and positive behavioural strategies.'
+      },
+      {
+        name: 'St. Isaac Jogues & St. Kateri Tekakwitha Catholic Elementary',
+        type: 'Catholic Elementary (DCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource rooms, executive functioning coaching, and inclusive peer play groups.'
+      },
     ]
   },
   {
@@ -1165,23 +1165,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Dunbarton High & Sinclair Secondary',
-        type: 'Public Secondary (DDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Practical academic classes, social navigation, and sensory integration spaces.'
-      },
-      {
         name: 'William Dunbar & Valley View Public School',
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Intensive communication early intervention paired with in-home therapy trials.'
+        iepFocus: 'Comprehensive developmental classes, proactive sensory breaks, and private clinician coordination.'
       },
       {
-        name: 'St. Mary Catholic Secondary School',
-        type: 'Catholic Secondary (DCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Collaborative student success team meetings and assistive tech integration.'
-      }
+        name: 'Dr. C.F. Cannon & Gandatsetiagon Public School',
+        type: 'Public Elementary (DDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early intervention language enrichment, visual schedule supports, and positive behavioural strategies.'
+      },
+      {
+        name: 'St. Isaac Jogues & St. Kateri Tekakwitha Catholic Elementary',
+        type: 'Catholic Elementary (DCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource rooms, executive functioning coaching, and inclusive peer play groups.'
+      },
     ]
   },
 
@@ -1208,23 +1208,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Westdale Secondary & Ancaster High',
-        type: 'Public Secondary (HWDSB / HDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Integrated resource learning pods and vocational life-skills development.'
-      },
-      {
-        name: 'Norwood Park & Earl Kitchener School',
-        type: 'Public Elementary (HWDSB)',
+        name: 'Norwood Park & Earl Kitchener Elementary School',
+        type: 'Public Elementary (HWDSB / HDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Natural environment play modifications and assistive AAC technology implementation.'
+        iepFocus: 'Comprehensive special education classrooms, assent-based ABA protocol integration, and speech support.'
       },
       {
-        name: 'St. Mary Catholic Secondary School',
-        type: 'Catholic Secondary (HWCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Collaborative multi-disciplinary team reviews and modified evaluation plans.'
-      }
+        name: 'Maple Grove Public & Pine Grove Public School',
+        type: 'Public Elementary (HDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Sensory regulation plans, modified curriculum pacing, and collaborative R.B.A. consultant coordination.'
+      },
+      {
+        name: 'St. Bernadette & St. Marguerite Bourgeoys Catholic Elementary',
+        type: 'Catholic Elementary (HCDSB / HWCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized learning plans, EA coordination, and assistive AAC communication strategies.'
+      },
     ]
   },
   {
@@ -1249,23 +1249,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Westdale Secondary & Ancaster High',
-        type: 'Public Secondary (HWDSB / HDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Integrated resource learning pods and vocational life-skills development.'
-      },
-      {
-        name: 'Norwood Park & Earl Kitchener School',
-        type: 'Public Elementary (HWDSB)',
+        name: 'Norwood Park & Earl Kitchener Elementary School',
+        type: 'Public Elementary (HWDSB / HDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Natural environment play modifications and assistive AAC technology implementation.'
+        iepFocus: 'Comprehensive special education classrooms, assent-based ABA protocol integration, and speech support.'
       },
       {
-        name: 'St. Mary Catholic Secondary School',
-        type: 'Catholic Secondary (HWCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Collaborative multi-disciplinary team reviews and modified evaluation plans.'
-      }
+        name: 'Maple Grove Public & Pine Grove Public School',
+        type: 'Public Elementary (HDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Sensory regulation plans, modified curriculum pacing, and collaborative R.B.A. consultant coordination.'
+      },
+      {
+        name: 'St. Bernadette & St. Marguerite Bourgeoys Catholic Elementary',
+        type: 'Catholic Elementary (HCDSB / HWCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized learning plans, EA coordination, and assistive AAC communication strategies.'
+      },
     ]
   },
   {
@@ -1290,23 +1290,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Westdale Secondary & Ancaster High',
-        type: 'Public Secondary (HWDSB / HDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Integrated resource learning pods and vocational life-skills development.'
-      },
-      {
-        name: 'Norwood Park & Earl Kitchener School',
-        type: 'Public Elementary (HWDSB)',
+        name: 'Norwood Park & Earl Kitchener Elementary School',
+        type: 'Public Elementary (HWDSB / HDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Natural environment play modifications and assistive AAC technology implementation.'
+        iepFocus: 'Comprehensive special education classrooms, assent-based ABA protocol integration, and speech support.'
       },
       {
-        name: 'St. Mary Catholic Secondary School',
-        type: 'Catholic Secondary (HWCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Collaborative multi-disciplinary team reviews and modified evaluation plans.'
-      }
+        name: 'Maple Grove Public & Pine Grove Public School',
+        type: 'Public Elementary (HDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Sensory regulation plans, modified curriculum pacing, and collaborative R.B.A. consultant coordination.'
+      },
+      {
+        name: 'St. Bernadette & St. Marguerite Bourgeoys Catholic Elementary',
+        type: 'Catholic Elementary (HCDSB / HWCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized learning plans, EA coordination, and assistive AAC communication strategies.'
+      },
     ]
   },
   {
@@ -1331,23 +1331,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Westdale Secondary & Ancaster High',
-        type: 'Public Secondary (HWDSB / HDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Integrated resource learning pods and vocational life-skills development.'
-      },
-      {
-        name: 'Norwood Park & Earl Kitchener School',
-        type: 'Public Elementary (HWDSB)',
+        name: 'Norwood Park & Earl Kitchener Elementary School',
+        type: 'Public Elementary (HWDSB / HDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Natural environment play modifications and assistive AAC technology implementation.'
+        iepFocus: 'Comprehensive special education classrooms, assent-based ABA protocol integration, and speech support.'
       },
       {
-        name: 'St. Mary Catholic Secondary School',
-        type: 'Catholic Secondary (HWCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Collaborative multi-disciplinary team reviews and modified evaluation plans.'
-      }
+        name: 'Maple Grove Public & Pine Grove Public School',
+        type: 'Public Elementary (HDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Sensory regulation plans, modified curriculum pacing, and collaborative R.B.A. consultant coordination.'
+      },
+      {
+        name: 'St. Bernadette & St. Marguerite Bourgeoys Catholic Elementary',
+        type: 'Catholic Elementary (HCDSB / HWCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized learning plans, EA coordination, and assistive AAC communication strategies.'
+      },
     ]
   },
   {
@@ -1372,23 +1372,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Sir Winston Churchill & Eden High School',
-        type: 'Public Secondary (DSBN)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Specialized life skills classes and sensory-safe breakout rooms.'
-      },
-      {
         name: 'Dalewood & Grapeview Public School',
         type: 'Public Elementary (DSBN)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Early intensive reading and functional speech IEP accommodations.'
+        iepFocus: 'Sensory integration rooms, ASD resource support, and seamless kindergarten-to-elementary transitions.'
       },
       {
-        name: 'Denis Morris Catholic High School',
-        type: 'Catholic Secondary (NCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Individual education plans customized with independent RBA consultation.'
-      }
+        name: 'Prince Philip & Oakridge Public School',
+        type: 'Public Elementary (DSBN)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Structured teaching approaches, functional communication, and external therapist team alignment.'
+      },
+      {
+        name: 'St. Peter Catholic & Mother Teresa Catholic Elementary',
+        type: 'Catholic Elementary (NCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Differentiated learning plans, special education resource teachers, and speech therapy integration.'
+      },
     ]
   },
   {
@@ -1413,23 +1413,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Sir Winston Churchill & Eden High School',
-        type: 'Public Secondary (DSBN)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Specialized life skills classes and sensory-safe breakout rooms.'
-      },
-      {
         name: 'Dalewood & Grapeview Public School',
         type: 'Public Elementary (DSBN)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Early intensive reading and functional speech IEP accommodations.'
+        iepFocus: 'Sensory integration rooms, ASD resource support, and seamless kindergarten-to-elementary transitions.'
       },
       {
-        name: 'Denis Morris Catholic High School',
-        type: 'Catholic Secondary (NCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Individual education plans customized with independent RBA consultation.'
-      }
+        name: 'Prince Philip & Oakridge Public School',
+        type: 'Public Elementary (DSBN)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Structured teaching approaches, functional communication, and external therapist team alignment.'
+      },
+      {
+        name: 'St. Peter Catholic & Mother Teresa Catholic Elementary',
+        type: 'Catholic Elementary (NCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Differentiated learning plans, special education resource teachers, and speech therapy integration.'
+      },
     ]
   },
   {
@@ -1454,23 +1454,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Sir Winston Churchill & Eden High School',
-        type: 'Public Secondary (DSBN)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Specialized life skills classes and sensory-safe breakout rooms.'
-      },
-      {
         name: 'Dalewood & Grapeview Public School',
         type: 'Public Elementary (DSBN)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Early intensive reading and functional speech IEP accommodations.'
+        iepFocus: 'Sensory integration rooms, ASD resource support, and seamless kindergarten-to-elementary transitions.'
       },
       {
-        name: 'Denis Morris Catholic High School',
-        type: 'Catholic Secondary (NCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Individual education plans customized with independent RBA consultation.'
-      }
+        name: 'Prince Philip & Oakridge Public School',
+        type: 'Public Elementary (DSBN)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Structured teaching approaches, functional communication, and external therapist team alignment.'
+      },
+      {
+        name: 'St. Peter Catholic & Mother Teresa Catholic Elementary',
+        type: 'Catholic Elementary (NCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Differentiated learning plans, special education resource teachers, and speech therapy integration.'
+      },
     ]
   },
   {
@@ -1495,23 +1495,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Sir Winston Churchill & Eden High School',
-        type: 'Public Secondary (DSBN)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Specialized life skills classes and sensory-safe breakout rooms.'
-      },
-      {
         name: 'Dalewood & Grapeview Public School',
         type: 'Public Elementary (DSBN)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Early intensive reading and functional speech IEP accommodations.'
+        iepFocus: 'Sensory integration rooms, ASD resource support, and seamless kindergarten-to-elementary transitions.'
       },
       {
-        name: 'Denis Morris Catholic High School',
-        type: 'Catholic Secondary (NCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Individual education plans customized with independent RBA consultation.'
-      }
+        name: 'Prince Philip & Oakridge Public School',
+        type: 'Public Elementary (DSBN)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Structured teaching approaches, functional communication, and external therapist team alignment.'
+      },
+      {
+        name: 'St. Peter Catholic & Mother Teresa Catholic Elementary',
+        type: 'Catholic Elementary (NCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Differentiated learning plans, special education resource teachers, and speech therapy integration.'
+      },
     ]
   },
   {
@@ -1536,23 +1536,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Sir Winston Churchill & Eden High School',
-        type: 'Public Secondary (DSBN)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Specialized life skills classes and sensory-safe breakout rooms.'
-      },
-      {
         name: 'Dalewood & Grapeview Public School',
         type: 'Public Elementary (DSBN)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Early intensive reading and functional speech IEP accommodations.'
+        iepFocus: 'Sensory integration rooms, ASD resource support, and seamless kindergarten-to-elementary transitions.'
       },
       {
-        name: 'Denis Morris Catholic High School',
-        type: 'Catholic Secondary (NCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Individual education plans customized with independent RBA consultation.'
-      }
+        name: 'Prince Philip & Oakridge Public School',
+        type: 'Public Elementary (DSBN)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Structured teaching approaches, functional communication, and external therapist team alignment.'
+      },
+      {
+        name: 'St. Peter Catholic & Mother Teresa Catholic Elementary',
+        type: 'Catholic Elementary (NCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Differentiated learning plans, special education resource teachers, and speech therapy integration.'
+      },
     ]
   },
   {
@@ -1577,23 +1577,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Sir Winston Churchill & Eden High School',
-        type: 'Public Secondary (DSBN)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Specialized life skills classes and sensory-safe breakout rooms.'
-      },
-      {
         name: 'Dalewood & Grapeview Public School',
         type: 'Public Elementary (DSBN)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Early intensive reading and functional speech IEP accommodations.'
+        iepFocus: 'Sensory integration rooms, ASD resource support, and seamless kindergarten-to-elementary transitions.'
       },
       {
-        name: 'Denis Morris Catholic High School',
-        type: 'Catholic Secondary (NCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Individual education plans customized with independent RBA consultation.'
-      }
+        name: 'Prince Philip & Oakridge Public School',
+        type: 'Public Elementary (DSBN)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Structured teaching approaches, functional communication, and external therapist team alignment.'
+      },
+      {
+        name: 'St. Peter Catholic & Mother Teresa Catholic Elementary',
+        type: 'Catholic Elementary (NCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Differentiated learning plans, special education resource teachers, and speech therapy integration.'
+      },
     ]
   },
   {
@@ -1618,23 +1618,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Sir Winston Churchill & Eden High School',
-        type: 'Public Secondary (DSBN)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Specialized life skills classes and sensory-safe breakout rooms.'
-      },
-      {
         name: 'Dalewood & Grapeview Public School',
         type: 'Public Elementary (DSBN)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Early intensive reading and functional speech IEP accommodations.'
+        iepFocus: 'Sensory integration rooms, ASD resource support, and seamless kindergarten-to-elementary transitions.'
       },
       {
-        name: 'Denis Morris Catholic High School',
-        type: 'Catholic Secondary (NCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Individual education plans customized with independent RBA consultation.'
-      }
+        name: 'Prince Philip & Oakridge Public School',
+        type: 'Public Elementary (DSBN)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Structured teaching approaches, functional communication, and external therapist team alignment.'
+      },
+      {
+        name: 'St. Peter Catholic & Mother Teresa Catholic Elementary',
+        type: 'Catholic Elementary (NCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Differentiated learning plans, special education resource teachers, and speech therapy integration.'
+      },
     ]
   },
 
@@ -1661,23 +1661,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Cameron Heights Collegiate & Waterloo-Oxford',
-        type: 'Public Secondary (WRDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Lifeskills and developmental education programs with community outing support.'
-      },
-      {
         name: 'Empire Public & Central Public School',
-        type: 'Public Elementary (WRDSB)',
-        grades: 'JK-Grade 6',
-        iepFocus: 'Assent-based behavioral protocols and collaborative parent coaching alignment.'
+        type: 'Public Elementary (WRDSB / UGDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource teachers supporting social regulation, visual supports, and AAC devices.'
       },
       {
-        name: 'St. David Catholic Secondary School',
-        type: 'Catholic Secondary (WCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Special education resource teachers supporting social regulation and AAC devices.'
-      }
+        name: 'Laurelwood Public & Sir Adam Beck Public School',
+        type: 'Public Elementary (WRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Neurodiversity-affirming classrooms, sensory accommodations, and home-school consistency.'
+      },
+      {
+        name: 'Our Lady of Lourdes & St. Luke Catholic Elementary',
+        type: 'Catholic Elementary (WCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Personalized educational support, emotional regulation zones, and collaborative BSP implementation.'
+      },
     ]
   },
   {
@@ -1702,23 +1702,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Cameron Heights Collegiate & Waterloo-Oxford',
-        type: 'Public Secondary (WRDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Lifeskills and developmental education programs with community outing support.'
-      },
-      {
         name: 'Empire Public & Central Public School',
-        type: 'Public Elementary (WRDSB)',
-        grades: 'JK-Grade 6',
-        iepFocus: 'Assent-based behavioral protocols and collaborative parent coaching alignment.'
+        type: 'Public Elementary (WRDSB / UGDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource teachers supporting social regulation, visual supports, and AAC devices.'
       },
       {
-        name: 'St. David Catholic Secondary School',
-        type: 'Catholic Secondary (WCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Special education resource teachers supporting social regulation and AAC devices.'
-      }
+        name: 'Laurelwood Public & Sir Adam Beck Public School',
+        type: 'Public Elementary (WRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Neurodiversity-affirming classrooms, sensory accommodations, and home-school consistency.'
+      },
+      {
+        name: 'Our Lady of Lourdes & St. Luke Catholic Elementary',
+        type: 'Catholic Elementary (WCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Personalized educational support, emotional regulation zones, and collaborative BSP implementation.'
+      },
     ]
   },
   {
@@ -1743,23 +1743,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Cameron Heights Collegiate & Waterloo-Oxford',
-        type: 'Public Secondary (WRDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Lifeskills and developmental education programs with community outing support.'
-      },
-      {
         name: 'Empire Public & Central Public School',
-        type: 'Public Elementary (WRDSB)',
-        grades: 'JK-Grade 6',
-        iepFocus: 'Assent-based behavioral protocols and collaborative parent coaching alignment.'
+        type: 'Public Elementary (WRDSB / UGDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource teachers supporting social regulation, visual supports, and AAC devices.'
       },
       {
-        name: 'St. David Catholic Secondary School',
-        type: 'Catholic Secondary (WCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Special education resource teachers supporting social regulation and AAC devices.'
-      }
+        name: 'Laurelwood Public & Sir Adam Beck Public School',
+        type: 'Public Elementary (WRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Neurodiversity-affirming classrooms, sensory accommodations, and home-school consistency.'
+      },
+      {
+        name: 'Our Lady of Lourdes & St. Luke Catholic Elementary',
+        type: 'Catholic Elementary (WCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Personalized educational support, emotional regulation zones, and collaborative BSP implementation.'
+      },
     ]
   },
   {
@@ -1784,23 +1784,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Cameron Heights Collegiate & Waterloo-Oxford',
-        type: 'Public Secondary (WRDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Lifeskills and developmental education programs with community outing support.'
-      },
-      {
         name: 'Empire Public & Central Public School',
-        type: 'Public Elementary (WRDSB)',
-        grades: 'JK-Grade 6',
-        iepFocus: 'Assent-based behavioral protocols and collaborative parent coaching alignment.'
+        type: 'Public Elementary (WRDSB / UGDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource teachers supporting social regulation, visual supports, and AAC devices.'
       },
       {
-        name: 'St. David Catholic Secondary School',
-        type: 'Catholic Secondary (WCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Special education resource teachers supporting social regulation and AAC devices.'
-      }
+        name: 'Laurelwood Public & Sir Adam Beck Public School',
+        type: 'Public Elementary (WRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Neurodiversity-affirming classrooms, sensory accommodations, and home-school consistency.'
+      },
+      {
+        name: 'Our Lady of Lourdes & St. Luke Catholic Elementary',
+        type: 'Catholic Elementary (WCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Personalized educational support, emotional regulation zones, and collaborative BSP implementation.'
+      },
     ]
   },
   {
@@ -1825,23 +1825,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Cameron Heights Collegiate & Waterloo-Oxford',
-        type: 'Public Secondary (WRDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Lifeskills and developmental education programs with community outing support.'
-      },
-      {
         name: 'Empire Public & Central Public School',
-        type: 'Public Elementary (WRDSB)',
-        grades: 'JK-Grade 6',
-        iepFocus: 'Assent-based behavioral protocols and collaborative parent coaching alignment.'
+        type: 'Public Elementary (WRDSB / UGDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource teachers supporting social regulation, visual supports, and AAC devices.'
       },
       {
-        name: 'St. David Catholic Secondary School',
-        type: 'Catholic Secondary (WCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Special education resource teachers supporting social regulation and AAC devices.'
-      }
+        name: 'Laurelwood Public & Sir Adam Beck Public School',
+        type: 'Public Elementary (WRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Neurodiversity-affirming classrooms, sensory accommodations, and home-school consistency.'
+      },
+      {
+        name: 'Our Lady of Lourdes & St. Luke Catholic Elementary',
+        type: 'Catholic Elementary (WCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Personalized educational support, emotional regulation zones, and collaborative BSP implementation.'
+      },
     ]
   },
   {
@@ -1866,23 +1866,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Cameron Heights Collegiate & Waterloo-Oxford',
-        type: 'Public Secondary (WRDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Lifeskills and developmental education programs with community outing support.'
-      },
-      {
         name: 'Empire Public & Central Public School',
-        type: 'Public Elementary (WRDSB)',
-        grades: 'JK-Grade 6',
-        iepFocus: 'Assent-based behavioral protocols and collaborative parent coaching alignment.'
+        type: 'Public Elementary (WRDSB / UGDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource teachers supporting social regulation, visual supports, and AAC devices.'
       },
       {
-        name: 'St. David Catholic Secondary School',
-        type: 'Catholic Secondary (WCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Special education resource teachers supporting social regulation and AAC devices.'
-      }
+        name: 'Laurelwood Public & Sir Adam Beck Public School',
+        type: 'Public Elementary (WRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Neurodiversity-affirming classrooms, sensory accommodations, and home-school consistency.'
+      },
+      {
+        name: 'Our Lady of Lourdes & St. Luke Catholic Elementary',
+        type: 'Catholic Elementary (WCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Personalized educational support, emotional regulation zones, and collaborative BSP implementation.'
+      },
     ]
   },
   {
@@ -1907,23 +1907,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Cameron Heights Collegiate & Waterloo-Oxford',
-        type: 'Public Secondary (WRDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Lifeskills and developmental education programs with community outing support.'
-      },
-      {
         name: 'Empire Public & Central Public School',
-        type: 'Public Elementary (WRDSB)',
-        grades: 'JK-Grade 6',
-        iepFocus: 'Assent-based behavioral protocols and collaborative parent coaching alignment.'
+        type: 'Public Elementary (WRDSB / UGDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource teachers supporting social regulation, visual supports, and AAC devices.'
       },
       {
-        name: 'St. David Catholic Secondary School',
-        type: 'Catholic Secondary (WCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Special education resource teachers supporting social regulation and AAC devices.'
-      }
+        name: 'Laurelwood Public & Sir Adam Beck Public School',
+        type: 'Public Elementary (WRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Neurodiversity-affirming classrooms, sensory accommodations, and home-school consistency.'
+      },
+      {
+        name: 'Our Lady of Lourdes & St. Luke Catholic Elementary',
+        type: 'Catholic Elementary (WCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Personalized educational support, emotional regulation zones, and collaborative BSP implementation.'
+      },
     ]
   },
   {
@@ -1948,23 +1948,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Cameron Heights Collegiate & Waterloo-Oxford',
-        type: 'Public Secondary (WRDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Lifeskills and developmental education programs with community outing support.'
-      },
-      {
         name: 'Empire Public & Central Public School',
-        type: 'Public Elementary (WRDSB)',
-        grades: 'JK-Grade 6',
-        iepFocus: 'Assent-based behavioral protocols and collaborative parent coaching alignment.'
+        type: 'Public Elementary (WRDSB / UGDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource teachers supporting social regulation, visual supports, and AAC devices.'
       },
       {
-        name: 'St. David Catholic Secondary School',
-        type: 'Catholic Secondary (WCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Special education resource teachers supporting social regulation and AAC devices.'
-      }
+        name: 'Laurelwood Public & Sir Adam Beck Public School',
+        type: 'Public Elementary (WRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Neurodiversity-affirming classrooms, sensory accommodations, and home-school consistency.'
+      },
+      {
+        name: 'Our Lady of Lourdes & St. Luke Catholic Elementary',
+        type: 'Catholic Elementary (WCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Personalized educational support, emotional regulation zones, and collaborative BSP implementation.'
+      },
     ]
   },
   {
@@ -1989,23 +1989,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Cameron Heights Collegiate & Waterloo-Oxford',
-        type: 'Public Secondary (WRDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Lifeskills and developmental education programs with community outing support.'
-      },
-      {
         name: 'Empire Public & Central Public School',
-        type: 'Public Elementary (WRDSB)',
-        grades: 'JK-Grade 6',
-        iepFocus: 'Assent-based behavioral protocols and collaborative parent coaching alignment.'
+        type: 'Public Elementary (WRDSB / UGDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource teachers supporting social regulation, visual supports, and AAC devices.'
       },
       {
-        name: 'St. David Catholic Secondary School',
-        type: 'Catholic Secondary (WCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Special education resource teachers supporting social regulation and AAC devices.'
-      }
+        name: 'Laurelwood Public & Sir Adam Beck Public School',
+        type: 'Public Elementary (WRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Neurodiversity-affirming classrooms, sensory accommodations, and home-school consistency.'
+      },
+      {
+        name: 'Our Lady of Lourdes & St. Luke Catholic Elementary',
+        type: 'Catholic Elementary (WCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Personalized educational support, emotional regulation zones, and collaborative BSP implementation.'
+      },
     ]
   },
   {
@@ -2030,23 +2030,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Cameron Heights Collegiate & Waterloo-Oxford',
-        type: 'Public Secondary (WRDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Lifeskills and developmental education programs with community outing support.'
-      },
-      {
         name: 'Empire Public & Central Public School',
-        type: 'Public Elementary (WRDSB)',
-        grades: 'JK-Grade 6',
-        iepFocus: 'Assent-based behavioral protocols and collaborative parent coaching alignment.'
+        type: 'Public Elementary (WRDSB / UGDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource teachers supporting social regulation, visual supports, and AAC devices.'
       },
       {
-        name: 'St. David Catholic Secondary School',
-        type: 'Catholic Secondary (WCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Special education resource teachers supporting social regulation and AAC devices.'
-      }
+        name: 'Laurelwood Public & Sir Adam Beck Public School',
+        type: 'Public Elementary (WRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Neurodiversity-affirming classrooms, sensory accommodations, and home-school consistency.'
+      },
+      {
+        name: 'Our Lady of Lourdes & St. Luke Catholic Elementary',
+        type: 'Catholic Elementary (WCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Personalized educational support, emotional regulation zones, and collaborative BSP implementation.'
+      },
     ]
   },
 
@@ -2073,23 +2073,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Barrie North Collegiate & Innisdale Secondary',
-        type: 'Public Secondary (SCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Life skills learning programs and supported community integration.'
-      },
-      {
-        name: 'Mapleview Public & Oakley Park School',
+        name: 'Mapleview Public & Oakley Park Elementary School',
         type: 'Public Elementary (SCDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Communication-rich classrooms and natural play accommodations.'
+        iepFocus: 'Sensory accommodations, personalized visual routines, and collaborative in-home therapy alignment.'
       },
       {
-        name: 'St. Joseph’s Catholic High School',
-        type: 'Catholic Secondary (SMCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Individualized student plans designed with family and behavioral consultants.'
-      }
+        name: 'Algonquin Ridge & Cundles Heights Public School',
+        type: 'Public Elementary (SCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early developmental intervention, social skills dyad support, and individualized education planning.'
+      },
+      {
+        name: 'St. John Vianney & St. Bernadette Catholic Elementary',
+        type: 'Catholic Elementary (SMCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource center support, EA assistance, and positive behavioural plans.'
+      },
     ]
   },
   {
@@ -2114,23 +2114,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Barrie North Collegiate & Innisdale Secondary',
-        type: 'Public Secondary (SCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Life skills learning programs and supported community integration.'
-      },
-      {
-        name: 'Mapleview Public & Oakley Park School',
+        name: 'Mapleview Public & Oakley Park Elementary School',
         type: 'Public Elementary (SCDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Communication-rich classrooms and natural play accommodations.'
+        iepFocus: 'Sensory accommodations, personalized visual routines, and collaborative in-home therapy alignment.'
       },
       {
-        name: 'St. Joseph’s Catholic High School',
-        type: 'Catholic Secondary (SMCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Individualized student plans designed with family and behavioral consultants.'
-      }
+        name: 'Algonquin Ridge & Cundles Heights Public School',
+        type: 'Public Elementary (SCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early developmental intervention, social skills dyad support, and individualized education planning.'
+      },
+      {
+        name: 'St. John Vianney & St. Bernadette Catholic Elementary',
+        type: 'Catholic Elementary (SMCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource center support, EA assistance, and positive behavioural plans.'
+      },
     ]
   },
   {
@@ -2155,23 +2155,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Barrie North Collegiate & Innisdale Secondary',
-        type: 'Public Secondary (SCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Life skills learning programs and supported community integration.'
-      },
-      {
-        name: 'Mapleview Public & Oakley Park School',
+        name: 'Mapleview Public & Oakley Park Elementary School',
         type: 'Public Elementary (SCDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Communication-rich classrooms and natural play accommodations.'
+        iepFocus: 'Sensory accommodations, personalized visual routines, and collaborative in-home therapy alignment.'
       },
       {
-        name: 'St. Joseph’s Catholic High School',
-        type: 'Catholic Secondary (SMCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Individualized student plans designed with family and behavioral consultants.'
-      }
+        name: 'Algonquin Ridge & Cundles Heights Public School',
+        type: 'Public Elementary (SCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early developmental intervention, social skills dyad support, and individualized education planning.'
+      },
+      {
+        name: 'St. John Vianney & St. Bernadette Catholic Elementary',
+        type: 'Catholic Elementary (SMCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource center support, EA assistance, and positive behavioural plans.'
+      },
     ]
   },
   {
@@ -2196,23 +2196,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Barrie North Collegiate & Innisdale Secondary',
-        type: 'Public Secondary (SCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Life skills learning programs and supported community integration.'
-      },
-      {
-        name: 'Mapleview Public & Oakley Park School',
+        name: 'Mapleview Public & Oakley Park Elementary School',
         type: 'Public Elementary (SCDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Communication-rich classrooms and natural play accommodations.'
+        iepFocus: 'Sensory accommodations, personalized visual routines, and collaborative in-home therapy alignment.'
       },
       {
-        name: 'St. Joseph’s Catholic High School',
-        type: 'Catholic Secondary (SMCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Individualized student plans designed with family and behavioral consultants.'
-      }
+        name: 'Algonquin Ridge & Cundles Heights Public School',
+        type: 'Public Elementary (SCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early developmental intervention, social skills dyad support, and individualized education planning.'
+      },
+      {
+        name: 'St. John Vianney & St. Bernadette Catholic Elementary',
+        type: 'Catholic Elementary (SMCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource center support, EA assistance, and positive behavioural plans.'
+      },
     ]
   },
   {
@@ -2237,23 +2237,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Barrie North Collegiate & Innisdale Secondary',
-        type: 'Public Secondary (SCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Life skills learning programs and supported community integration.'
-      },
-      {
-        name: 'Mapleview Public & Oakley Park School',
+        name: 'Mapleview Public & Oakley Park Elementary School',
         type: 'Public Elementary (SCDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Communication-rich classrooms and natural play accommodations.'
+        iepFocus: 'Sensory accommodations, personalized visual routines, and collaborative in-home therapy alignment.'
       },
       {
-        name: 'St. Joseph’s Catholic High School',
-        type: 'Catholic Secondary (SMCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Individualized student plans designed with family and behavioral consultants.'
-      }
+        name: 'Algonquin Ridge & Cundles Heights Public School',
+        type: 'Public Elementary (SCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early developmental intervention, social skills dyad support, and individualized education planning.'
+      },
+      {
+        name: 'St. John Vianney & St. Bernadette Catholic Elementary',
+        type: 'Catholic Elementary (SMCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource center support, EA assistance, and positive behavioural plans.'
+      },
     ]
   },
   {
@@ -2278,23 +2278,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Barrie North Collegiate & Innisdale Secondary',
-        type: 'Public Secondary (SCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Life skills learning programs and supported community integration.'
-      },
-      {
-        name: 'Mapleview Public & Oakley Park School',
+        name: 'Mapleview Public & Oakley Park Elementary School',
         type: 'Public Elementary (SCDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Communication-rich classrooms and natural play accommodations.'
+        iepFocus: 'Sensory accommodations, personalized visual routines, and collaborative in-home therapy alignment.'
       },
       {
-        name: 'St. Joseph’s Catholic High School',
-        type: 'Catholic Secondary (SMCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Individualized student plans designed with family and behavioral consultants.'
-      }
+        name: 'Algonquin Ridge & Cundles Heights Public School',
+        type: 'Public Elementary (SCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early developmental intervention, social skills dyad support, and individualized education planning.'
+      },
+      {
+        name: 'St. John Vianney & St. Bernadette Catholic Elementary',
+        type: 'Catholic Elementary (SMCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource center support, EA assistance, and positive behavioural plans.'
+      },
     ]
   },
   {
@@ -2319,23 +2319,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Barrie North Collegiate & Innisdale Secondary',
-        type: 'Public Secondary (SCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Life skills learning programs and supported community integration.'
-      },
-      {
-        name: 'Mapleview Public & Oakley Park School',
+        name: 'Mapleview Public & Oakley Park Elementary School',
         type: 'Public Elementary (SCDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Communication-rich classrooms and natural play accommodations.'
+        iepFocus: 'Sensory accommodations, personalized visual routines, and collaborative in-home therapy alignment.'
       },
       {
-        name: 'St. Joseph’s Catholic High School',
-        type: 'Catholic Secondary (SMCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Individualized student plans designed with family and behavioral consultants.'
-      }
+        name: 'Algonquin Ridge & Cundles Heights Public School',
+        type: 'Public Elementary (SCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early developmental intervention, social skills dyad support, and individualized education planning.'
+      },
+      {
+        name: 'St. John Vianney & St. Bernadette Catholic Elementary',
+        type: 'Catholic Elementary (SMCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource center support, EA assistance, and positive behavioural plans.'
+      },
     ]
   },
   {
@@ -2360,23 +2360,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Barrie North Collegiate & Innisdale Secondary',
-        type: 'Public Secondary (SCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Life skills learning programs and supported community integration.'
-      },
-      {
-        name: 'Mapleview Public & Oakley Park School',
+        name: 'Mapleview Public & Oakley Park Elementary School',
         type: 'Public Elementary (SCDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Communication-rich classrooms and natural play accommodations.'
+        iepFocus: 'Sensory accommodations, personalized visual routines, and collaborative in-home therapy alignment.'
       },
       {
-        name: 'St. Joseph’s Catholic High School',
-        type: 'Catholic Secondary (SMCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Individualized student plans designed with family and behavioral consultants.'
-      }
+        name: 'Algonquin Ridge & Cundles Heights Public School',
+        type: 'Public Elementary (SCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early developmental intervention, social skills dyad support, and individualized education planning.'
+      },
+      {
+        name: 'St. John Vianney & St. Bernadette Catholic Elementary',
+        type: 'Catholic Elementary (SMCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource center support, EA assistance, and positive behavioural plans.'
+      },
     ]
   },
 
@@ -2403,23 +2403,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Barrie North Collegiate & Innisdale Secondary',
-        type: 'Public Secondary (SCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Life skills learning programs and supported community integration.'
-      },
-      {
-        name: 'Mapleview Public & Oakley Park School',
+        name: 'Mapleview Public & Oakley Park Elementary School',
         type: 'Public Elementary (SCDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Communication-rich classrooms and natural play accommodations.'
+        iepFocus: 'Sensory accommodations, personalized visual routines, and collaborative in-home therapy alignment.'
       },
       {
-        name: 'St. Joseph’s Catholic High School',
-        type: 'Catholic Secondary (SMCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Individualized student plans designed with family and behavioral consultants.'
-      }
+        name: 'Algonquin Ridge & Cundles Heights Public School',
+        type: 'Public Elementary (SCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early developmental intervention, social skills dyad support, and individualized education planning.'
+      },
+      {
+        name: 'St. John Vianney & St. Bernadette Catholic Elementary',
+        type: 'Catholic Elementary (SMCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource center support, EA assistance, and positive behavioural plans.'
+      },
     ]
   },
   {
@@ -2444,23 +2444,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Barrie North Collegiate & Innisdale Secondary',
-        type: 'Public Secondary (SCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Life skills learning programs and supported community integration.'
-      },
-      {
-        name: 'Mapleview Public & Oakley Park School',
+        name: 'Mapleview Public & Oakley Park Elementary School',
         type: 'Public Elementary (SCDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Communication-rich classrooms and natural play accommodations.'
+        iepFocus: 'Sensory accommodations, personalized visual routines, and collaborative in-home therapy alignment.'
       },
       {
-        name: 'St. Joseph’s Catholic High School',
-        type: 'Catholic Secondary (SMCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Individualized student plans designed with family and behavioral consultants.'
-      }
+        name: 'Algonquin Ridge & Cundles Heights Public School',
+        type: 'Public Elementary (SCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early developmental intervention, social skills dyad support, and individualized education planning.'
+      },
+      {
+        name: 'St. John Vianney & St. Bernadette Catholic Elementary',
+        type: 'Catholic Elementary (SMCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource center support, EA assistance, and positive behavioural plans.'
+      },
     ]
   },
 
@@ -2487,23 +2487,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Peterborough Collegiate (PACE) & Adam Scott',
-        type: 'Public Secondary (KPRDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Adaptive secondary education and vocational transitional programming.'
-      },
-      {
-        name: 'Westmount & Prince of Wales Public School',
+        name: 'Westmount Public & Prince of Wales Public School',
         type: 'Public Elementary (KPRDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Dedicated special education resource classes and sensory diet accommodations.'
+        iepFocus: 'Specialized classrooms for autism, structured communication protocols, and in-home team consultation.'
       },
       {
-        name: 'Holy Cross Catholic Secondary School',
-        type: 'Catholic Secondary (PVNCCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Collaborative IEP goal coordination with local regional treatment teams.'
-      }
+        name: 'Queen Elizabeth & Edmison Heights Public School',
+        type: 'Public Elementary (KPRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Sensory-informed teaching, differentiated instruction, and positive behavioral supports.'
+      },
+      {
+        name: 'St. Alphonsus & St. Teresa Catholic Elementary',
+        type: 'Catholic Elementary (PVNCCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized learning plans, assistive tech accommodations, and community therapy alignment.'
+      },
     ]
   },
   {
@@ -2528,23 +2528,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Peterborough Collegiate (PACE) & Adam Scott',
-        type: 'Public Secondary (KPRDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Adaptive secondary education and vocational transitional programming.'
-      },
-      {
-        name: 'Westmount & Prince of Wales Public School',
+        name: 'Westmount Public & Prince of Wales Public School',
         type: 'Public Elementary (KPRDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Dedicated special education resource classes and sensory diet accommodations.'
+        iepFocus: 'Specialized classrooms for autism, structured communication protocols, and in-home team consultation.'
       },
       {
-        name: 'Holy Cross Catholic Secondary School',
-        type: 'Catholic Secondary (PVNCCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Collaborative IEP goal coordination with local regional treatment teams.'
-      }
+        name: 'Queen Elizabeth & Edmison Heights Public School',
+        type: 'Public Elementary (KPRDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Sensory-informed teaching, differentiated instruction, and positive behavioral supports.'
+      },
+      {
+        name: 'St. Alphonsus & St. Teresa Catholic Elementary',
+        type: 'Catholic Elementary (PVNCCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized learning plans, assistive tech accommodations, and community therapy alignment.'
+      },
     ]
   },
   {
@@ -2569,23 +2569,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Dunbarton High & Sinclair Secondary',
-        type: 'Public Secondary (DDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Practical academic classes, social navigation, and sensory integration spaces.'
-      },
-      {
         name: 'William Dunbar & Valley View Public School',
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Intensive communication early intervention paired with in-home therapy trials.'
+        iepFocus: 'Comprehensive developmental classes, proactive sensory breaks, and private clinician coordination.'
       },
       {
-        name: 'St. Mary Catholic Secondary School',
-        type: 'Catholic Secondary (DCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Collaborative student success team meetings and assistive tech integration.'
-      }
+        name: 'Dr. C.F. Cannon & Gandatsetiagon Public School',
+        type: 'Public Elementary (DDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early intervention language enrichment, visual schedule supports, and positive behavioural strategies.'
+      },
+      {
+        name: 'St. Isaac Jogues & St. Kateri Tekakwitha Catholic Elementary',
+        type: 'Catholic Elementary (DCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource rooms, executive functioning coaching, and inclusive peer play groups.'
+      },
     ]
   },
   {
@@ -2610,23 +2610,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Dunbarton High & Sinclair Secondary',
-        type: 'Public Secondary (DDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Practical academic classes, social navigation, and sensory integration spaces.'
-      },
-      {
         name: 'William Dunbar & Valley View Public School',
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Intensive communication early intervention paired with in-home therapy trials.'
+        iepFocus: 'Comprehensive developmental classes, proactive sensory breaks, and private clinician coordination.'
       },
       {
-        name: 'St. Mary Catholic Secondary School',
-        type: 'Catholic Secondary (DCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Collaborative student success team meetings and assistive tech integration.'
-      }
+        name: 'Dr. C.F. Cannon & Gandatsetiagon Public School',
+        type: 'Public Elementary (DDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Early intervention language enrichment, visual schedule supports, and positive behavioural strategies.'
+      },
+      {
+        name: 'St. Isaac Jogues & St. Kateri Tekakwitha Catholic Elementary',
+        type: 'Catholic Elementary (DCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource rooms, executive functioning coaching, and inclusive peer play groups.'
+      },
     ]
   },
 
@@ -2653,23 +2653,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Nepean High School & Lisgar Collegiate',
-        type: 'Public Secondary (OCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Bilingual special education classes and differentiated learning strategies.'
-      },
-      {
         name: 'Elmdale Public & Broadview Public School',
         type: 'Public Elementary (OCDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Early speech, AAC device adoption, and positive behavioral teaching plans.'
+        iepFocus: 'Integrated autism support classes, sensory room access, and close coordination with private RBA teams.'
       },
       {
-        name: 'St. Pius X High School / Collège catholique Samuel-Genest',
-        type: 'Catholic Secondary (OCSB / CECCE)',
-        grades: 'Grades 7-12',
-        iepFocus: 'Comprehensive student support services with assent-based clinical goals.'
-      }
+        name: 'Rockcliffe Park Public & Hopewell Avenue Public School',
+        type: 'Public Elementary (OCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized communication protocols, AAC implementation, and classroom transition supports.'
+      },
+      {
+        name: 'St. George Catholic & Corpus Christi Catholic Elementary',
+        type: 'Catholic Elementary (OCSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource teachers, differentiated learning, and positive behavioural intervention plans.'
+      },
     ]
   },
   {
@@ -2694,23 +2694,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Nepean High School & Lisgar Collegiate',
-        type: 'Public Secondary (OCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Bilingual special education classes and differentiated learning strategies.'
-      },
-      {
         name: 'Elmdale Public & Broadview Public School',
         type: 'Public Elementary (OCDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Early speech, AAC device adoption, and positive behavioral teaching plans.'
+        iepFocus: 'Integrated autism support classes, sensory room access, and close coordination with private RBA teams.'
       },
       {
-        name: 'St. Pius X High School / Collège catholique Samuel-Genest',
-        type: 'Catholic Secondary (OCSB / CECCE)',
-        grades: 'Grades 7-12',
-        iepFocus: 'Comprehensive student support services with assent-based clinical goals.'
-      }
+        name: 'Rockcliffe Park Public & Hopewell Avenue Public School',
+        type: 'Public Elementary (OCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized communication protocols, AAC implementation, and classroom transition supports.'
+      },
+      {
+        name: 'St. George Catholic & Corpus Christi Catholic Elementary',
+        type: 'Catholic Elementary (OCSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource teachers, differentiated learning, and positive behavioural intervention plans.'
+      },
     ]
   },
 
@@ -2737,23 +2737,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Nepean High School & Lisgar Collegiate',
-        type: 'Public Secondary (OCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Bilingual special education classes and differentiated learning strategies.'
-      },
-      {
         name: 'Elmdale Public & Broadview Public School',
         type: 'Public Elementary (OCDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Early speech, AAC device adoption, and positive behavioral teaching plans.'
+        iepFocus: 'Integrated autism support classes, sensory room access, and close coordination with private RBA teams.'
       },
       {
-        name: 'St. Pius X High School / Collège catholique Samuel-Genest',
-        type: 'Catholic Secondary (OCSB / CECCE)',
-        grades: 'Grades 7-12',
-        iepFocus: 'Comprehensive student support services with assent-based clinical goals.'
-      }
+        name: 'Rockcliffe Park Public & Hopewell Avenue Public School',
+        type: 'Public Elementary (OCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized communication protocols, AAC implementation, and classroom transition supports.'
+      },
+      {
+        name: 'St. George Catholic & Corpus Christi Catholic Elementary',
+        type: 'Catholic Elementary (OCSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource teachers, differentiated learning, and positive behavioural intervention plans.'
+      },
     ]
   },
   {
@@ -2778,23 +2778,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Nepean High School & Lisgar Collegiate',
-        type: 'Public Secondary (OCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Bilingual special education classes and differentiated learning strategies.'
-      },
-      {
         name: 'Elmdale Public & Broadview Public School',
         type: 'Public Elementary (OCDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Early speech, AAC device adoption, and positive behavioral teaching plans.'
+        iepFocus: 'Integrated autism support classes, sensory room access, and close coordination with private RBA teams.'
       },
       {
-        name: 'St. Pius X High School / Collège catholique Samuel-Genest',
-        type: 'Catholic Secondary (OCSB / CECCE)',
-        grades: 'Grades 7-12',
-        iepFocus: 'Comprehensive student support services with assent-based clinical goals.'
-      }
+        name: 'Rockcliffe Park Public & Hopewell Avenue Public School',
+        type: 'Public Elementary (OCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized communication protocols, AAC implementation, and classroom transition supports.'
+      },
+      {
+        name: 'St. George Catholic & Corpus Christi Catholic Elementary',
+        type: 'Catholic Elementary (OCSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource teachers, differentiated learning, and positive behavioural intervention plans.'
+      },
     ]
   },
   {
@@ -2819,23 +2819,23 @@ export const ontarioLocations: LocationInfo[] = [
     },
     schools: [
       {
-        name: 'Nepean High School & Lisgar Collegiate',
-        type: 'Public Secondary (OCDSB)',
-        grades: 'Grades 9-12',
-        iepFocus: 'Bilingual special education classes and differentiated learning strategies.'
-      },
-      {
         name: 'Elmdale Public & Broadview Public School',
         type: 'Public Elementary (OCDSB)',
         grades: 'JK-Grade 8',
-        iepFocus: 'Early speech, AAC device adoption, and positive behavioral teaching plans.'
+        iepFocus: 'Integrated autism support classes, sensory room access, and close coordination with private RBA teams.'
       },
       {
-        name: 'St. Pius X High School / Collège catholique Samuel-Genest',
-        type: 'Catholic Secondary (OCSB / CECCE)',
-        grades: 'Grades 7-12',
-        iepFocus: 'Comprehensive student support services with assent-based clinical goals.'
-      }
+        name: 'Rockcliffe Park Public & Hopewell Avenue Public School',
+        type: 'Public Elementary (OCDSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Individualized communication protocols, AAC implementation, and classroom transition supports.'
+      },
+      {
+        name: 'St. George Catholic & Corpus Christi Catholic Elementary',
+        type: 'Catholic Elementary (OCSB)',
+        grades: 'JK-Grade 8',
+        iepFocus: 'Special education resource teachers, differentiated learning, and positive behavioural intervention plans.'
+      },
     ]
   },
   {
