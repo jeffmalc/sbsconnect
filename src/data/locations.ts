@@ -69,7 +69,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Catholic Elementary (TCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Individualized Education Plans (IEPs), specialized educational assistants (EAs), and integrated speech & AAC goals.',
-        url: 'https://holyrosary.tcdsb.org'
+        url: 'https://www.tcdsb.org/schools/holyrosary/'
       },
     ]
   },
@@ -113,7 +113,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Catholic Elementary (TCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Individualized Education Plans (IEPs), specialized educational assistants (EAs), and integrated speech & AAC goals.',
-        url: 'https://holyrosary.tcdsb.org'
+        url: 'https://www.tcdsb.org/schools/holyrosary/'
       },
     ]
   },
@@ -157,7 +157,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Catholic Elementary (TCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Individualized Education Plans (IEPs), specialized educational assistants (EAs), and integrated speech & AAC goals.',
-        url: 'https://holyrosary.tcdsb.org'
+        url: 'https://www.tcdsb.org/schools/holyrosary/'
       },
     ]
   },
@@ -201,7 +201,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Catholic Elementary (TCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Individualized Education Plans (IEPs), specialized educational assistants (EAs), and integrated speech & AAC goals.',
-        url: 'https://holyrosary.tcdsb.org'
+        url: 'https://www.tcdsb.org/schools/holyrosary/'
       },
     ]
   },
@@ -245,7 +245,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Catholic Elementary (TCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Individualized Education Plans (IEPs), specialized educational assistants (EAs), and integrated speech & AAC goals.',
-        url: 'https://holyrosary.tcdsb.org'
+        url: 'https://www.tcdsb.org/schools/holyrosary/'
       },
     ]
   },
@@ -291,7 +291,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Catholic Elementary (DPCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Special education resource team collaboration, modified learning plans, and functional social communication.',
-        url: 'https://www.dpcdsb.org/PHILP'
+        url: 'https://philp.dpcdsb.org/'
       },
     ]
   },
@@ -335,7 +335,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Catholic Elementary (DPCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Special education resource team collaboration, modified learning plans, and functional social communication.',
-        url: 'https://www.dpcdsb.org/PHILP'
+        url: 'https://philp.dpcdsb.org/'
       },
     ]
   },
@@ -379,7 +379,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Catholic Elementary (DPCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Special education resource team collaboration, modified learning plans, and functional social communication.',
-        url: 'https://www.dpcdsb.org/PHILP'
+        url: 'https://philp.dpcdsb.org/'
       },
     ]
   },
@@ -411,21 +411,21 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive special education resource teams, autism support classes, and calm sensory spaces.',
-        url: 'http://www.yrdsb.ca/schools/silverstream.ps'
+        url: 'https://silverstream-ps.yrdsb.ca/'
       },
       {
         name: 'Bayview Glen Public School',
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Individualized communication protocols, assistive technology, and structured kindergarten transitions.',
-        url: 'http://www.yrdsb.ca/schools/bayviewglen.ps'
+        url: 'https://bayviewglen-ps.yrdsb.ca/'
       },
       {
         name: 'St. Charles Garnier Catholic Elementary School',
         type: 'Catholic Elementary (YCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Specialized special education learning centers, neurodiversity-affirming accommodations, and peer mentorship.',
-        url: 'https://scga.ycdsb.ca'
+        url: 'https://scg.ycdsb.ca/'
       },
     ]
   },
@@ -455,21 +455,21 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive special education resource teams, autism support classes, and calm sensory spaces.',
-        url: 'http://www.yrdsb.ca/schools/silverstream.ps'
+        url: 'https://silverstream-ps.yrdsb.ca/'
       },
       {
         name: 'Bayview Glen Public School',
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Individualized communication protocols, assistive technology, and structured kindergarten transitions.',
-        url: 'http://www.yrdsb.ca/schools/bayviewglen.ps'
+        url: 'https://bayviewglen-ps.yrdsb.ca/'
       },
       {
         name: 'St. Charles Garnier Catholic Elementary School',
         type: 'Catholic Elementary (YCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Specialized special education learning centers, neurodiversity-affirming accommodations, and peer mentorship.',
-        url: 'https://scga.ycdsb.ca'
+        url: 'https://scg.ycdsb.ca/'
       },
     ]
   },
@@ -499,21 +499,21 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive special education resource teams, autism support classes, and calm sensory spaces.',
-        url: 'http://www.yrdsb.ca/schools/silverstream.ps'
+        url: 'https://silverstream-ps.yrdsb.ca/'
       },
       {
         name: 'Bayview Glen Public School',
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Individualized communication protocols, assistive technology, and structured kindergarten transitions.',
-        url: 'http://www.yrdsb.ca/schools/bayviewglen.ps'
+        url: 'https://bayviewglen-ps.yrdsb.ca/'
       },
       {
         name: 'St. Charles Garnier Catholic Elementary School',
         type: 'Catholic Elementary (YCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Specialized special education learning centers, neurodiversity-affirming accommodations, and peer mentorship.',
-        url: 'https://scga.ycdsb.ca'
+        url: 'https://scg.ycdsb.ca/'
       },
     ]
   },
@@ -543,21 +543,21 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive special education resource teams, autism support classes, and calm sensory spaces.',
-        url: 'http://www.yrdsb.ca/schools/silverstream.ps'
+        url: 'https://silverstream-ps.yrdsb.ca/'
       },
       {
         name: 'Bayview Glen Public School',
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Individualized communication protocols, assistive technology, and structured kindergarten transitions.',
-        url: 'http://www.yrdsb.ca/schools/bayviewglen.ps'
+        url: 'https://bayviewglen-ps.yrdsb.ca/'
       },
       {
         name: 'St. Charles Garnier Catholic Elementary School',
         type: 'Catholic Elementary (YCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Specialized special education learning centers, neurodiversity-affirming accommodations, and peer mentorship.',
-        url: 'https://scga.ycdsb.ca'
+        url: 'https://scg.ycdsb.ca/'
       },
     ]
   },
@@ -587,21 +587,21 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive special education resource teams, autism support classes, and calm sensory spaces.',
-        url: 'http://www.yrdsb.ca/schools/silverstream.ps'
+        url: 'https://silverstream-ps.yrdsb.ca/'
       },
       {
         name: 'Bayview Glen Public School',
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Individualized communication protocols, assistive technology, and structured kindergarten transitions.',
-        url: 'http://www.yrdsb.ca/schools/bayviewglen.ps'
+        url: 'https://bayviewglen-ps.yrdsb.ca/'
       },
       {
         name: 'St. Charles Garnier Catholic Elementary School',
         type: 'Catholic Elementary (YCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Specialized special education learning centers, neurodiversity-affirming accommodations, and peer mentorship.',
-        url: 'https://scga.ycdsb.ca'
+        url: 'https://scg.ycdsb.ca/'
       },
     ]
   },
@@ -631,21 +631,21 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive special education resource teams, autism support classes, and calm sensory spaces.',
-        url: 'http://www.yrdsb.ca/schools/silverstream.ps'
+        url: 'https://silverstream-ps.yrdsb.ca/'
       },
       {
         name: 'Bayview Glen Public School',
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Individualized communication protocols, assistive technology, and structured kindergarten transitions.',
-        url: 'http://www.yrdsb.ca/schools/bayviewglen.ps'
+        url: 'https://bayviewglen-ps.yrdsb.ca/'
       },
       {
         name: 'St. Charles Garnier Catholic Elementary School',
         type: 'Catholic Elementary (YCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Specialized special education learning centers, neurodiversity-affirming accommodations, and peer mentorship.',
-        url: 'https://scga.ycdsb.ca'
+        url: 'https://scg.ycdsb.ca/'
       },
     ]
   },
@@ -675,21 +675,21 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive special education resource teams, autism support classes, and calm sensory spaces.',
-        url: 'http://www.yrdsb.ca/schools/silverstream.ps'
+        url: 'https://silverstream-ps.yrdsb.ca/'
       },
       {
         name: 'Bayview Glen Public School',
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Individualized communication protocols, assistive technology, and structured kindergarten transitions.',
-        url: 'http://www.yrdsb.ca/schools/bayviewglen.ps'
+        url: 'https://bayviewglen-ps.yrdsb.ca/'
       },
       {
         name: 'St. Charles Garnier Catholic Elementary School',
         type: 'Catholic Elementary (YCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Specialized special education learning centers, neurodiversity-affirming accommodations, and peer mentorship.',
-        url: 'https://scga.ycdsb.ca'
+        url: 'https://scg.ycdsb.ca/'
       },
     ]
   },
@@ -719,21 +719,21 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive special education resource teams, autism support classes, and calm sensory spaces.',
-        url: 'http://www.yrdsb.ca/schools/silverstream.ps'
+        url: 'https://silverstream-ps.yrdsb.ca/'
       },
       {
         name: 'Bayview Glen Public School',
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Individualized communication protocols, assistive technology, and structured kindergarten transitions.',
-        url: 'http://www.yrdsb.ca/schools/bayviewglen.ps'
+        url: 'https://bayviewglen-ps.yrdsb.ca/'
       },
       {
         name: 'St. Charles Garnier Catholic Elementary School',
         type: 'Catholic Elementary (YCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Specialized special education learning centers, neurodiversity-affirming accommodations, and peer mentorship.',
-        url: 'https://scga.ycdsb.ca'
+        url: 'https://scg.ycdsb.ca/'
       },
     ]
   },
@@ -763,21 +763,21 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive special education resource teams, autism support classes, and calm sensory spaces.',
-        url: 'http://www.yrdsb.ca/schools/silverstream.ps'
+        url: 'https://silverstream-ps.yrdsb.ca/'
       },
       {
         name: 'Bayview Glen Public School',
         type: 'Public Elementary (YRDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Individualized communication protocols, assistive technology, and structured kindergarten transitions.',
-        url: 'http://www.yrdsb.ca/schools/bayviewglen.ps'
+        url: 'https://bayviewglen-ps.yrdsb.ca/'
       },
       {
         name: 'St. Charles Garnier Catholic Elementary School',
         type: 'Catholic Elementary (YCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Specialized special education learning centers, neurodiversity-affirming accommodations, and peer mentorship.',
-        url: 'https://scga.ycdsb.ca'
+        url: 'https://scg.ycdsb.ca/'
       },
     ]
   },
@@ -809,14 +809,14 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (HWDSB / HDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive special education classrooms, assent-based ABA protocol integration, and speech support.',
-        url: 'https://www.hwdsb.on.ca/norwoodpark/'
+        url: 'https://norwoodpark.hwdsb.on.ca/'
       },
       {
         name: 'Maple Grove Public School',
         type: 'Public Elementary (HDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Sensory regulation plans, modified curriculum pacing, and collaborative R.B.A. consultant coordination.',
-        url: 'https://mpg.hdsb.ca'
+        url: 'https://www.hdsb.ca/mag'
       },
       {
         name: 'St. Bernadette Catholic Elementary School',
@@ -853,14 +853,14 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (HWDSB / HDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive special education classrooms, assent-based ABA protocol integration, and speech support.',
-        url: 'https://www.hwdsb.on.ca/norwoodpark/'
+        url: 'https://norwoodpark.hwdsb.on.ca/'
       },
       {
         name: 'Maple Grove Public School',
         type: 'Public Elementary (HDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Sensory regulation plans, modified curriculum pacing, and collaborative R.B.A. consultant coordination.',
-        url: 'https://mpg.hdsb.ca'
+        url: 'https://www.hdsb.ca/mag'
       },
       {
         name: 'St. Bernadette Catholic Elementary School',
@@ -897,14 +897,14 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (HWDSB / HDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive special education classrooms, assent-based ABA protocol integration, and speech support.',
-        url: 'https://www.hwdsb.on.ca/norwoodpark/'
+        url: 'https://norwoodpark.hwdsb.on.ca/'
       },
       {
         name: 'Maple Grove Public School',
         type: 'Public Elementary (HDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Sensory regulation plans, modified curriculum pacing, and collaborative R.B.A. consultant coordination.',
-        url: 'https://mpg.hdsb.ca'
+        url: 'https://www.hdsb.ca/mag'
       },
       {
         name: 'St. Bernadette Catholic Elementary School',
@@ -941,14 +941,14 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (HWDSB / HDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive special education classrooms, assent-based ABA protocol integration, and speech support.',
-        url: 'https://www.hwdsb.on.ca/norwoodpark/'
+        url: 'https://norwoodpark.hwdsb.on.ca/'
       },
       {
         name: 'Maple Grove Public School',
         type: 'Public Elementary (HDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Sensory regulation plans, modified curriculum pacing, and collaborative R.B.A. consultant coordination.',
-        url: 'https://mpg.hdsb.ca'
+        url: 'https://www.hdsb.ca/mag'
       },
       {
         name: 'St. Bernadette Catholic Elementary School',
@@ -987,21 +987,21 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive developmental classes, proactive sensory breaks, and private clinician coordination.',
-        url: 'https://williamdunbar.ddsb.ca'
+        url: 'https://williamdunbar.ddsb.ca/en/index.aspx'
       },
       {
         name: 'Dr. C.F. Cannon Public School',
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Early intervention language enrichment, visual schedule supports, and positive behavioural strategies.',
-        url: 'https://cfcannon.ddsb.ca'
+        url: 'https://cannon.ddsb.ca/en/index.aspx'
       },
       {
         name: 'St. Isaac Jogues Catholic School',
         type: 'Catholic Elementary (DCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Special education resource rooms, executive functioning coaching, and inclusive peer play groups.',
-        url: 'https://stisaacjogues.dcdsb.ca'
+        url: 'https://www.dcdsb.ca/stisaac/'
       },
     ]
   },
@@ -1031,21 +1031,21 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive developmental classes, proactive sensory breaks, and private clinician coordination.',
-        url: 'https://williamdunbar.ddsb.ca'
+        url: 'https://williamdunbar.ddsb.ca/en/index.aspx'
       },
       {
         name: 'Dr. C.F. Cannon Public School',
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Early intervention language enrichment, visual schedule supports, and positive behavioural strategies.',
-        url: 'https://cfcannon.ddsb.ca'
+        url: 'https://cannon.ddsb.ca/en/index.aspx'
       },
       {
         name: 'St. Isaac Jogues Catholic School',
         type: 'Catholic Elementary (DCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Special education resource rooms, executive functioning coaching, and inclusive peer play groups.',
-        url: 'https://stisaacjogues.dcdsb.ca'
+        url: 'https://www.dcdsb.ca/stisaac/'
       },
     ]
   },
@@ -1075,21 +1075,21 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive developmental classes, proactive sensory breaks, and private clinician coordination.',
-        url: 'https://williamdunbar.ddsb.ca'
+        url: 'https://williamdunbar.ddsb.ca/en/index.aspx'
       },
       {
         name: 'Dr. C.F. Cannon Public School',
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Early intervention language enrichment, visual schedule supports, and positive behavioural strategies.',
-        url: 'https://cfcannon.ddsb.ca'
+        url: 'https://cannon.ddsb.ca/en/index.aspx'
       },
       {
         name: 'St. Isaac Jogues Catholic School',
         type: 'Catholic Elementary (DCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Special education resource rooms, executive functioning coaching, and inclusive peer play groups.',
-        url: 'https://stisaacjogues.dcdsb.ca'
+        url: 'https://www.dcdsb.ca/stisaac/'
       },
     ]
   },
@@ -1119,21 +1119,21 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive developmental classes, proactive sensory breaks, and private clinician coordination.',
-        url: 'https://williamdunbar.ddsb.ca'
+        url: 'https://williamdunbar.ddsb.ca/en/index.aspx'
       },
       {
         name: 'Dr. C.F. Cannon Public School',
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Early intervention language enrichment, visual schedule supports, and positive behavioural strategies.',
-        url: 'https://cfcannon.ddsb.ca'
+        url: 'https://cannon.ddsb.ca/en/index.aspx'
       },
       {
         name: 'St. Isaac Jogues Catholic School',
         type: 'Catholic Elementary (DCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Special education resource rooms, executive functioning coaching, and inclusive peer play groups.',
-        url: 'https://stisaacjogues.dcdsb.ca'
+        url: 'https://www.dcdsb.ca/stisaac/'
       },
     ]
   },
@@ -1163,21 +1163,21 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive developmental classes, proactive sensory breaks, and private clinician coordination.',
-        url: 'https://williamdunbar.ddsb.ca'
+        url: 'https://williamdunbar.ddsb.ca/en/index.aspx'
       },
       {
         name: 'Dr. C.F. Cannon Public School',
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Early intervention language enrichment, visual schedule supports, and positive behavioural strategies.',
-        url: 'https://cfcannon.ddsb.ca'
+        url: 'https://cannon.ddsb.ca/en/index.aspx'
       },
       {
         name: 'St. Isaac Jogues Catholic School',
         type: 'Catholic Elementary (DCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Special education resource rooms, executive functioning coaching, and inclusive peer play groups.',
-        url: 'https://stisaacjogues.dcdsb.ca'
+        url: 'https://www.dcdsb.ca/stisaac/'
       },
     ]
   },
@@ -1207,21 +1207,21 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive developmental classes, proactive sensory breaks, and private clinician coordination.',
-        url: 'https://williamdunbar.ddsb.ca'
+        url: 'https://williamdunbar.ddsb.ca/en/index.aspx'
       },
       {
         name: 'Dr. C.F. Cannon Public School',
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Early intervention language enrichment, visual schedule supports, and positive behavioural strategies.',
-        url: 'https://cfcannon.ddsb.ca'
+        url: 'https://cannon.ddsb.ca/en/index.aspx'
       },
       {
         name: 'St. Isaac Jogues Catholic School',
         type: 'Catholic Elementary (DCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Special education resource rooms, executive functioning coaching, and inclusive peer play groups.',
-        url: 'https://stisaacjogues.dcdsb.ca'
+        url: 'https://www.dcdsb.ca/stisaac/'
       },
     ]
   },
@@ -1251,21 +1251,21 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive developmental classes, proactive sensory breaks, and private clinician coordination.',
-        url: 'https://williamdunbar.ddsb.ca'
+        url: 'https://williamdunbar.ddsb.ca/en/index.aspx'
       },
       {
         name: 'Dr. C.F. Cannon Public School',
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Early intervention language enrichment, visual schedule supports, and positive behavioural strategies.',
-        url: 'https://cfcannon.ddsb.ca'
+        url: 'https://cannon.ddsb.ca/en/index.aspx'
       },
       {
         name: 'St. Isaac Jogues Catholic School',
         type: 'Catholic Elementary (DCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Special education resource rooms, executive functioning coaching, and inclusive peer play groups.',
-        url: 'https://stisaacjogues.dcdsb.ca'
+        url: 'https://www.dcdsb.ca/stisaac/'
       },
     ]
   },
@@ -1297,14 +1297,14 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (HWDSB / HDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive special education classrooms, assent-based ABA protocol integration, and speech support.',
-        url: 'https://www.hwdsb.on.ca/norwoodpark/'
+        url: 'https://norwoodpark.hwdsb.on.ca/'
       },
       {
         name: 'Maple Grove Public School',
         type: 'Public Elementary (HDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Sensory regulation plans, modified curriculum pacing, and collaborative R.B.A. consultant coordination.',
-        url: 'https://mpg.hdsb.ca'
+        url: 'https://www.hdsb.ca/mag'
       },
       {
         name: 'St. Bernadette Catholic Elementary School',
@@ -1341,14 +1341,14 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (HWDSB / HDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive special education classrooms, assent-based ABA protocol integration, and speech support.',
-        url: 'https://www.hwdsb.on.ca/norwoodpark/'
+        url: 'https://norwoodpark.hwdsb.on.ca/'
       },
       {
         name: 'Maple Grove Public School',
         type: 'Public Elementary (HDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Sensory regulation plans, modified curriculum pacing, and collaborative R.B.A. consultant coordination.',
-        url: 'https://mpg.hdsb.ca'
+        url: 'https://www.hdsb.ca/mag'
       },
       {
         name: 'St. Bernadette Catholic Elementary School',
@@ -1385,14 +1385,14 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (HWDSB / HDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive special education classrooms, assent-based ABA protocol integration, and speech support.',
-        url: 'https://www.hwdsb.on.ca/norwoodpark/'
+        url: 'https://norwoodpark.hwdsb.on.ca/'
       },
       {
         name: 'Maple Grove Public School',
         type: 'Public Elementary (HDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Sensory regulation plans, modified curriculum pacing, and collaborative R.B.A. consultant coordination.',
-        url: 'https://mpg.hdsb.ca'
+        url: 'https://www.hdsb.ca/mag'
       },
       {
         name: 'St. Bernadette Catholic Elementary School',
@@ -1429,14 +1429,14 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (HWDSB / HDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive special education classrooms, assent-based ABA protocol integration, and speech support.',
-        url: 'https://www.hwdsb.on.ca/norwoodpark/'
+        url: 'https://norwoodpark.hwdsb.on.ca/'
       },
       {
         name: 'Maple Grove Public School',
         type: 'Public Elementary (HDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Sensory regulation plans, modified curriculum pacing, and collaborative R.B.A. consultant coordination.',
-        url: 'https://mpg.hdsb.ca'
+        url: 'https://www.hdsb.ca/mag'
       },
       {
         name: 'St. Bernadette Catholic Elementary School',
@@ -1797,7 +1797,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Catholic Elementary (WCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Personalized educational support, emotional regulation zones, and collaborative BSP implementation.',
-        url: 'https://stluke.wcdsb.ca'
+        url: 'https://www.wcdsb.ca/st-luke-catholic-elementary-school/'
       },
     ]
   },
@@ -1841,7 +1841,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Catholic Elementary (WCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Personalized educational support, emotional regulation zones, and collaborative BSP implementation.',
-        url: 'https://stluke.wcdsb.ca'
+        url: 'https://www.wcdsb.ca/st-luke-catholic-elementary-school/'
       },
     ]
   },
@@ -1885,7 +1885,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Catholic Elementary (WCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Personalized educational support, emotional regulation zones, and collaborative BSP implementation.',
-        url: 'https://stluke.wcdsb.ca'
+        url: 'https://www.wcdsb.ca/st-luke-catholic-elementary-school/'
       },
     ]
   },
@@ -1929,7 +1929,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Catholic Elementary (WCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Personalized educational support, emotional regulation zones, and collaborative BSP implementation.',
-        url: 'https://stluke.wcdsb.ca'
+        url: 'https://www.wcdsb.ca/st-luke-catholic-elementary-school/'
       },
     ]
   },
@@ -1973,7 +1973,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Catholic Elementary (WCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Personalized educational support, emotional regulation zones, and collaborative BSP implementation.',
-        url: 'https://stluke.wcdsb.ca'
+        url: 'https://www.wcdsb.ca/st-luke-catholic-elementary-school/'
       },
     ]
   },
@@ -2017,7 +2017,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Catholic Elementary (WCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Personalized educational support, emotional regulation zones, and collaborative BSP implementation.',
-        url: 'https://stluke.wcdsb.ca'
+        url: 'https://www.wcdsb.ca/st-luke-catholic-elementary-school/'
       },
     ]
   },
@@ -2061,7 +2061,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Catholic Elementary (WCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Personalized educational support, emotional regulation zones, and collaborative BSP implementation.',
-        url: 'https://stluke.wcdsb.ca'
+        url: 'https://www.wcdsb.ca/st-luke-catholic-elementary-school/'
       },
     ]
   },
@@ -2105,7 +2105,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Catholic Elementary (WCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Personalized educational support, emotional regulation zones, and collaborative BSP implementation.',
-        url: 'https://stluke.wcdsb.ca'
+        url: 'https://www.wcdsb.ca/st-luke-catholic-elementary-school/'
       },
     ]
   },
@@ -2149,7 +2149,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Catholic Elementary (WCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Personalized educational support, emotional regulation zones, and collaborative BSP implementation.',
-        url: 'https://stluke.wcdsb.ca'
+        url: 'https://www.wcdsb.ca/st-luke-catholic-elementary-school/'
       },
     ]
   },
@@ -2193,7 +2193,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Catholic Elementary (WCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Personalized educational support, emotional regulation zones, and collaborative BSP implementation.',
-        url: 'https://stluke.wcdsb.ca'
+        url: 'https://www.wcdsb.ca/st-luke-catholic-elementary-school/'
       },
     ]
   },
@@ -2232,7 +2232,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (SCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Early developmental intervention, social skills dyad support, and individualized education planning.',
-        url: 'https://alq.scdsb.on.ca'
+        url: 'https://alr.scdsb.on.ca/'
       },
       {
         name: 'St. John Vianney Catholic School',
@@ -2276,7 +2276,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (SCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Early developmental intervention, social skills dyad support, and individualized education planning.',
-        url: 'https://alq.scdsb.on.ca'
+        url: 'https://alr.scdsb.on.ca/'
       },
       {
         name: 'St. John Vianney Catholic School',
@@ -2320,7 +2320,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (SCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Early developmental intervention, social skills dyad support, and individualized education planning.',
-        url: 'https://alq.scdsb.on.ca'
+        url: 'https://alr.scdsb.on.ca/'
       },
       {
         name: 'St. John Vianney Catholic School',
@@ -2364,7 +2364,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (SCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Early developmental intervention, social skills dyad support, and individualized education planning.',
-        url: 'https://alq.scdsb.on.ca'
+        url: 'https://alr.scdsb.on.ca/'
       },
       {
         name: 'St. John Vianney Catholic School',
@@ -2408,7 +2408,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (SCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Early developmental intervention, social skills dyad support, and individualized education planning.',
-        url: 'https://alq.scdsb.on.ca'
+        url: 'https://alr.scdsb.on.ca/'
       },
       {
         name: 'St. John Vianney Catholic School',
@@ -2452,7 +2452,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (SCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Early developmental intervention, social skills dyad support, and individualized education planning.',
-        url: 'https://alq.scdsb.on.ca'
+        url: 'https://alr.scdsb.on.ca/'
       },
       {
         name: 'St. John Vianney Catholic School',
@@ -2496,7 +2496,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (SCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Early developmental intervention, social skills dyad support, and individualized education planning.',
-        url: 'https://alq.scdsb.on.ca'
+        url: 'https://alr.scdsb.on.ca/'
       },
       {
         name: 'St. John Vianney Catholic School',
@@ -2540,7 +2540,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (SCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Early developmental intervention, social skills dyad support, and individualized education planning.',
-        url: 'https://alq.scdsb.on.ca'
+        url: 'https://alr.scdsb.on.ca/'
       },
       {
         name: 'St. John Vianney Catholic School',
@@ -2586,7 +2586,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (SCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Early developmental intervention, social skills dyad support, and individualized education planning.',
-        url: 'https://alq.scdsb.on.ca'
+        url: 'https://alr.scdsb.on.ca/'
       },
       {
         name: 'St. John Vianney Catholic School',
@@ -2630,7 +2630,7 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (SCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Early developmental intervention, social skills dyad support, and individualized education planning.',
-        url: 'https://alq.scdsb.on.ca'
+        url: 'https://alr.scdsb.on.ca/'
       },
       {
         name: 'St. John Vianney Catholic School',
@@ -2669,21 +2669,21 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (KPRDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Specialized classrooms for autism, structured communication protocols, and in-home team consultation.',
-        url: 'https://westmount.kprdsb.ca'
+        url: 'https://www.kprschools.ca/westmount/'
       },
       {
         name: 'Queen Elizabeth Public School',
         type: 'Public Elementary (KPRDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Sensory-informed teaching, differentiated instruction, and positive behavioral supports.',
-        url: 'https://queenelizabeth.kprdsb.ca'
+        url: 'https://www.kprschools.ca/queenelizabeth/'
       },
       {
         name: 'St. Alphonsus Catholic Elementary School',
         type: 'Catholic Elementary (PVNCCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Individualized learning plans, assistive tech accommodations, and community therapy alignment.',
-        url: 'https://alphonsus.pvnccdsb.on.ca'
+        url: 'https://stalphonsus.pvnccdsb.on.ca/'
       },
     ]
   },
@@ -2713,21 +2713,21 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (KPRDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Specialized classrooms for autism, structured communication protocols, and in-home team consultation.',
-        url: 'https://westmount.kprdsb.ca'
+        url: 'https://www.kprschools.ca/westmount/'
       },
       {
         name: 'Queen Elizabeth Public School',
         type: 'Public Elementary (KPRDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Sensory-informed teaching, differentiated instruction, and positive behavioral supports.',
-        url: 'https://queenelizabeth.kprdsb.ca'
+        url: 'https://www.kprschools.ca/queenelizabeth/'
       },
       {
         name: 'St. Alphonsus Catholic Elementary School',
         type: 'Catholic Elementary (PVNCCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Individualized learning plans, assistive tech accommodations, and community therapy alignment.',
-        url: 'https://alphonsus.pvnccdsb.on.ca'
+        url: 'https://stalphonsus.pvnccdsb.on.ca/'
       },
     ]
   },
@@ -2757,21 +2757,21 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive developmental classes, proactive sensory breaks, and private clinician coordination.',
-        url: 'https://williamdunbar.ddsb.ca'
+        url: 'https://williamdunbar.ddsb.ca/en/index.aspx'
       },
       {
         name: 'Dr. C.F. Cannon Public School',
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Early intervention language enrichment, visual schedule supports, and positive behavioural strategies.',
-        url: 'https://cfcannon.ddsb.ca'
+        url: 'https://cannon.ddsb.ca/en/index.aspx'
       },
       {
         name: 'St. Isaac Jogues Catholic School',
         type: 'Catholic Elementary (DCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Special education resource rooms, executive functioning coaching, and inclusive peer play groups.',
-        url: 'https://stisaacjogues.dcdsb.ca'
+        url: 'https://www.dcdsb.ca/stisaac/'
       },
     ]
   },
@@ -2801,21 +2801,21 @@ export const ontarioLocations: LocationInfo[] = [
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Comprehensive developmental classes, proactive sensory breaks, and private clinician coordination.',
-        url: 'https://williamdunbar.ddsb.ca'
+        url: 'https://williamdunbar.ddsb.ca/en/index.aspx'
       },
       {
         name: 'Dr. C.F. Cannon Public School',
         type: 'Public Elementary (DDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Early intervention language enrichment, visual schedule supports, and positive behavioural strategies.',
-        url: 'https://cfcannon.ddsb.ca'
+        url: 'https://cannon.ddsb.ca/en/index.aspx'
       },
       {
         name: 'St. Isaac Jogues Catholic School',
         type: 'Catholic Elementary (DCDSB)',
         grades: 'JK-Grade 8',
         iepFocus: 'Special education resource rooms, executive functioning coaching, and inclusive peer play groups.',
-        url: 'https://stisaacjogues.dcdsb.ca'
+        url: 'https://www.dcdsb.ca/stisaac/'
       },
     ]
   },
