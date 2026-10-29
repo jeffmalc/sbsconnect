@@ -1,143 +1,420 @@
 ---
+import { servicesPricelist } from '../data/pricing';
 ---
-<!-- SECTION: ONTARIO AUTISM PROGRAM (OAP) & FUNDING CALCULATOR -->
-<section id="funding" class="py-20 bg-gradient-to-b from-brand-surface to-white border-t border-brand-border">
+
+<!-- SECTION: COST, PER-HOUR PRICELIST & ALL-SERVICES CALCULATOR -->
+<section id="pricing" class="py-20 bg-gradient-to-b from-brand-surface to-white border-t border-brand-border">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header -->
     <div class="max-w-3xl mx-auto text-center mb-16">
-      <span class="text-xs uppercase tracking-widest font-bold text-brand-orchid">Funding & Financial Transparency</span>
-      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-2">Connecting Your Ontario Autism Funding</h2>
+      <span class="text-xs uppercase tracking-widest font-bold text-brand-orchid">Financial Transparency &amp; OAP Billing</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-2">
+        Transparent Hourly Pricing &amp; Service Calculator
+      </h2>
       <p class="mt-4 text-slate-600 font-medium leading-relaxed">
-        Because our connected teams are supervised directly by Registered Behaviour Analysts (R.B.A. Ont.), 100% of your
-        clinical receipts are eligible for Ontario Autism Program (OAP) reconciliation and private insurance
-        reimbursement.
+        No hidden agency fees or surprise retainers. Whether you are using your Ontario Autism Program (OAP) funding, private health insurance, or self-funding, all rates are billed transparently per hour with direct clinical line items for simple reconciliation.
       </p>
     </div>
 
-    <!-- Interactive Budget & Invoice Calculator -->
-    <div class="bg-white rounded-3xl p-6 sm:p-10 border border-brand-border shadow-card max-w-4xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <!-- Controls Form -->
+    <!-- 1. SAMPLE PER-HOUR PRICELIST TABLE -->
+    <div class="bg-white rounded-3xl border border-brand-border shadow-card overflow-hidden mb-16">
+      <div class="p-6 sm:p-8 border-b border-brand-border/60 bg-gradient-to-r from-brand-surface via-white to-brand-surface flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
-          <h3 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
-            <svg class="w-5 h-5 text-brand-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              ><path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
-              ></path></svg
-            >
-            OAP Allocation Estimator
-          </h3>
+          <h3 class="text-xl font-bold text-slate-900">Official In-Home Clinical Fee Schedule</h3>
+          <p class="text-xs text-slate-500 mt-1">Standardized contractor and clinical fee baselines across Ontario (CAD)</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+            ✓ OAP Invoicing Ready
+          </span>
+          <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-ocean/10 text-brand-ocean border border-brand-ocean/20">
+            ✓ CPBAO Regulated
+          </span>
+        </div>
+      </div>
 
-          <!-- Funding Stream Selector -->
-          <div class="mb-5">
-            <label for="calcFundingType" class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2"
-              >Select Your Funding Source</label
-            >
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead class="bg-slate-50 border-b border-brand-border text-slate-600 uppercase tracking-wider text-[11px] font-bold">
+            <tr>
+              <th scope="col" class="py-4 px-6">Service &amp; Role</th>
+              <th scope="col" class="py-4 px-6">Category</th>
+              <th scope="col" class="py-4 px-6">Hourly Rate</th>
+              <th scope="col" class="py-4 px-6">Funding Eligibility</th>
+              <th scope="col" class="py-4 px-6 text-right">Action</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 font-medium">
+            {servicesPricelist.map((item) => (
+              <tr class="hover:bg-brand-surface/60 transition-colors">
+                <td class="py-4 px-6">
+                  <div class="font-bold text-slate-900 text-sm">{item.name}</div>
+                  <div class="text-[11px] text-slate-500 mt-0.5">{item.professionalRole}</div>
+                  <div class="text-[11px] text-slate-400 mt-1 line-clamp-1">{item.description}</div>
+                </td>
+                <td class="py-4 px-6">
+                  <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-brand-surface border border-brand-border text-brand-dark">
+                    {item.serviceCategory}
+                  </span>
+                </td>
+                <td class="py-4 px-6 whitespace-nowrap">
+                  <div class="text-base font-bold text-brand-orchid">${item.hourlyRate} <span class="text-xs text-slate-400 font-normal">{item.rateUnit}</span></div>
+                  <div class="text-[10px] text-slate-400 font-medium">{item.billingFormat}</div>
+                </td>
+                <td class="py-4 px-6">
+                  <div class="flex flex-col gap-1">
+                    {item.oapEligible && (
+                      <span class="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-700">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> OAP Core &amp; Childhood Budget
+                      </span>
+                    )}
+                    {item.insuranceReimbursable && (
+                      <span class="inline-flex items-center gap-1 text-[10px] font-bold text-brand-ocean">
+                        <span class="w-1.5 h-1.5 rounded-full bg-brand-ocean"></span> Private Extended Health
+                      </span>
+                    )}
+                    {!item.oapEligible && !item.insuranceReimbursable && (
+                      <span class="text-[10px] text-slate-400">Specialized Direct Service</span>
+                    )}
+                  </div>
+                </td>
+                <td class="py-4 px-6 text-right whitespace-nowrap">
+                  <button
+                    type="button"
+                    data-prefill-goal={item.name}
+                    class="px-3.5 py-1.5 rounded-xl border border-brand-orchid text-brand-orchid hover:bg-brand-orchid hover:text-white font-bold text-xs transition-all shadow-sm"
+                  >
+                    Select
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Footnote on Sliding Scale & Consultations -->
+      <div class="p-6 bg-slate-50 border-t border-brand-border flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-600">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-brand-orchid"></span>
+          <span><strong>Financial Accommodation:</strong> We offer sliding-scale options and flexible payment schedules when finances are a barrier to care.</span>
+        </div>
+        <div class="font-semibold text-brand-dark">
+          Free No-Obligation Clinical Intake Consultation
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. MULTI-SERVICE INTERACTIVE BUDGET & INVOICE CALCULATOR -->
+    <div class="bg-white rounded-3xl p-6 sm:p-10 border border-brand-border shadow-card max-w-5xl mx-auto">
+      <div class="mb-8 border-b border-brand-border pb-6">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-ocean">Interactive Estimator</span>
+        <h3 class="text-2xl font-bold text-slate-900 mt-1">Multi-Service In-Home Budget Calculator</h3>
+        <p class="text-xs sm:text-sm text-slate-600 mt-1">
+          Customize weekly hours across each discipline to see an estimated monthly invoice breakdown and OAP reimbursement alignment.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Interactive Service Sliders Column -->
+        <div class="lg:col-span-7 space-y-5">
+          <!-- Funding Program Selector -->
+          <div>
+            <label for="calcFundingTypeSelect" class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
+              Primary Funding Source
+            </label>
             <select
-              id="calcFundingType"
+              id="calcFundingTypeSelect"
               class="w-full p-3 rounded-2xl bg-brand-surface border border-brand-border text-sm font-semibold text-slate-800 focus:outline-none focus:border-brand-orchid"
             >
-              <option value="oap-core">OAP Core Clinical Services (Determination of Needs)</option>
+              <option value="oap-core">Ontario Autism Program (OAP) Core Clinical Services</option>
               <option value="oap-childhood">OAP Childhood Budget / Interim One-Time ($20k / $5k)</option>
-              <option value="private-insurance">Private Extended Health Benefits (Psychology/RBA)</option>
-              <option value="self-pay">Direct Family Self-Pay</option>
+              <option value="insurance">Private Extended Health Benefits (Psychology/Speech/OT)</option>
+              <option value="self-pay">Direct Family Self-Pay / Health Spending Account</option>
             </select>
           </div>
 
-          <!-- Weekly In-Home Hours Slider -->
-          <div class="mb-6">
-            <div class="flex justify-between items-center mb-2">
-              <label for="hoursSlider" class="text-xs font-bold text-slate-500 uppercase tracking-wider"
-                >Weekly In-Home Hours</label
-              >
-              <span id="hoursDisplay" class="text-base font-bold text-brand-orchid">8 hrs/week</span>
+          <!-- Service 1: In-Home ABA Therapist -->
+          <div class="p-4 rounded-2xl bg-brand-surface border border-brand-border/70">
+            <div class="flex justify-between items-center mb-1.5">
+              <div>
+                <label for="sliderAba" class="text-xs font-bold text-slate-800 block">In-Home ABA Therapy ($70/hr)</label>
+                <span class="text-[11px] text-slate-500">Instructor Therapist 1-on-1 direct trials</span>
+              </div>
+              <span id="displayHoursAba" class="text-sm font-bold text-brand-orchid">8 hrs/week</span>
             </div>
             <input
               type="range"
-              id="hoursSlider"
-              min="2"
+              id="sliderAba"
+              min="0"
               max="25"
               value="8"
               step="1"
               class="w-full h-2 bg-brand-border rounded-lg appearance-none cursor-pointer accent-brand-orchid"
             />
-            <div class="flex justify-between text-[11px] text-slate-400 mt-1 font-semibold">
-              <span>2 hrs (Focal)</span>
-              <span>10 hrs (Comprehensive)</span>
+            <div class="flex justify-between text-[10px] text-slate-400 mt-1 font-semibold">
+              <span>0 hrs</span>
+              <span>8 hrs (Standard)</span>
               <span>25 hrs (Intensive)</span>
             </div>
           </div>
 
-          <!-- CPBAO Supervision Ratio Guarantee -->
-          <div class="p-4 rounded-2xl bg-brand-surface/70 border border-brand-border/60 text-xs text-slate-600">
-            <div class="flex items-center gap-2 font-bold text-brand-dark mb-1">
-              <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"
-                ><path
-                  fill-rule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clip-rule="evenodd"></path></svg
-              >
-              CPBAO Standard 4.1(e) Supervision Included
+          <!-- Service 2: Speech-Language Pathology -->
+          <div class="p-4 rounded-2xl bg-brand-surface border border-brand-border/70">
+            <div class="flex justify-between items-center mb-1.5">
+              <div>
+                <label for="sliderSlp" class="text-xs font-bold text-slate-800 block">Speech Therapy / SLP ($165/hr)</label>
+                <span class="text-[11px] text-slate-500">AAC communication, motor speech &amp; language</span>
+              </div>
+              <span id="displayHoursSlp" class="text-sm font-bold text-brand-ocean">1 hr/week</span>
             </div>
-            Every connected team includes direct RBA clinical supervision (average 10-15% of direct hours) factored into
-            your billing package.
+            <input
+              type="range"
+              id="sliderSlp"
+              min="0"
+              max="5"
+              value="1"
+              step="0.5"
+              class="w-full h-2 bg-brand-border rounded-lg appearance-none cursor-pointer accent-brand-ocean"
+            />
+            <div class="flex justify-between text-[10px] text-slate-400 mt-1 font-semibold">
+              <span>0 hrs</span>
+              <span>1 hr/week</span>
+              <span>5 hrs/week</span>
+            </div>
+          </div>
+
+          <!-- Service 3: Occupational Therapy -->
+          <div class="p-4 rounded-2xl bg-brand-surface border border-brand-border/70">
+            <div class="flex justify-between items-center mb-1.5">
+              <div>
+                <label for="sliderOt" class="text-xs font-bold text-slate-800 block">Occupational Therapy / OT ($160/hr)</label>
+                <span class="text-[11px] text-slate-500">Sensory diets, motor skills &amp; feeding routines</span>
+              </div>
+              <span id="displayHoursOt" class="text-sm font-bold text-brand-berry">1 hr/week</span>
+            </div>
+            <input
+              type="range"
+              id="sliderOt"
+              min="0"
+              max="4"
+              value="1"
+              step="0.5"
+              class="w-full h-2 bg-brand-border rounded-lg appearance-none cursor-pointer accent-brand-berry"
+            />
+            <div class="flex justify-between text-[10px] text-slate-400 mt-1 font-semibold">
+              <span>0 hrs</span>
+              <span>1 hr/week</span>
+              <span>4 hrs/week</span>
+            </div>
+          </div>
+
+          <!-- Service 4: Respite & Relief Care -->
+          <div class="p-4 rounded-2xl bg-brand-surface border border-brand-border/70">
+            <div class="flex justify-between items-center mb-1.5">
+              <div>
+                <label for="sliderRespite" class="text-xs font-bold text-slate-800 block">Respite Care ($38/hr)</label>
+                <span class="text-[11px] text-slate-500">Autism-trained in-home caregiver relief</span>
+              </div>
+              <span id="displayHoursRespite" class="text-sm font-bold text-slate-700">0 hrs/week</span>
+            </div>
+            <input
+              type="range"
+              id="sliderRespite"
+              min="0"
+              max="15"
+              value="0"
+              step="1"
+              class="w-full h-2 bg-brand-border rounded-lg appearance-none cursor-pointer accent-slate-700"
+            />
+            <div class="flex justify-between text-[10px] text-slate-400 mt-1 font-semibold">
+              <span>0 hrs</span>
+              <span>5 hrs/week</span>
+              <span>15 hrs/week</span>
+            </div>
+          </div>
+
+          <!-- CPBAO RBA Supervision Ratio Notice -->
+          <div class="p-4 rounded-2xl bg-amber-50/70 border border-amber-200/80 text-xs text-amber-900 leading-relaxed">
+            <div class="flex items-center gap-1.5 font-bold mb-1">
+              <span>⚖️ CPBAO Standard 4 Supervision Included:</span>
+            </div>
+            When ABA is selected, the calculator automatically includes required direct RBA clinical supervision (average 12% of ABA hours at $170/hr) so your estimate is 100% compliant and accurate for OAP reconciliation.
           </div>
         </div>
 
         <!-- Dynamic Live Receipt & Breakdown Card -->
-        <div
-          class="bg-gradient-to-br from-slate-900 to-brand-dark text-white p-6 sm:p-7 rounded-3xl shadow-glow-orchid flex flex-col justify-between"
-        >
+        <div class="lg:col-span-5 bg-gradient-to-br from-slate-900 to-brand-dark text-white p-6 sm:p-7 rounded-3xl shadow-glow-orchid flex flex-col justify-between sticky top-24">
           <div>
             <div class="flex justify-between items-center border-b border-white/10 pb-4 mb-4">
-              <span class="text-xs uppercase font-bold text-brand-peony">Monthly Estimate</span>
-              <span
-                id="reimbursementStatusBadge"
-                class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"
-              >
+              <span class="text-xs uppercase font-bold text-brand-peony">Monthly Cost Estimate</span>
+              <span id="calcFundingBadge" class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
                 100% OAP Reconcilable
               </span>
             </div>
 
-            <div class="space-y-3 text-sm">
+            <!-- Itemized lines -->
+            <div class="space-y-3 text-xs sm:text-sm">
               <div class="flex justify-between">
-                <span class="text-slate-300"
-                  >Direct Instructor Therapist (<span id="calcMonthlyHours">32</span> hrs/mo):</span
-                >
-                <span id="calcDirectCost" class="font-bold text-white">$2,240</span>
+                <span class="text-slate-300">In-Home ABA (<span id="calcHoursAbaMo">32</span> hrs/mo):</span>
+                <span id="calcCostAba" class="font-bold text-white">$2,240</span>
               </div>
               <div class="flex justify-between">
-                <span class="text-slate-300">Supervising R.B.A. (Ont.) (<span id="calcRbaHours">4</span> hrs/mo):</span>
-                <span id="calcRbaCost" class="font-bold text-white">$680</span>
+                <span class="text-slate-300">R.B.A. Supervision (<span id="calcHoursRbaMo">4</span> hrs/mo):</span>
+                <span id="calcCostRba" class="font-bold text-white">$680</span>
               </div>
-              <div class="flex justify-between text-xs text-slate-400">
-                <span>PHIPA Platform & Graphing System:</span>
+              <div class="flex justify-between" id="rowSlp">
+                <span class="text-slate-300">Speech Therapy (<span id="calcHoursSlpMo">4</span> hrs/mo):</span>
+                <span id="calcCostSlp" class="font-bold text-white">$660</span>
+              </div>
+              <div class="flex justify-between" id="rowOt">
+                <span class="text-slate-300">Occupational Therapy (<span id="calcHoursOtMo">4</span> hrs/mo):</span>
+                <span id="calcCostOt" class="font-bold text-white">$640</span>
+              </div>
+              <div class="flex justify-between hidden" id="rowRespite">
+                <span class="text-slate-300">Respite Care (<span id="calcHoursRespiteMo">0</span> hrs/mo):</span>
+                <span id="calcCostRespite" class="font-bold text-white">$0</span>
+              </div>
+              <div class="flex justify-between text-xs text-slate-400 pt-1">
+                <span>Clinical Data &amp; PHIPA Records:</span>
                 <span class="text-emerald-400 font-semibold">Included</span>
               </div>
             </div>
 
-            <div class="border-t border-white/10 pt-4 mt-4 flex justify-between items-baseline">
+            <!-- Monthly Total -->
+            <div class="border-t border-white/10 pt-4 mt-5 flex justify-between items-baseline">
               <div>
                 <span class="block text-xs uppercase text-slate-400 font-semibold">Estimated Monthly Total</span>
-                <span class="text-[11px] text-slate-400">Based on standard Ontario contractor rates</span>
+                <span class="text-[10px] text-slate-400">Based on 4-week billing period</span>
               </div>
-              <span id="calcTotalCost" class="text-3xl font-bold text-brand-peony">$2,920</span>
+              <span id="calcGrandTotal" class="text-3xl font-bold text-brand-peony">$4,220</span>
             </div>
           </div>
 
-          <div class="mt-6 pt-4 border-t border-white/10">
+          <div class="mt-6 pt-4 border-t border-white/10 space-y-2">
             <button
               type="button"
-              data-start-intake-wizard
-              class="w-full py-3 rounded-2xl bg-brand-ocean hover:bg-brand-ocean/90 text-white font-bold text-sm shadow-md transition-all"
+              id="calcRequestMatchBtn"
+              class="w-full py-3 rounded-2xl bg-brand-ocean hover:bg-brand-ocean/90 text-white font-bold text-xs sm:text-sm shadow-md transition-all active:scale-95"
             >
-              Request Match with These Hours
+              Request Team Match with This Plan
             </button>
+            <p class="text-[10px] text-slate-400 text-center">
+              No deposit required. Invoices generated upon session completion.
+            </p>
           </div>
         </div>
       </div>
     </div>
+
   </div>
 </section>
+
+<script>
+  // Dynamic Calculation Logic
+  const sliderAba = document.getElementById('sliderAba') as HTMLInputElement | null;
+  const sliderSlp = document.getElementById('sliderSlp') as HTMLInputElement | null;
+  const sliderOt = document.getElementById('sliderOt') as HTMLInputElement | null;
+  const sliderRespite = document.getElementById('sliderRespite') as HTMLInputElement | null;
+  const fundingSelect = document.getElementById('calcFundingTypeSelect') as HTMLSelectElement | null;
+
+  function recalculateAllServices() {
+    const hoursAbaWk = parseFloat(sliderAba?.value || '0');
+    const hoursSlpWk = parseFloat(sliderSlp?.value || '0');
+    const hoursOtWk = parseFloat(sliderOt?.value || '0');
+    const hoursRespiteWk = parseFloat(sliderRespite?.value || '0');
+
+    // Update slider label displays
+    const dAba = document.getElementById('displayHoursAba');
+    const dSlp = document.getElementById('displayHoursSlp');
+    const dOt = document.getElementById('displayHoursOt');
+    const dRespite = document.getElementById('displayHoursRespite');
+
+    if (dAba) dAba.textContent = `${hoursAbaWk} hrs/week`;
+    if (dSlp) dSlp.textContent = `${hoursSlpWk} hr${hoursSlpWk === 1 ? '' : 's'}/week`;
+    if (dOt) dOt.textContent = `${hoursOtWk} hr${hoursOtWk === 1 ? '' : 's'}/week`;
+    if (dRespite) dRespite.textContent = `${hoursRespiteWk} hrs/week`;
+
+    // Monthly hours (4 weeks)
+    const moAba = hoursAbaWk * 4;
+    const moRba = hoursAbaWk > 0 ? Math.max(1, Math.round(moAba * 0.12)) : 0;
+    const moSlp = hoursSlpWk * 4;
+    const moOt = hoursOtWk * 4;
+    const moRespite = hoursRespiteWk * 4;
+
+    // Rates
+    const costAba = moAba * 70;
+    const costRba = moRba * 170;
+    const costSlp = moSlp * 165;
+    const costOt = moOt * 160;
+    const costRespite = moRespite * 38;
+
+    const grandTotal = costAba + costRba + costSlp + costOt + costRespite;
+
+    // Update monthly invoice breakdown
+    const elHoursAbaMo = document.getElementById('calcHoursAbaMo');
+    const elCostAba = document.getElementById('calcCostAba');
+    const elHoursRbaMo = document.getElementById('calcHoursRbaMo');
+    const elCostRba = document.getElementById('calcCostRba');
+    const elHoursSlpMo = document.getElementById('calcHoursSlpMo');
+    const elCostSlp = document.getElementById('calcCostSlp');
+    const elHoursOtMo = document.getElementById('calcHoursOtMo');
+    const elCostOt = document.getElementById('calcCostOt');
+    const elHoursRespiteMo = document.getElementById('calcHoursRespiteMo');
+    const elCostRespite = document.getElementById('calcCostRespite');
+    const elGrandTotal = document.getElementById('calcGrandTotal');
+
+    if (elHoursAbaMo) elHoursAbaMo.textContent = String(moAba);
+    if (elCostAba) elCostAba.textContent = `$${costAba.toLocaleString()}`;
+    if (elHoursRbaMo) elHoursRbaMo.textContent = String(moRba);
+    if (elCostRba) elCostRba.textContent = `$${costRba.toLocaleString()}`;
+    if (elHoursSlpMo) elHoursSlpMo.textContent = String(moSlp);
+    if (elCostSlp) elCostSlp.textContent = `$${costSlp.toLocaleString()}`;
+    if (elHoursOtMo) elHoursOtMo.textContent = String(moOt);
+    if (elCostOt) elCostOt.textContent = `$${costOt.toLocaleString()}`;
+    if (elHoursRespiteMo) elHoursRespiteMo.textContent = String(moRespite);
+    if (elCostRespite) elCostRespite.textContent = `$${costRespite.toLocaleString()}`;
+    if (elGrandTotal) elGrandTotal.textContent = `$${grandTotal.toLocaleString()}`;
+
+    // Visibility toggles for 0 hours
+    document.getElementById('rowSlp')?.classList.toggle('hidden', moSlp === 0);
+    document.getElementById('rowOt')?.classList.toggle('hidden', moOt === 0);
+    document.getElementById('rowRespite')?.classList.toggle('hidden', moRespite === 0);
+  }
+
+  sliderAba?.addEventListener('input', recalculateAllServices);
+  sliderSlp?.addEventListener('input', recalculateAllServices);
+  sliderOt?.addEventListener('input', recalculateAllServices);
+  sliderRespite?.addEventListener('input', recalculateAllServices);
+  fundingSelect?.addEventListener('change', recalculateAllServices);
+
+  // Trigger match request with calculated plan
+  document.getElementById('calcRequestMatchBtn')?.addEventListener('click', () => {
+    const intakeModal = document.getElementById('intakeModal') as HTMLDialogElement | null;
+    const hoursAba = sliderAba?.value || '0';
+    const hoursSlp = sliderSlp?.value || '0';
+    const hoursOt = sliderOt?.value || '0';
+    const notes = document.getElementById('intakeNotes') as HTMLTextAreaElement | null;
+    if (notes) {
+      notes.value = `Estimated Plan: ${hoursAba} hrs/wk ABA, ${hoursSlp} hrs/wk Speech, ${hoursOt} hrs/wk OT.`;
+    }
+    intakeModal?.showModal();
+  });
+
+  // Prefill service buttons from table
+  document.querySelectorAll<HTMLElement>('[data-prefill-goal]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const goal = btn.dataset.prefillGoal || '';
+      const intakeModal = document.getElementById('intakeModal') as HTMLDialogElement | null;
+      const notes = document.getElementById('intakeNotes') as HTMLTextAreaElement | null;
+      if (notes && goal) {
+        notes.value = `Interested in service: ${goal}.`;
+      }
+      intakeModal?.showModal();
+    });
+  });
+
+  // Initial calculation on load
+  recalculateAllServices();
+</script>
