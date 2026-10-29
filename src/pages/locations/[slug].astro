@@ -37,8 +37,8 @@ const matchingTeams = therapyTeamsData.filter((t) => {
 
 const displayTeams = matchingTeams.length > 0 ? matchingTeams : therapyTeamsData.slice(0, 3);
 
-const pageTitle = `Autism Therapy & Pediatric Services in ${location.name}, Ontario | Side by Side Therapy Connect`;
-const pageDescription = `In-home ABA therapy, Speech-Language Pathology, Occupational Therapy, Respite, and Assessments in ${location.name}. Vetted clinical teams under Registered Behaviour Analyst supervision.`;
+const pageTitle = `In-Home Autism Therapy in ${location.name}, Ontario | ABA, Speech & OT`;
+const pageDescription = `Dedicated in-home ABA therapy, Speech-Language Pathology, and Occupational Therapy in ${location.name}, Ontario (${location.postalPrefixes.slice(0, 3).join(', ')}). Supervised by Registered Behaviour Analysts (R.B.A. Ont.). OAP approved.`;
 
 // Localized MedicalBusiness schema with ALL services
 const locationSchema = {
@@ -53,7 +53,7 @@ const locationSchema = {
     name: location.name,
     containedInPlace: {
       '@type': 'AdministrativeArea',
-      name: 'Ontario, Canada',
+      name: `${location.region}, Ontario, Canada`,
     },
   },
   medicalSpecialty: [
@@ -67,7 +67,7 @@ const locationSchema = {
   availableService: servicesData.map((s) => ({
     '@type': 'TherapeuticProcedure',
     name: `${s.name} in ${location.name}`,
-    description: `${s.tagline} Delivered in-home and in community settings across ${location.name}.`
+    description: `${s.tagline} Delivered in-home and in community settings across ${location.name}, ${location.region}.`
   }))
 };
 
@@ -137,7 +137,7 @@ const iconSvgMap: Record<string, string> = {
         <div class="max-w-4xl">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-brand-peony/50 text-brand-dark shadow-sm text-xs font-semibold mb-6">
             <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span>Serving {location.name} ({location.region}) &bull; Complete Transdisciplinary Coverage</span>
+            <span>Serving {location.name} ({location.region}) &bull; Population: {location.populationEstimate}</span>
           </div>
 
           <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-[1.15]">
@@ -145,7 +145,11 @@ const iconSvgMap: Record<string, string> = {
           </h1>
 
           <p class="mt-6 text-lg sm:text-xl text-slate-600 font-medium leading-relaxed">
-            {location.description} In {location.name}, we provide complete transdisciplinary pediatric care right where your child is most comfortable. From in-home ABA therapy and Speech-Language Pathology to Occupational Therapy, Respite, and Psycho-Educational Assessments—all coordinated by licensed Ontario clinicians.
+            {location.description}
+          </p>
+
+          <p class="mt-3 text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+            Families across <strong>{location.name}</strong> receive dedicated, 1-on-1 natural environment teaching in their living room, kitchen, or local community. Every session is directly supervised by a licensed Ontario <strong class="text-brand-ocean">Registered Behaviour Analyst (R.B.A. Ont.)</strong>, ensuring strict compliance with CPBAO Standard 4 and direct eligibility for Ontario Autism Program (OAP) funding.
           </p>
 
           <div class="mt-8 flex flex-wrap items-center gap-4">
@@ -179,6 +183,63 @@ const iconSvgMap: Record<string, string> = {
         </div>
       </div>
     </section>
+
+    <!-- SECTION: UNIQUE LOCAL COMMUNITY CONTEXT (WHY IN-HOME IN THIS CITY) -->
+    {location.localContext && (
+      <section class="py-16 bg-white border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl mb-10">
+            <span class="text-xs uppercase tracking-widest font-bold text-brand-ocean">Local Clinical Context</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">
+              Why In-Home Therapy Works Best for Families in {location.name}
+            </h2>
+            <p class="mt-2 text-slate-600 text-sm font-medium">
+              We tailor therapy delivery around the unique geographic and educational landscape of {location.name}.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 rounded-3xl bg-brand-surface border border-brand-border">
+              <span class="text-xs font-bold text-brand-orchid uppercase tracking-wider block mb-2">🚗 Zero Commute Stress</span>
+              <h3 class="font-bold text-slate-900 text-base mb-2">Eliminating Local Traffic</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                {location.localContext.travelFocus}
+              </p>
+              <p class="text-[11px] text-slate-500">
+                Instead of losing focus in the car, your child begins sessions energized in their familiar home space.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-3xl bg-brand-surface border border-brand-border">
+              <span class="text-xs font-bold text-brand-ocean uppercase tracking-wider block mb-2">🏫 School &amp; IEP Support</span>
+              <h3 class="font-bold text-slate-900 text-base mb-2">Local Board Coordination</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                Our Supervising RBAs help align Behaviour Service Plans with local school boards serving {location.name}:
+              </p>
+              <ul class="space-y-1 text-xs text-slate-700 font-semibold">
+                {location.localContext.schoolBoards.map((board) => (
+                  <li class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-ocean"></span>
+                    <span>{board}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="p-6 rounded-3xl bg-brand-surface border border-brand-border">
+              <span class="text-xs font-bold text-brand-berry uppercase tracking-wider block mb-2">🤝 Collaborative Care</span>
+              <h3 class="font-bold text-slate-900 text-base mb-2">Community Alliances</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                {location.localContext.communityResources}
+              </p>
+              <p class="text-[11px] text-slate-500">
+                {location.localContext.localChallengeHighlight}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    )}
 
     <!-- SECTION: UNIQUE LOCALIZED SERVICES DIRECTORY FOR THIS CITY -->
     <section id="local-services" class="py-20 bg-brand-surface border-b border-brand-border">
