@@ -212,8 +212,8 @@ const schoolsWithCoords = (location.schools || []).map((school, i) => {
               '<p style="font-size: 11px; color: #334155; line-height: 1.4; margin: 0 0 6px 0; background: #f8fafc; padding: 6px 8px; border-radius: 6px; border-left: 3px solid #b02994;">' + sch.iepFocus + '</p>' +
               '<div style="margin-top: 8px; padding-top: 6px; border-top: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 4px;">' +
                 '<span style="font-size: 10px; color: #166534; font-weight: 600;">✓ In-Home ABA &amp; IEP Alignment Supported</span>' +
-                '<a href="https://www.google.com/search?q=' + encodeURIComponent(sch.name + ' ' + name + ' Ontario school') + '" target="_blank" rel="noopener noreferrer" style="font-size: 11px; font-weight: 700; color: #8224e3; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;">' +
-                  '<span>View School Directory &amp; Catchment &rarr;</span>' +
+                '<a href="' + (sch.url || '#') + '" target="_blank" rel="noopener noreferrer" style="font-size: 11px; font-weight: 700; color: #8224e3; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;">' +
+                  '<span>Visit Official School Website &rarr;</span>' +
                 '</a>' +
               '</div>' +
             '</div>'

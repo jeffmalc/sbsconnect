@@ -454,10 +454,10 @@ const iconSvgMap: Record<string, string> = {
                   <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
                     <h3 class="font-bold text-slate-900 text-base">
                       <a
-                        href={`https://www.google.com/search?q=${encodeURIComponent(school.name + ' ' + location.name + ' Ontario school')}`}
+                        href={school.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        title={`View ${school.name} directory & info`}
+                        title={`Visit official website of ${school.name}`}
                         class="hover:text-brand-orchid transition-colors inline-flex items-center gap-2 group"
                       >
                         <span class="w-6 h-6 rounded-lg bg-brand-orchid/10 text-brand-orchid text-xs flex items-center justify-center font-bold shrink-0">
@@ -484,13 +484,14 @@ const iconSvgMap: Record<string, string> = {
 
                   <div class="pt-2.5 border-t border-brand-border/60 flex flex-wrap items-center justify-between gap-2 text-xs">
                     <a
-                      href={`https://www.google.com/search?q=${encodeURIComponent(school.name + ' ' + location.name + ' Ontario school special education')}`}
+                      href={school.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="text-brand-orchid hover:underline font-bold inline-flex items-center gap-1"
+                      title={`Visit official website of ${school.name}`}
+                      class="text-brand-orchid hover:underline font-bold inline-flex items-center gap-1.5"
                     >
-                      <span>Explore School Directory &amp; Special Ed</span>
-                      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <span>Visit Official School Website</span>
+                      <svg class="w-3.5 h-3.5 text-brand-orchid" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
                     </a>
